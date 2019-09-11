@@ -33,9 +33,13 @@
 
 &lt;h3 id=&#34;xss-io&#34;&gt;xss.io&lt;/h3&gt;
 
+&lt;h3 id=&#34;redis-sha-crack&#34;&gt;Redis SHA Crack&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/evilpacket/redis-sha-crack&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/evilpacket/redis-sha-crack&lt;/a&gt;&lt;/p&gt;
+
 &lt;h3 id=&#34;helmet&#34;&gt;Helmet&lt;/h3&gt;
 
-&lt;p&gt;Now maintained by Evan&lt;/p&gt;
+&lt;p&gt;Now maintained by Evan now&lt;/p&gt;
 </description>
     </item>
     
@@ -201,6 +205,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;DEFCON 19 - &lt;a href=&#34;https://www.youtube.com/watch?v=1q42YAksVeg&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Pillaging DVCS Repos for fun and profit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Toorcon 13 - &lt;a href=&#34;https://www.youtube.com/watch?v=qBWTkZqY8GI&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Pillaging DVCS Repos for fun and profit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;JSConf US - &lt;a href=&#34;https://www.youtube.com/watch?v=uVIcK4UXKWs&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Writing an (in)secure webapp&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Keeping it Realtime - &lt;a href=&#34;https://vimeo.com/42487947&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Old problems, new tools&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
