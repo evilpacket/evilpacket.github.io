@@ -21,14 +21,5 @@
 The rest of the story While learning how to actually use chrome devtools to remotely debug a Node.js application was working on I encountered an error when I tried to visit the debugger service with my web browser.</description>
     </item>
     
-    <item>
-      <title>My First Post</title>
-      <link>http://blog.evilpacket.net/2019/my-first-post/</link>
-      <pubDate>Sun, 08 Sep 2019 18:06:09 -0700</pubDate>
-      
-      <guid>http://blog.evilpacket.net/2019/my-first-post/</guid>
-      <description>some content</description>
-    </item>
-    
   </channel>
 </rss>
