@@ -18,6 +18,28 @@
     </item>
     
     <item>
+      <title>Projects</title>
+      <link>http://blog.evilpacket.net/projects/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.evilpacket.net/projects/</guid>
+      <description>
+
+&lt;p&gt;Historical archive of projects and tools I&amp;rsquo;ve start that I&amp;rsquo;m the slightest bit proud of.&lt;/p&gt;
+
+&lt;h3 id=&#34;dvcs-pillage&#34;&gt;DVCS-Pillage&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/evilpacket/DVCS-Pillage&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/evilpacket/DVCS-Pillage&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;xss-io&#34;&gt;xss.io&lt;/h3&gt;
+
+&lt;h3 id=&#34;helmet&#34;&gt;Helmet&lt;/h3&gt;
+
+&lt;p&gt;Now maintained by Evan&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>http://blog.evilpacket.net/about/</link>
       <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
@@ -34,6 +56,12 @@
 &lt;h3 id=&#34;career-and-mentorship&#34;&gt;Career and Mentorship&lt;/h3&gt;
 
 &lt;p&gt;Read about the start of my career and why I think mentorship is so important. &lt;a href=&#34;https://medium.com/@adam_baldwin/my-story-about-mentorship-3f793df90db7&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://medium.com/@adam_baldwin/my-story-about-mentorship-3f793df90db7&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;other-fun-facts&#34;&gt;Other Fun Facts&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2x DEFCON Black Badge holder. &lt;a href=&#34;https://www.defcon.org/html/links/dc-black-badge.html#tab-6&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;DC18&lt;/a&gt;, &lt;a href=&#34;https://www.defcon.org/html/links/dc-black-badge.html#tab-4&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;DC20&lt;/a&gt; #PFY&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -45,7 +73,13 @@
       <guid>http://blog.evilpacket.net/vulns/</guid>
       <description>
 
-&lt;p&gt;Still a work in progress to gather and collect all the various vulns I&amp;rsquo;ve found over the years.&lt;/p&gt;
+&lt;p&gt;Work in progress to gather and collect all the various vulns I&amp;rsquo;ve found over the years. Unlikely to ever be complete.&lt;/p&gt;
+
+&lt;h1 id=&#34;2016&#34;&gt;2016&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Atom Editor - &lt;a href=&#34;https://medium.com/lift-security/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks-3404566ba788&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Misconfiguration allowed code execution on untrustd networks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&#34;2014&#34;&gt;2014&lt;/h1&gt;
 
