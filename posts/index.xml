@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on EvilPacket</title>
+    <link>http://blog.evilpacket.net/posts/</link>
+    <description>Recent content in Posts on EvilPacket</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 10 Sep 2019 16:27:22 -0700</lastBuildDate>
+    
+	<atom:link href="http://blog.evilpacket.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Leveraging Javascript Debuggers for compromise</title>
+      <link>http://blog.evilpacket.net/2019/leveraging-javascript-debuggers/</link>
+      <pubDate>Tue, 10 Sep 2019 16:27:22 -0700</pubDate>
+      
+      <guid>http://blog.evilpacket.net/2019/leveraging-javascript-debuggers/</guid>
+      <description>Summary I discovered that developers do leave remote JavaScript debuggers and headless browsers laying around on the internet leading to sensitive data exposure and an interesting remote position for an attacker.
+The rest of the story While learning how to actually use chrome devtools to remotely debug a Node.js application was working on I encountered an error when I tried to visit the debugger service with my web browser.</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://blog.evilpacket.net/2019/my-first-post/</link>
+      <pubDate>Sun, 08 Sep 2019 18:06:09 -0700</pubDate>
+      
+      <guid>http://blog.evilpacket.net/2019/my-first-post/</guid>
+      <description>some content</description>
+    </item>
+    
+  </channel>
+</rss>
