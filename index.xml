@@ -47,6 +47,28 @@
 
 &lt;p&gt;Still a work in progress to gather and collect all the various vulns I&amp;rsquo;ve found over the years.&lt;/p&gt;
 
+&lt;h1 id=&#34;2014&#34;&gt;2014&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0030&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;CVE-2014-0030&lt;/a&gt; - Apache Roller XML-RPC susceptible to XXE Attacks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;2012&#34;&gt;2012&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/jashkenas/2001456&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;npm Registry sha password exposure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;OpenFire Code Execution&lt;/li&gt;
+&lt;li&gt;Nagios Enterprise Config Manager Log Persistent XSS&lt;/li&gt;
+&lt;li&gt;Nagios Enterprise XIWindow Reflected XSS&lt;/li&gt;
+&lt;li&gt;Pandora FMS 4.0.2 System Audit Log XSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;2010&#34;&gt;2010&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.securityfocus.com/archive/1/508948&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;MiFi Geopwn&lt;/a&gt; - Sprint / Verizon MiFi geo location theft&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h1 id=&#34;2006&#34;&gt;2006&lt;/h1&gt;
 
 &lt;ul&gt;
