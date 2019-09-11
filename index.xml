@@ -45,10 +45,13 @@
       <guid>http://blog.evilpacket.net/vulns/</guid>
       <description>
 
+&lt;p&gt;Still a work in progress to gather and collect all the various vulns I&amp;rsquo;ve found over the years.&lt;/p&gt;
+
 &lt;h1 id=&#34;2006&#34;&gt;2006&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://support.symantec.com/us/en/article.symsa1095.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;SYMSA1095&lt;/a&gt; - Symantec Security Information Manager Authentication bypass&lt;/li&gt;
+&lt;li&gt;Symantec Enterprise Firewall Privilege Escalation&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;2005&#34;&gt;2005&lt;/h1&gt;
