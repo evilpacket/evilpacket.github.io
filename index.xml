@@ -105,6 +105,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.securityfocus.com/archive/1/508948&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;MiFi Geopwn&lt;/a&gt; - Sprint / Verizon MiFi geo location theft&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2010-4534&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;CVE-2010-4534&lt;/a&gt; - Django admin interface sensitive data exposure&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;2006&#34;&gt;2006&lt;/h1&gt;
