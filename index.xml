@@ -59,6 +59,7 @@
       
       <guid>http://blog.evilpacket.net/vulns/</guid>
       <description>&lt;p&gt;Work in progress to gather and collect all the various vulns I&#39;ve found over the years. Unlikely to ever be complete.&lt;/p&gt;
+&lt;p&gt;Note: This timeline does not currently include the 171 vulnerabilities I found and published via the npm security advisory data (formerly the node security project).&lt;/p&gt;
 &lt;h1 id=&#34;2017&#34;&gt;2017&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;pgAdmin 4 - XSS leading to RCE&lt;/li&gt;
