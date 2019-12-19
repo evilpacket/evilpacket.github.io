@@ -167,15 +167,15 @@ apt-get remove ruby-build git clone https://github.com/rbenv/ruby-build.git cd r
           <p>While following the Setting Up a <a href="https://github.com/rapid7/metasploit-framework/wiki/Setting-Up-a-Metasploit-Development-Environment">Metasploit Development Environment</a> I ran into a few hiccups. Hopefully somebody else won't stumble if I write it down and share it.</p>
 <h2 id="error-ruby-build-definition-not-found-262">Error: ruby-build: definition not found: 2.6.2</h2>
 <p>I think originally I was on an ubuntu system but I also ran into this when developing from Kali Linux.</p>
-<pre><code>apt-get remove ruby-build
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get remove ruby-build
 git clone https://github.com/rbenv/ruby-build.git
 cd ruby-build
 sudo ./install.sh
-</code></pre><h2 id="rbev-issues">rbev issues</h2>
+</code></pre></div><h2 id="rbev-issues">rbev issues</h2>
 <p>rbev wasn't installed on my system right either. I had to follow the installation instructions from <a href="https://www.darkoperator.com/installing-metasploit-in-ubunt">https://www.darkoperator.com/installing-metasploit-in-ubunt</a></p>
 <h2 id="warning-the-running-version-of-bundler-1172-is-older-than-the-version-that-created-the-lockfile-1173">Warning: the running version of Bundler (1.17.2) is older than the version that created the lockfile (1.17.3).</h2>
-<pre><code>gem install bundler -v 1.17.3
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gem install bundler -v 1.17.3
+</code></pre></div>
     </div>
 
     <div class="post-copyright">
