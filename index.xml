@@ -5,13 +5,13 @@
     <description>Recent content in EvilPacket on EvilPacket</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Sep 2019 16:27:22 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2019 22:27:58 -0800</lastBuildDate>
     <atom:link href="http://blog.evilpacket.net/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Posts</title>
       <link>http://blog.evilpacket.net/posts/</link>
-      <pubDate>Tue, 10 Sep 2019 16:27:22 -0700</pubDate>
+      <pubDate>Wed, 18 Dec 2019 22:27:58 -0800</pubDate>
       
       <guid>http://blog.evilpacket.net/posts/</guid>
       <description></description>
@@ -23,22 +23,13 @@
       <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>http://blog.evilpacket.net/projects/</guid>
-      <description>
-
-&lt;p&gt;Historical archive of projects and tools I&amp;rsquo;ve start that I&amp;rsquo;m the slightest bit proud of.&lt;/p&gt;
-
+      <description>&lt;p&gt;Historical archive of projects and tools I&#39;ve start that I&#39;m the slightest bit proud of.&lt;/p&gt;
 &lt;h3 id=&#34;dvcs-pillage&#34;&gt;DVCS-Pillage&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/evilpacket/DVCS-Pillage&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/evilpacket/DVCS-Pillage&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;xss-io&#34;&gt;xss.io&lt;/h3&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://github.com/evilpacket/DVCS-Pillage&#34;&gt;https://github.com/evilpacket/DVCS-Pillage&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;xssio&#34;&gt;xss.io&lt;/h3&gt;
 &lt;h3 id=&#34;redis-sha-crack&#34;&gt;Redis SHA Crack&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/evilpacket/redis-sha-crack&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/evilpacket/redis-sha-crack&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://github.com/evilpacket/redis-sha-crack&#34;&gt;https://github.com/evilpacket/redis-sha-crack&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;helmet&#34;&gt;Helmet&lt;/h3&gt;
-
 &lt;p&gt;Now maintained by Evan now&lt;/p&gt;
 </description>
     </item>
@@ -49,22 +40,14 @@
       <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>http://blog.evilpacket.net/about/</guid>
-      <description>
-
-&lt;h1 id=&#34;bio&#34;&gt;Bio&lt;/h1&gt;
-
-&lt;p&gt;Adam Baldwin is VP of Security at &lt;a href=&#34;https://npmjs.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;npm Inc.&lt;/a&gt;, the company that powers the world’s JavaScript. An information security professional with over 24 years of experience, Adam has spent his career building companies, breaking into companies, managing teams, designing products, and talking about security non-stop.&lt;/p&gt;
-
+      <description>&lt;h1 id=&#34;bio&#34;&gt;Bio&lt;/h1&gt;
+&lt;p&gt;Adam Baldwin is VP of Security at &lt;a href=&#34;https://npmjs.com&#34;&gt;npm Inc.&lt;/a&gt;, the company that powers the world’s JavaScript. An information security professional with over 24 years of experience, Adam has spent his career building companies, breaking into companies, managing teams, designing products, and talking about security non-stop.&lt;/p&gt;
 &lt;p&gt;Previously, Adam founded ^Lift Security, a successful application security and penetration testing service company, and the Node Security Platform, an initiative to track vulnerabilities in the JavaScript ecosystem. The project evolved into a SaaS platform at the forefront of the DevSecOps movement. Both were acquired by npm, Inc. in early 2018.&lt;/p&gt;
-
 &lt;h3 id=&#34;career-and-mentorship&#34;&gt;Career and Mentorship&lt;/h3&gt;
-
-&lt;p&gt;Read about the start of my career and why I think mentorship is so important. &lt;a href=&#34;https://medium.com/@adam_baldwin/my-story-about-mentorship-3f793df90db7&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://medium.com/@adam_baldwin/my-story-about-mentorship-3f793df90db7&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;Read about the start of my career and why I think mentorship is so important. &lt;a href=&#34;https://medium.com/@adam_baldwin/my-story-about-mentorship-3f793df90db7&#34;&gt;https://medium.com/@adam_baldwin/my-story-about-mentorship-3f793df90db7&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;other-fun-facts&#34;&gt;Other Fun Facts&lt;/h3&gt;
-
 &lt;ul&gt;
-&lt;li&gt;2x DEFCON Black Badge holder. &lt;a href=&#34;https://www.defcon.org/html/links/dc-black-badge.html#tab-6&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;DC18&lt;/a&gt;, &lt;a href=&#34;https://www.defcon.org/html/links/dc-black-badge.html#tab-4&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;DC20&lt;/a&gt; #PFY&lt;/li&gt;
+&lt;li&gt;2x DEFCON Black Badge holder. &lt;a href=&#34;https://www.defcon.org/html/links/dc-black-badge.html#tab-6&#34;&gt;DC18&lt;/a&gt;, &lt;a href=&#34;https://www.defcon.org/html/links/dc-black-badge.html#tab-4&#34;&gt;DC20&lt;/a&gt; #PFY&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -75,56 +58,40 @@
       <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>http://blog.evilpacket.net/vulns/</guid>
-      <description>
-
-&lt;p&gt;Work in progress to gather and collect all the various vulns I&amp;rsquo;ve found over the years. Unlikely to ever be complete.&lt;/p&gt;
-
+      <description>&lt;p&gt;Work in progress to gather and collect all the various vulns I&#39;ve found over the years. Unlikely to ever be complete.&lt;/p&gt;
 &lt;h1 id=&#34;2017&#34;&gt;2017&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;pgAdmin 4 - XSS leading to RCE&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2016&#34;&gt;2016&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Atom Editor - &lt;a href=&#34;https://medium.com/lift-security/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks-3404566ba788&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Misconfiguration allowed code execution on untrustd networks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Atom Editor - &lt;a href=&#34;https://medium.com/lift-security/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks-3404566ba788&#34;&gt;Misconfiguration allowed code execution on untrustd networks&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2014&#34;&gt;2014&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0030&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;CVE-2014-0030&lt;/a&gt; - Apache Roller XML-RPC susceptible to XXE Attacks&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0030&#34;&gt;CVE-2014-0030&lt;/a&gt; - Apache Roller XML-RPC susceptible to XXE Attacks&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2012&#34;&gt;2012&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/jashkenas/2001456&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;npm Registry sha password exposure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/jashkenas/2001456&#34;&gt;npm Registry sha password exposure&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;OpenFire Code Execution&lt;/li&gt;
 &lt;li&gt;Nagios Enterprise Config Manager Log Persistent XSS&lt;/li&gt;
 &lt;li&gt;Nagios Enterprise XIWindow Reflected XSS&lt;/li&gt;
 &lt;li&gt;Pandora FMS 4.0.2 System Audit Log XSS&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2010&#34;&gt;2010&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.securityfocus.com/archive/1/508948&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;MiFi Geopwn&lt;/a&gt; - Sprint / Verizon MiFi geo location theft&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2010-4534&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;CVE-2010-4534&lt;/a&gt; - Django admin interface sensitive data exposure&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.securityfocus.com/archive/1/508948&#34;&gt;MiFi Geopwn&lt;/a&gt; - Sprint / Verizon MiFi geo location theft&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2010-4534&#34;&gt;CVE-2010-4534&lt;/a&gt; - Django admin interface sensitive data exposure&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2006&#34;&gt;2006&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://support.symantec.com/us/en/article.symsa1095.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;SYMSA1095&lt;/a&gt; - Symantec Security Information Manager Authentication bypass&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.symantec.com/us/en/article.symsa1095.html&#34;&gt;SYMSA1095&lt;/a&gt; - Symantec Security Information Manager Authentication bypass&lt;/li&gt;
 &lt;li&gt;Symantec Enterprise Firewall Privilege Escalation&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2005&#34;&gt;2005&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cvedetails.com/cve/CVE-2005-1204/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;CVE-2005-1204&lt;/a&gt; - Neslo Desktop Rover DoS&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cvedetails.com/cve/CVE-2005-1204/&#34;&gt;CVE-2005-1204&lt;/a&gt; - Neslo Desktop Rover DoS&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -135,97 +102,74 @@
       <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>http://blog.evilpacket.net/presentations/</guid>
-      <description>
-
-&lt;h1 id=&#34;2019&#34;&gt;2019&lt;/h1&gt;
-
+      <description>&lt;h1 id=&#34;2019&#34;&gt;2019&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;LocoMocoSec, &lt;a href=&#34;https://www.youtube.com/watch?v=HDo2iOlkbyc&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;JavaScript Supply Chain Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LocoMocoSec, &lt;a href=&#34;https://www.youtube.com/watch?v=HDo2iOlkbyc&#34;&gt;JavaScript Supply Chain Security&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Container Security Summit - JavaScript Supply Chain Security&lt;/li&gt;
-&lt;li&gt;Absolute AppSec - &lt;a href=&#34;https://www.youtube.com/watch?v=EQ9cZFyJ_xA&amp;amp;feature=youtu.be&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;EP #65&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Real Talk JavaScript - &lt;a href=&#34;https://realtalkjavascript.simplecast.fm/33196473&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Secure JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Absolute AppSec - &lt;a href=&#34;https://www.youtube.com/watch?v=EQ9cZFyJ_xA&amp;amp;feature=youtu.be&#34;&gt;EP #65&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Real Talk JavaScript - &lt;a href=&#34;https://realtalkjavascript.simplecast.fm/33196473&#34;&gt;Secure JavaScript&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2018&#34;&gt;2018&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;BrazilJS - &lt;a href=&#34;https://www.youtube.com/watch?v=hxlEct_FCEk&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Becoming a Security Minded Developer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Node Summit - &lt;a href=&#34;https://vimeo.com/287729415&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Security Panel&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Thunderplains - &lt;a href=&#34;https://www.youtube.com/watch?v=rn0U_vPEqZY&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;The Developer Trail: Adventures shipping secure software&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://brakeingsecurity.com/2018-043-adam-baldwin-npmjs-director-of-security-event-stream-post-mortem-and-making-your-package-system-more-secure&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Brakeing Down Security Podcast&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JavaScript Jabber - &lt;a href=&#34;https://devchat.tv/js-jabber/jsj-294-node-security-adam-baldwin/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Node Security&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JS Party - &lt;a href=&#34;https://changelog.com/jsparty/23&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;The state of Node security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;BrazilJS - &lt;a href=&#34;https://www.youtube.com/watch?v=hxlEct_FCEk&#34;&gt;Becoming a Security Minded Developer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Node Summit - &lt;a href=&#34;https://vimeo.com/287729415&#34;&gt;Security Panel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Thunderplains - &lt;a href=&#34;https://www.youtube.com/watch?v=rn0U_vPEqZY&#34;&gt;The Developer Trail: Adventures shipping secure software&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://brakeingsecurity.com/2018-043-adam-baldwin-npmjs-director-of-security-event-stream-post-mortem-and-making-your-package-system-more-secure&#34;&gt;Brakeing Down Security Podcast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript Jabber - &lt;a href=&#34;https://devchat.tv/js-jabber/jsj-294-node-security-adam-baldwin/&#34;&gt;Node Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JS Party - &lt;a href=&#34;https://changelog.com/jsparty/23&#34;&gt;The state of Node security&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2017&#34;&gt;2017&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Node Summit - &lt;a href=&#34;https://vimeo.com/229529077&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hunting for malicious modules in npm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;NodeConf AR - &lt;a href=&#34;https://www.youtube.com/watch?v=AGJV4PgZXns&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Continuous Security&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The Manifest - &lt;a href=&#34;https://www.iheart.com/podcast/256-the-manifest-31120517/episode/episode-9-typosquatting-with-adam-baldwin-39946713/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Typosquatting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Exploring Information Security podcast - &lt;a href=&#34;http://www.timothydeblock.com/eis/tag/Adam+Baldwin&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;What is the Node Security Platform&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Node Summit - &lt;a href=&#34;https://vimeo.com/229529077&#34;&gt;Hunting for malicious modules in npm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NodeConf AR - &lt;a href=&#34;https://www.youtube.com/watch?v=AGJV4PgZXns&#34;&gt;Continuous Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Manifest - &lt;a href=&#34;https://www.iheart.com/podcast/256-the-manifest-31120517/episode/episode-9-typosquatting-with-adam-baldwin-39946713/&#34;&gt;Typosquatting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Exploring Information Security podcast - &lt;a href=&#34;http://www.timothydeblock.com/eis/tag/Adam+Baldwin&#34;&gt;What is the Node Security Platform&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2016&#34;&gt;2016&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Node Summit - &lt;a href=&#34;https://vimeo.com/179274716&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Security Panel&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;EmpireJS - &lt;a href=&#34;https://www.youtube.com/watch?v=-N-WB7hnPsE&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Continuous Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Node Summit - &lt;a href=&#34;https://vimeo.com/179274716&#34;&gt;Security Panel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;EmpireJS - &lt;a href=&#34;https://www.youtube.com/watch?v=-N-WB7hnPsE&#34;&gt;Continuous Security&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Thunderplains - Continuous Security&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2015&#34;&gt;2015&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Nodevember - &lt;a href=&#34;https://www.youtube.com/watch?v=QxH9PWreUPE&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Node Security Experiements&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;CascadiaFest - &lt;a href=&#34;https://www.youtube.com/watch?v=ePPbjaFLN88&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;The art of identifying vulnerabilities&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;SINFO - &lt;a href=&#34;https://www.youtube.com/watch?v=9iz_Q30Yiaw&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Breaking into Security&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Node Summit - &lt;a href=&#34;https://vimeo.com/123546531&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Security Panel&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;OpoJS - &lt;a href=&#34;https://www.youtube.com/watch?v=n8a1BZcgCG4&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;OWASP Top 10 / requireSafe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Nodevember - &lt;a href=&#34;https://www.youtube.com/watch?v=QxH9PWreUPE&#34;&gt;Node Security Experiements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CascadiaFest - &lt;a href=&#34;https://www.youtube.com/watch?v=ePPbjaFLN88&#34;&gt;The art of identifying vulnerabilities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SINFO - &lt;a href=&#34;https://www.youtube.com/watch?v=9iz_Q30Yiaw&#34;&gt;Breaking into Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Node Summit - &lt;a href=&#34;https://vimeo.com/123546531&#34;&gt;Security Panel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;OpoJS - &lt;a href=&#34;https://www.youtube.com/watch?v=n8a1BZcgCG4&#34;&gt;OWASP Top 10 / requireSafe&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2014&#34;&gt;2014&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;JSFest - &lt;a href=&#34;https://www.youtube.com/watch?v=rjzpPlY5Kck&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;A Security Carol&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;NodeDay at PayPal - &lt;a href=&#34;https://www.youtube.com/watch?v=Zc8QvuRbdoQ&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Node Security in the Enterprise&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ThunderPlains - &lt;a href=&#34;https://www.youtube.com/watch?v=4vccPZcq08w&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Node Security Live&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JSFest - &lt;a href=&#34;https://www.youtube.com/watch?v=rjzpPlY5Kck&#34;&gt;A Security Carol&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NodeDay at PayPal - &lt;a href=&#34;https://www.youtube.com/watch?v=Zc8QvuRbdoQ&#34;&gt;Node Security in the Enterprise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ThunderPlains - &lt;a href=&#34;https://www.youtube.com/watch?v=4vccPZcq08w&#34;&gt;Node Security Live&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2013&#34;&gt;2013&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;LXJS - &lt;a href=&#34;https://www.youtube.com/watch?v=49Bpzq6okWk&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Introducing the Node Security Project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JSConf EU - &lt;a href=&#34;https://www.youtube.com/watch?v=_aUKRh74JRY&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Security First&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JSConf US - &lt;a href=&#34;https://www.youtube.com/watch?v=82-hJk5WryU&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Builders vs Breakers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;NodePDX - &lt;a href=&#34;https://www.youtube.com/watch?v=UfCFFC-ilmI&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Introducing nodesecurity.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JavaScript Jabber - &lt;a href=&#34;https://devchat.tv/js-jabber/089-jsj-the-node-security-project-with-adam-baldwin/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;The Node Security Project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LXJS - &lt;a href=&#34;https://www.youtube.com/watch?v=49Bpzq6okWk&#34;&gt;Introducing the Node Security Project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JSConf EU - &lt;a href=&#34;https://www.youtube.com/watch?v=_aUKRh74JRY&#34;&gt;Security First&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JSConf US - &lt;a href=&#34;https://www.youtube.com/watch?v=82-hJk5WryU&#34;&gt;Builders vs Breakers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NodePDX - &lt;a href=&#34;https://www.youtube.com/watch?v=UfCFFC-ilmI&#34;&gt;Introducing nodesecurity.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript Jabber - &lt;a href=&#34;https://devchat.tv/js-jabber/089-jsj-the-node-security-project-with-adam-baldwin/&#34;&gt;The Node Security Project&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2012&#34;&gt;2012&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;DEFCON 20 - &lt;a href=&#34;https://www.youtube.com/watch?v=LV8IU3r1hr0&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Blind XSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DEFCON 20 - &lt;a href=&#34;https://www.youtube.com/watch?v=LV8IU3r1hr0&#34;&gt;Blind XSS&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;RedisConf - EvilSHA - Cracking SHA hashes using publicly available Redis instances&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2011&#34;&gt;2011&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;DEFCON 19 - &lt;a href=&#34;https://www.youtube.com/watch?v=1q42YAksVeg&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Pillaging DVCS Repos for fun and profit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Toorcon 13 - &lt;a href=&#34;https://www.youtube.com/watch?v=qBWTkZqY8GI&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Pillaging DVCS Repos for fun and profit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JSConf US - &lt;a href=&#34;https://www.youtube.com/watch?v=uVIcK4UXKWs&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Writing an (in)secure webapp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Keeping it Realtime - &lt;a href=&#34;https://vimeo.com/42487947&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Old problems, new tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DEFCON 19 - &lt;a href=&#34;https://www.youtube.com/watch?v=1q42YAksVeg&#34;&gt;Pillaging DVCS Repos for fun and profit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Toorcon 13 - &lt;a href=&#34;https://www.youtube.com/watch?v=qBWTkZqY8GI&#34;&gt;Pillaging DVCS Repos for fun and profit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JSConf US - &lt;a href=&#34;https://www.youtube.com/watch?v=uVIcK4UXKWs&#34;&gt;Writing an (in)secure webapp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Keeping it Realtime - &lt;a href=&#34;https://vimeo.com/42487947&#34;&gt;Old problems, new tools&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2010&#34;&gt;2010&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Djangocon - &lt;a href=&#34;https://pyvideo.org/djangocon-us-2010/djangocon-2010--pony-pwning.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Pony Pwning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Djangocon - &lt;a href=&#34;https://pyvideo.org/djangocon-us-2010/djangocon-2010--pony-pwning.html&#34;&gt;Pony Pwning&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;2009&#34;&gt;2009&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Toorcamp - Introduction to w3af&lt;/li&gt;
 &lt;/ul&gt;

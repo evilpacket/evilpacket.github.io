@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on EvilPacket</title>
@@ -6,10 +6,21 @@
     <description>Recent content in Posts on EvilPacket</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Sep 2019 16:27:22 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2019 22:27:58 -0800</lastBuildDate>
     
 	<atom:link href="http://blog.evilpacket.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>metasploit-framework Dev Environment setup issues</title>
+      <link>http://blog.evilpacket.net/2019/msf-dev-environment/</link>
+      <pubDate>Wed, 18 Dec 2019 22:27:58 -0800</pubDate>
+      
+      <guid>http://blog.evilpacket.net/2019/msf-dev-environment/</guid>
+      <description>While following the Setting Up a Metasploit Development Environment I ran into a few hiccups. Hopefully somebody else won&#39;t stumble if I write it down and share it.
+Error: ruby-build: definition not found: 2.6.2 I think originally I was on an ubuntu system but I also ran into this when developing from Kali Linux.
+apt-get remove ruby-build git clone https://github.com/rbenv/ruby-build.git cd ruby-build sudo ./install.sh rbev issues rbev wasn&#39;t installed on my system right either.</description>
+    </item>
     
     <item>
       <title>Leveraging Javascript Debuggers for compromise</title>
@@ -18,7 +29,8 @@
       
       <guid>http://blog.evilpacket.net/2019/leveraging-javascript-debuggers/</guid>
       <description>Summary I discovered that developers do leave remote JavaScript debuggers and headless browsers laying around on the internet leading to sensitive data exposure and an interesting remote position for an attacker.
-The rest of the story While learning how to actually use chrome devtools to remotely debug a Node.js application was working on I encountered an error when I tried to visit the debugger service with my web browser.</description>
+The rest of the story While learning how to actually use chrome devtools to remotely debug a Node.js application was working on I encountered an error when I tried to visit the debugger service with my web browser.
+While the Node.</description>
     </item>
     
   </channel>

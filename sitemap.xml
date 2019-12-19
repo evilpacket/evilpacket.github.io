@@ -4,7 +4,7 @@
     <url>
       <loc>http://blog.evilpacket.net/</loc>
       
-      <lastmod>2019-09-10T16:27:22-07:00</lastmod>
+      <lastmod>2019-12-18T22:27:58-08:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -16,9 +16,9 @@
     </url>
   
     <url>
-      <loc>http://blog.evilpacket.net/2019/leveraging-javascript-debuggers/</loc>
+      <loc>http://blog.evilpacket.net/2019/msf-dev-environment/</loc>
       
-      <lastmod>2019-09-10T16:27:22-07:00</lastmod>
+      <lastmod>2019-12-18T22:27:58-08:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -31,6 +31,20 @@
   
     <url>
       <loc>http://blog.evilpacket.net/posts/</loc>
+      
+      <lastmod>2019-12-18T22:27:58-08:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://blog.evilpacket.net/2019/leveraging-javascript-debuggers/</loc>
       
       <lastmod>2019-09-10T16:27:22-07:00</lastmod>
       

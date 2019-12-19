@@ -11,7 +11,7 @@
   
   
   
-  
+  <link rel="next" href="http://blog.evilpacket.net/2019/msf-dev-environment/" />
   <link rel="canonical" href="http://blog.evilpacket.net/2019/leveraging-javascript-debuggers/" />
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -37,7 +37,8 @@
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Leveraging Javascript Debuggers for compromise"/>
 <meta name="twitter:description" content="Summary I discovered that developers do leave remote JavaScript debuggers and headless browsers laying around on the internet leading to sensitive data exposure and an interesting remote position for an attacker.
-The rest of the story While learning how to actually use chrome devtools to remotely debug a Node.js application was working on I encountered an error when I tried to visit the debugger service with my web browser."/>
+The rest of the story While learning how to actually use chrome devtools to remotely debug a Node.js application was working on I encountered an error when I tried to visit the debugger service with my web browser.
+While the Node."/>
 
   <script type="application/ld+json">
 {
@@ -165,61 +166,46 @@ The rest of the story While learning how to actually use chrome devtools to remo
           
           
 
-          
-
-<h1 id="summary">Summary</h1>
-
+          <h1 id="summary">Summary</h1>
 <p>I discovered that developers do leave remote JavaScript debuggers and headless browsers laying around on the internet leading to sensitive data exposure and an interesting remote position for an attacker.</p>
-
 <h1 id="the-rest-of-the-story">The rest of the story</h1>
-
 <p>While learning how to actually use chrome devtools to remotely debug a Node.js application was working on I encountered an error when I tried to visit the debugger service with my web browser.</p>
-
-<p><img src="/images/2019/09/websocket-request.png" style="width:40%;"></p>
-
-<p>While the <a href="https://nodejs.org/de/docs/guides/debugging-getting-started/#exposing-the-debug-port-publicly-is-unsafe" rel="nofollow noreferrer" target="_blank">Node.js documentation</a> says &ldquo;exposing the debug port publicly is unsafe&rdquo; and by default it listens on localhost my brain wanted to know the answer to this question; <em>Do people just leave their debuggers hanging around on the internet</em></p>
-
+<!-- raw HTML omitted -->
+<p>While the <a href="https://nodejs.org/de/docs/guides/debugging-getting-started/#exposing-the-debug-port-publicly-is-unsafe">Node.js documentation</a> says &ldquo;exposing the debug port publicly is unsafe&rdquo; and by default it listens on localhost my brain wanted to know the answer to this question; <em>Do people just leave their debuggers hanging around on the internet</em></p>
 <p>The answer is <em>yes</em>.</p>
-
-<p>Because of the unique string that is output when making a basic HTTP request to the debugger service, we can use a service like <a href="https://www.shodan.io/" rel="nofollow noreferrer" target="_blank">shodan</a> or zoomeye to find potential targets. On a penetration test this would be something very interesting to keep an eye out for internally.</p>
-
-<p><a href="https://www.shodan.io/search?query=WebSockets+request+was+expected" rel="nofollow noreferrer" target="_blank">https://www.shodan.io/search?query=WebSockets+request+was+expected</a></p>
-
+<p>Because of the unique string that is output when making a basic HTTP request to the debugger service, we can use a service like <a href="https://www.shodan.io/">shodan</a> or zoomeye to find potential targets. On a penetration test this would be something very interesting to keep an eye out for internally.</p>
+<p><a href="https://www.shodan.io/search?query=WebSockets+request+was+expected">https://www.shodan.io/search?query=WebSockets+request+was+expected</a></p>
 <p>If you find one of these debuggers laying around not only do you get remote code execution, you also get source code, and secrets stored in the environment or the config. There is a lot of interesting and juicy information just laying around the Internet if you are willing to go look for it.</p>
-
-<h3 id="let-s-try-it-ourselves">Let&rsquo;s try it ourselves</h3>
-
+<h3 id="lets-try-it-ourselves">Let's try it ourselves</h3>
 <ol>
-<li><p>Once you have found your target open chrome and browse to <code>chrome://inspect/</code></p></li>
-
-<li><p>Click on the <code>Configure...</code> button</p></li>
-
-<li><p>Put in the ip/hostname and port for the remote target and click <code>Done</code>. Example <code>evilpacket.net:9229</code><br />
-<em>You should notice a new remote target appear in the list providing your the node.js version.</em></p></li>
-
-<li><p>Click <code>inspect</code> to open up the devtools window and connect to the remote host.</p></li>
-
-<li><p>Click <code>Console</code> in the menu bar at the top.</p></li>
-
-<li><p>Now things get interesting and I&rsquo;m not exactly sure why this happens (if somebody reading this knows please <a href="https://twitter.com/adam_baldwin" rel="nofollow noreferrer" target="_blank">tell me</a>), sometimes you get dropped into an alternative context (VM Context x). You will want to click the dropdown and select the <code>node</code> context. If you don&rsquo;t when you try and run some code you might end up with something like</p>
-
-<pre><code class="language-txt">Uncaught ReferenceError: process is not defined
-at &lt;anonymous&gt;:1:1
-</code></pre></li>
+<li>
+<p>Once you have found your target open chrome and browse to <code>chrome://inspect/</code></p>
+</li>
+<li>
+<p>Click on the <code>Configure...</code> button</p>
+</li>
+<li>
+<p>Put in the ip/hostname and port for the remote target and click <code>Done</code>. Example <code>evilpacket.net:9229</code><br>
+<em>You should notice a new remote target appear in the list providing your the node.js version.</em></p>
+</li>
+<li>
+<p>Click <code>inspect</code> to open up the devtools window and connect to the remote host.</p>
+</li>
+<li>
+<p>Click <code>Console</code> in the menu bar at the top.</p>
+</li>
+<li>
+<p>Now things get interesting and I'm not exactly sure why this happens (if somebody reading this knows please <a href="https://twitter.com/adam_baldwin">tell me</a>), sometimes you get dropped into an alternative context (VM Context x). You will want to click the dropdown and select the <code>node</code> context. If you don't when you try and run some code you might end up with something like</p>
+</li>
 </ol>
-
-<p><img src="/images/2019/09/node-context.png" style="width:40%;"></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Uncaught ReferenceError: process is not defined
+    at &lt;anonymous&gt;:1:1
+</code></pre></div><!-- raw HTML omitted -->
 <p>At this point you are free to run and execute code as you wish with whatever permissions the user has at whatever location this host is in the remote network.</p>
-
-<h1 id="but-wait-there-s-more">But wait, there&rsquo;s more.</h1>
-
+<h1 id="but-wait-theres-more">But wait, there's more.</h1>
 <p>More than just Node.js developers utilize Chrome dev tools. In fact a lot of developers use headless browsers for all kinds of testing.</p>
-
-<p>An<a href="https://www.shodan.io/search?query=Inspectable+WebContents" rel="nofollow noreferrer" target="_blank">interesting search</a> to do to find these open resources is <code>Inspectable WebContents</code>.</p>
-
+<p>An<a href="https://www.shodan.io/search?query=Inspectable+WebContents">interesting search</a> to do to find these open resources is <code>Inspectable WebContents</code>.</p>
 <p>When you connect to one of these instances you basically get a browser inside a browser so you can access any active cookies or client side sensitive data that may be cached. Additionally you get to have a browser at that servers position in the newtork that may be able to access interesting internal services or metadata urls as pictured below.</p>
-
 <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/images/2019/09/aws-metadata.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
     </div>
@@ -294,15 +280,15 @@ at &lt;anonymous&gt;:1:1
     <div class="post-nav">
          
         
+        <a href="http://blog.evilpacket.net/2019/msf-dev-environment/" class="next" rel="next" title="metasploit-framework Dev Environment setup issues">metasploit-framework Dev Environment setup issues&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
     </div>
 
     <div class="post-comment">
           
           
-  
 
  
-
 
           
     </div>
@@ -335,7 +321,7 @@ at &lt;anonymous&gt;:1:1
 
 
     
-     <link href="//lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">  
+    <link crossorigin="anonymous" integrity="sha384-yziQACfvCVwLqVFLqkWBYRO3XeA4EqzfXKGwaWnenYn5XzqfJFlFdKEmvutIQdKb" href="https://lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">
       
      <script src="/js/vendor_gallery.min.js" async="" ></script>
     
