@@ -6,10 +6,21 @@
     <description>Recent content in Posts on EvilPacket</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Dec 2019 09:19:25 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jan 2020 17:34:01 -0800</lastBuildDate>
     
 	<atom:link href="http://blog.evilpacket.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Identify an O.MG Cable</title>
+      <link>http://blog.evilpacket.net/2020/identify-an-omg-cable/</link>
+      <pubDate>Mon, 06 Jan 2020 17:34:01 -0800</pubDate>
+      
+      <guid>http://blog.evilpacket.net/2020/identify-an-omg-cable/</guid>
+      <description>Today I got my hands on an O.MG cable. It is extremely well manufactured and to most it will be extremely stealthy.
+I thought it would be fun and educational to do a side by side comparison to create a reference for some minor visual differences to be able to detect one in the field. This comparison was done with what I believe to be official Apple cables.
+  Apple cables have more of a matte finish on the usb connector than the O.</description>
+    </item>
     
     <item>
       <title>Using Chrome Debugger Metasploit Gather Module</title>
