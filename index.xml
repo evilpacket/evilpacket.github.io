@@ -1,29 +1,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>EvilPacket on EvilPacket</title>
-    <link>http://blog.evilpacket.net/</link>
+    <link>http://evilpacket.net/</link>
     <description>Recent content in EvilPacket on EvilPacket</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Jan 2020 17:34:01 -0800</lastBuildDate>
-    <atom:link href="http://blog.evilpacket.net/" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://evilpacket.net/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Posts</title>
-      <link>http://blog.evilpacket.net/posts/</link>
-      <pubDate>Mon, 06 Jan 2020 17:34:01 -0800</pubDate>
+      <link>http://evilpacket.net/posts/</link>
+      <pubDate>Sun, 09 Feb 2020 10:00:13 -0800</pubDate>
       
-      <guid>http://blog.evilpacket.net/posts/</guid>
+      <guid>http://evilpacket.net/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>http://blog.evilpacket.net/projects/</link>
+      <link>http://evilpacket.net/projects/</link>
       <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.evilpacket.net/projects/</guid>
-      <description>&lt;p&gt;Historical archive of projects and tools I&#39;ve start that I&#39;m the slightest bit proud of.&lt;/p&gt;
+      <guid>http://evilpacket.net/projects/</guid>
+      <description>&lt;p&gt;Historical archive of projects and tools I&amp;rsquo;ve start that I&amp;rsquo;m the slightest bit proud of.&lt;/p&gt;
 &lt;h3 id=&#34;dvcs-pillage&#34;&gt;DVCS-Pillage&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/evilpacket/DVCS-Pillage&#34;&gt;https://github.com/evilpacket/DVCS-Pillage&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;xssio&#34;&gt;xss.io&lt;/h3&gt;
@@ -36,13 +36,14 @@
     
     <item>
       <title>About</title>
-      <link>http://blog.evilpacket.net/about/</link>
+      <link>http://evilpacket.net/about/</link>
       <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.evilpacket.net/about/</guid>
+      <guid>http://evilpacket.net/about/</guid>
       <description>&lt;h1 id=&#34;bio&#34;&gt;Bio&lt;/h1&gt;
-&lt;p&gt;Adam Baldwin is VP of Security at &lt;a href=&#34;https://npmjs.com&#34;&gt;npm Inc.&lt;/a&gt;, the company that powers the world’s JavaScript. An information security professional with over 24 years of experience, Adam has spent his career building companies, breaking into companies, managing teams, designing products, and talking about security non-stop.&lt;/p&gt;
-&lt;p&gt;Previously, Adam founded ^Lift Security, a successful application security and penetration testing service company, and the Node Security Platform, an initiative to track vulnerabilities in the JavaScript ecosystem. The project evolved into a SaaS platform at the forefront of the DevSecOps movement. Both were acquired by npm, Inc. in early 2018.&lt;/p&gt;
+&lt;p&gt;Adam Baldwin is a Senior Product Manager at &lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt;. A security focused professional with over 25 years of experience, Adam has spent his career building companies, breaking into companies, managing teams, designing products, and talking about security non-stop.&lt;/p&gt;
+&lt;p&gt;Previously Adam was VP of security at npm, acquired by GitHub in 2020.&lt;/p&gt;
+&lt;p&gt;Before that he founded ^Lift Security, a successful application security and penetration testing service company, and the Node Security Project, an initiative to track vulnerabilities and make security a core value in the JavaScript ecosystem. The project evolved into a SaaS platform at the forefront of the DevSecOps movement. Both were acquired by npm, Inc. in early 2018.&lt;/p&gt;
 &lt;h3 id=&#34;career-and-mentorship&#34;&gt;Career and Mentorship&lt;/h3&gt;
 &lt;p&gt;Read about the start of my career and why I think mentorship is so important. &lt;a href=&#34;https://medium.com/@adam_baldwin/my-story-about-mentorship-3f793df90db7&#34;&gt;https://medium.com/@adam_baldwin/my-story-about-mentorship-3f793df90db7&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;other-fun-facts&#34;&gt;Other Fun Facts&lt;/h3&gt;
@@ -54,11 +55,11 @@
     
     <item>
       <title>CVE / Vulnerabilities / Advisories</title>
-      <link>http://blog.evilpacket.net/vulns/</link>
+      <link>http://evilpacket.net/vulns/</link>
       <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.evilpacket.net/vulns/</guid>
-      <description>&lt;p&gt;Here are some vulnerabilities I&#39;ve found over the years. It is in no way a complete archive, but it&#39;s a pretty good list of 177 CVEs&lt;/p&gt;
+      <guid>http://evilpacket.net/vulns/</guid>
+      <description>&lt;p&gt;Here are some vulnerabilities I&amp;rsquo;ve found over the years. It is in no way a complete archive, but it&amp;rsquo;s a pretty good list of CVEs&lt;/p&gt;
 &lt;h2 id=&#34;2019&#34;&gt;2019&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14772&#34;&gt;CVE-2019-14772&lt;/a&gt; - verdaccio - Cross-Site Scripting&lt;/li&gt;
@@ -82,7 +83,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;2016&#34;&gt;2016&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Atom Editor - &lt;a href=&#34;https://medium.com/lift-security/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks-3404566ba788&#34;&gt;Misconfiguration allowed code execution on untrustd networks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Atom Editor - &lt;a href=&#34;https://medium.com/lift-security/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks-3404566ba788&#34;&gt;Misconfiguration allowed code execution on untrusted networks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2537&#34;&gt;CVE-2016-2537&lt;/a&gt; - is-my-json-valid - Regular Expression Denial of Service&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2515&#34;&gt;CVE-2016-2515&lt;/a&gt; - hawk - Regular Expression Denial of Service&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10520&#34;&gt;CVE-2016-10520&lt;/a&gt; - jadedown - Regular Expression Denial of Service&lt;/li&gt;
@@ -287,16 +288,17 @@
 &lt;h2 id=&#34;2005&#34;&gt;2005&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cvedetails.com/cve/CVE-2005-1204/&#34;&gt;CVE-2005-1204&lt;/a&gt; - Neslo Desktop Rover DoS&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://seclists.org/fulldisclosure/2005/Feb/1&#34;&gt;University of Phoenix - Outlook Express Unauthorized Configuration Manipulation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>Presentations and Podcasts</title>
-      <link>http://blog.evilpacket.net/presentations/</link>
+      <link>http://evilpacket.net/presentations/</link>
       <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.evilpacket.net/presentations/</guid>
+      <guid>http://evilpacket.net/presentations/</guid>
       <description>&lt;h1 id=&#34;2019&#34;&gt;2019&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;LocoMocoSec, &lt;a href=&#34;https://www.youtube.com/watch?v=HDo2iOlkbyc&#34;&gt;JavaScript Supply Chain Security&lt;/a&gt;&lt;/li&gt;

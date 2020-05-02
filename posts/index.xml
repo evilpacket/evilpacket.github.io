@@ -2,21 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on EvilPacket</title>
-    <link>http://blog.evilpacket.net/posts/</link>
+    <link>http://evilpacket.net/posts/</link>
     <description>Recent content in Posts on EvilPacket</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Jan 2020 17:34:01 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2020 10:00:13 -0800</lastBuildDate>
     
-	<atom:link href="http://blog.evilpacket.net/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://evilpacket.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>My Favorite Vulnerability: From ERROR to inter-protocol exploitation</title>
+      <link>http://evilpacket.net/2020/my-favorite-vuln/</link>
+      <pubDate>Sun, 09 Feb 2020 10:00:13 -0800</pubDate>
+      
+      <guid>http://evilpacket.net/2020/my-favorite-vuln/</guid>
+      <description>I&amp;rsquo;m excited to finally write up and share my favorite vulnerability I&amp;rsquo;ve ever found. It&amp;rsquo;s a story where all the right pieces fell into place to make it exploitable. The names, ports, and other details have been changed to protect the vulnerable even though this took place probably 6 years ago and I believe the devices are now sunsetted.
+So there I was testing this, ah, device. Let&amp;rsquo;s just go with that for now.</description>
+    </item>
+    
+    <item>
       <title>Identify an O.MG Cable</title>
-      <link>http://blog.evilpacket.net/2020/identify-an-omg-cable/</link>
+      <link>http://evilpacket.net/2020/identify-an-omg-cable/</link>
       <pubDate>Mon, 06 Jan 2020 17:34:01 -0800</pubDate>
       
-      <guid>http://blog.evilpacket.net/2020/identify-an-omg-cable/</guid>
+      <guid>http://evilpacket.net/2020/identify-an-omg-cable/</guid>
       <description>Today I got my hands on an O.MG cable. It is extremely well manufactured and to most it will be extremely stealthy.
 I thought it would be fun and educational to do a side by side comparison to create a reference for some minor visual differences to be able to detect one in the field. This comparison was done with what I believe to be official Apple cables.
   Apple cables have more of a matte finish on the usb connector than the O.</description>
@@ -24,32 +34,32 @@ I thought it would be fun and educational to do a side by side comparison to cre
     
     <item>
       <title>Using Chrome Debugger Metasploit Gather Module</title>
-      <link>http://blog.evilpacket.net/2019/using-chrome-debugger-msf-gather-module/</link>
+      <link>http://evilpacket.net/2019/using-chrome-debugger-msf-gather-module/</link>
       <pubDate>Thu, 19 Dec 2019 09:19:25 -0800</pubDate>
       
-      <guid>http://blog.evilpacket.net/2019/using-chrome-debugger-msf-gather-module/</guid>
-      <description>This last week Nick Starke got the chrome debugger metasploit module pushed over the line and merged into master. I figured I&#39;d write up a quick intro to the module and how it might be used should you happen to stumble across a chrome debugger laying around the network.
+      <guid>http://evilpacket.net/2019/using-chrome-debugger-msf-gather-module/</guid>
+      <description>This last week Nick Starke got the chrome debugger metasploit module pushed over the line and merged into master. I figured I&amp;rsquo;d write up a quick intro to the module and how it might be used should you happen to stumble across a chrome debugger laying around the network.
 Local environment If you want to startup chrome and test this yourself you can run chrome in a similar fashion.
 /Applications/Google\ Chrome.</description>
     </item>
     
     <item>
       <title>metasploit-framework Dev Environment setup issues</title>
-      <link>http://blog.evilpacket.net/2019/msf-dev-environment/</link>
+      <link>http://evilpacket.net/2019/msf-dev-environment/</link>
       <pubDate>Wed, 18 Dec 2019 22:27:58 -0800</pubDate>
       
-      <guid>http://blog.evilpacket.net/2019/msf-dev-environment/</guid>
-      <description>While following the Setting Up a Metasploit Development Environment I ran into a few hiccups. Hopefully somebody else won&#39;t stumble if I write it down and share it.
+      <guid>http://evilpacket.net/2019/msf-dev-environment/</guid>
+      <description>While following the Setting Up a Metasploit Development Environment I ran into a few hiccups. Hopefully somebody else won&amp;rsquo;t stumble if I write it down and share it.
 Error: ruby-build: definition not found: 2.6.2 I think originally I was on an ubuntu system but I also ran into this when developing from Kali Linux.
-apt-get remove ruby-build git clone https://github.com/rbenv/ruby-build.git cd ruby-build sudo ./install.sh rbev issues rbev wasn&#39;t installed on my system right either.</description>
+apt-get remove ruby-build git clone https://github.com/rbenv/ruby-build.git cd ruby-build sudo ./install.sh rbev issues rbev wasn&amp;rsquo;t installed on my system right either.</description>
     </item>
     
     <item>
       <title>Leveraging Javascript Debuggers for compromise</title>
-      <link>http://blog.evilpacket.net/2019/leveraging-javascript-debuggers/</link>
+      <link>http://evilpacket.net/2019/leveraging-javascript-debuggers/</link>
       <pubDate>Tue, 10 Sep 2019 16:27:22 -0700</pubDate>
       
-      <guid>http://blog.evilpacket.net/2019/leveraging-javascript-debuggers/</guid>
+      <guid>http://evilpacket.net/2019/leveraging-javascript-debuggers/</guid>
       <description>Summary I discovered that developers do leave remote JavaScript debuggers and headless browsers laying around on the internet leading to sensitive data exposure and an interesting remote position for an attacker.
 The rest of the story While learning how to actually use chrome devtools to remotely debug a Node.js application was working on I encountered an error when I tried to visit the debugger service with my web browser.
 While the Node.</description>

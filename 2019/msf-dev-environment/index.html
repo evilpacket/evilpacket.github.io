@@ -10,9 +10,9 @@
   
   
   
-  <link rel="prev" href="http://blog.evilpacket.net/2019/leveraging-javascript-debuggers/" />
-  <link rel="next" href="http://blog.evilpacket.net/2019/using-chrome-debugger-msf-gather-module/" />
-  <link rel="canonical" href="http://blog.evilpacket.net/2019/msf-dev-environment/" />
+  <link rel="prev" href="http://evilpacket.net/2019/leveraging-javascript-debuggers/" />
+  <link rel="next" href="http://evilpacket.net/2019/using-chrome-debugger-msf-gather-module/" />
+  <link rel="canonical" href="http://evilpacket.net/2019/msf-dev-environment/" />
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -36,9 +36,9 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="metasploit-framework Dev Environment setup issues"/>
-<meta name="twitter:description" content="While following the Setting Up a Metasploit Development Environment I ran into a few hiccups. Hopefully somebody else won&#39;t stumble if I write it down and share it.
+<meta name="twitter:description" content="While following the Setting Up a Metasploit Development Environment I ran into a few hiccups. Hopefully somebody else won&rsquo;t stumble if I write it down and share it.
 Error: ruby-build: definition not found: 2.6.2 I think originally I was on an ubuntu system but I also ran into this when developing from Kali Linux.
-apt-get remove ruby-build git clone https://github.com/rbenv/ruby-build.git cd ruby-build sudo ./install.sh rbev issues rbev wasn&#39;t installed on my system right either."/>
+apt-get remove ruby-build git clone https://github.com/rbenv/ruby-build.git cd ruby-build sudo ./install.sh rbev issues rbev wasn&rsquo;t installed on my system right either."/>
 
   <script type="application/ld+json">
 {
@@ -47,18 +47,18 @@ apt-get remove ruby-build git clone https://github.com/rbenv/ruby-build.git cd r
   "headline": "metasploit-framework Dev Environment setup issues",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http:\/\/blog.evilpacket.net\/2019\/msf-dev-environment\/"
+    "@id": "http:\/\/evilpacket.net\/2019\/msf-dev-environment\/"
   },
   "image": {
     "@type": "ImageObject",
-    "url": "http:\/\/blog.evilpacket.net\/cover.png",
+    "url": "http:\/\/evilpacket.net\/cover.png",
     "width":  800 ,
     "height":  600 
   },
   "genre": "posts",
   
   "wordcount":  105 ,
-  "url": "http:\/\/blog.evilpacket.net\/2019\/msf-dev-environment\/",
+  "url": "http:\/\/evilpacket.net\/2019\/msf-dev-environment\/",
   "datePublished": "2019-12-18T22:27:58-08:00",
   "dateModified": "2019-12-18T22:27:58-08:00",
   
@@ -67,7 +67,7 @@ apt-get remove ruby-build git clone https://github.com/rbenv/ruby-build.git cd r
     "name": "Adam BValdwin",
     "logo": {
       "@type": "ImageObject",
-      "url": "http:\/\/blog.evilpacket.net\/logo.png",
+      "url": "http:\/\/evilpacket.net\/logo.png",
       "width":  127 ,
       "height":  40 
     }
@@ -90,7 +90,7 @@ apt-get remove ruby-build git clone https://github.com/rbenv/ruby-build.git cd r
         <nav class="navbar">
     <div class="container">
         <div class="navbar-header header-logo">
-        	<a href="http://blog.evilpacket.net/">EvilPacket</a>
+        	<a href="http://evilpacket.net/">EvilPacket</a>
         </div>
         <div class="menu navbar-right">
                 
@@ -110,7 +110,7 @@ apt-get remove ruby-build git clone https://github.com/rbenv/ruby-build.git cd r
 <nav class="navbar-mobile" id="nav-mobile" style="display: none">
      <div class="container">
         <div class="navbar-header">
-            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://blog.evilpacket.net/">EvilPacket</a></div>
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://evilpacket.net/">EvilPacket</a></div>
             <div class="menu-toggle">
                 <span></span><span></span><span></span>
             </div>
@@ -138,7 +138,7 @@ apt-get remove ruby-build git clone https://github.com/rbenv/ruby-build.git cd r
     <header class="post-header">
         <h1 class="post-title">metasploit-framework Dev Environment setup issues</h1>
         <div class="post-meta">
-            Written by <a href="http://blog.evilpacket.net/" rel="author">Adam Baldwin</a> with ♥ 
+            Written by <a href="http://evilpacket.net/" rel="author">Adam Baldwin</a> with ♥ 
                 <span class="post-time">
                     on <time datetime=2019-12-18 >18 December 2019</time>
                 </span>
@@ -164,7 +164,7 @@ apt-get remove ruby-build git clone https://github.com/rbenv/ruby-build.git cd r
           
           
 
-          <p>While following the Setting Up a <a href="https://github.com/rapid7/metasploit-framework/wiki/Setting-Up-a-Metasploit-Development-Environment">Metasploit Development Environment</a> I ran into a few hiccups. Hopefully somebody else won't stumble if I write it down and share it.</p>
+          <p>While following the Setting Up a <a href="https://github.com/rapid7/metasploit-framework/wiki/Setting-Up-a-Metasploit-Development-Environment">Metasploit Development Environment</a> I ran into a few hiccups. Hopefully somebody else won&rsquo;t stumble if I write it down and share it.</p>
 <h2 id="error-ruby-build-definition-not-found-262">Error: ruby-build: definition not found: 2.6.2</h2>
 <p>I think originally I was on an ubuntu system but I also ran into this when developing from Kali Linux.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get remove ruby-build
@@ -172,7 +172,7 @@ git clone https://github.com/rbenv/ruby-build.git
 cd ruby-build
 sudo ./install.sh
 </code></pre></div><h2 id="rbev-issues">rbev issues</h2>
-<p>rbev wasn't installed on my system right either. I had to follow the installation instructions from <a href="https://www.darkoperator.com/installing-metasploit-in-ubunt">https://www.darkoperator.com/installing-metasploit-in-ubunt</a></p>
+<p>rbev wasn&rsquo;t installed on my system right either. I had to follow the installation instructions from <a href="https://www.darkoperator.com/installing-metasploit-in-ubunt">https://www.darkoperator.com/installing-metasploit-in-ubunt</a></p>
 <h2 id="warning-the-running-version-of-bundler-1172-is-older-than-the-version-that-created-the-lockfile-1173">Warning: the running version of Bundler (1.17.2) is older than the version that created the lockfile (1.17.3).</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gem install bundler -v 1.17.3
 </code></pre></div>
@@ -197,13 +197,13 @@ sudo ./install.sh
                 <span>
 
       
-        <a href="//twitter.com/share?url=http%3a%2f%2fblog.evilpacket.net%2f2019%2fmsf-dev-environment%2f&amp;text=metasploit-framework%20Dev%20Environment%20setup%20issues&amp;via=adam_baldwin" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=http%3a%2f%2fevilpacket.net%2f2019%2fmsf-dev-environment%2f&amp;text=metasploit-framework%20Dev%20Environment%20setup%20issues&amp;via=adam_baldwin" target="_blank" title="Share on Twitter">
           <i class="iconfont icon-twitter"></i>
         </a>
         
       
       
-        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fblog.evilpacket.net%2f2019%2fmsf-dev-environment%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fevilpacket.net%2f2019%2fmsf-dev-environment%2f" target="_blank" title="Share on Facebook">
           <i class="iconfont icon-facebook"></i>
         </a>
         
@@ -211,7 +211,7 @@ sudo ./install.sh
       
       
       
-        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fblog.evilpacket.net%2f2019%2fmsf-dev-environment%2f&amp;title=metasploit-framework%20Dev%20Environment%20setup%20issues" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fevilpacket.net%2f2019%2fmsf-dev-environment%2f&amp;title=metasploit-framework%20Dev%20Environment%20setup%20issues" target="_blank" title="Share on LinkedIn">
           <i class="iconfont icon-linkedin"></i>
         </a>
         
@@ -241,16 +241,16 @@ sudo ./install.sh
         
         <section>
                 <a href="javascript:window.history.back();">Back</a></span> · 
-                <span><a href="http://blog.evilpacket.net/">Home</a></span>
+                <span><a href="http://evilpacket.net/">Home</a></span>
         </section>
     </div>
 
     <div class="post-nav">
         
-        <a href="http://blog.evilpacket.net/2019/leveraging-javascript-debuggers/" class="prev" rel="prev" title="Leveraging Javascript Debuggers for compromise"><i class="iconfont icon-dajiantou"></i>&nbsp;Leveraging Javascript Debuggers for compromise</a>
+        <a href="http://evilpacket.net/2019/leveraging-javascript-debuggers/" class="prev" rel="prev" title="Leveraging Javascript Debuggers for compromise"><i class="iconfont icon-dajiantou"></i>&nbsp;Leveraging Javascript Debuggers for compromise</a>
          
         
-        <a href="http://blog.evilpacket.net/2019/using-chrome-debugger-msf-gather-module/" class="next" rel="next" title="Using Chrome Debugger Metasploit Gather Module">Using Chrome Debugger Metasploit Gather Module&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        <a href="http://evilpacket.net/2019/using-chrome-debugger-msf-gather-module/" class="next" rel="next" title="Using Chrome Debugger Metasploit Gather Module">Using Chrome Debugger Metasploit Gather Module&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
         
     </div>
 
@@ -272,7 +272,7 @@ sudo ./install.sh
         <span itemprop="copyrightYear">2019 - 2020</span>
         
          
-            <span class="author" itemprop="copyrightHolder"><a href="http://blog.evilpacket.net/">Adam Baldwin</a> | </span>
+            <span class="author" itemprop="copyrightHolder"><a href="http://evilpacket.net/">Adam Baldwin</a> | </span>
          
 
 		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>

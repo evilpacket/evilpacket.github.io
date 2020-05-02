@@ -11,8 +11,8 @@
   
   
   
-  <link rel="next" href="http://blog.evilpacket.net/2019/msf-dev-environment/" />
-  <link rel="canonical" href="http://blog.evilpacket.net/2019/leveraging-javascript-debuggers/" />
+  <link rel="next" href="http://evilpacket.net/2019/msf-dev-environment/" />
+  <link rel="canonical" href="http://evilpacket.net/2019/leveraging-javascript-debuggers/" />
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -47,18 +47,18 @@ While the Node."/>
   "headline": "Leveraging Javascript Debuggers for compromise",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http:\/\/blog.evilpacket.net\/2019\/leveraging-javascript-debuggers\/"
+    "@id": "http:\/\/evilpacket.net\/2019\/leveraging-javascript-debuggers\/"
   },
   "image": {
     "@type": "ImageObject",
-    "url": "http:\/\/blog.evilpacket.net\/cover.png",
+    "url": "http:\/\/evilpacket.net\/cover.png",
     "width":  800 ,
     "height":  600 
   },
   "genre": "posts",
   
   "wordcount":  489 ,
-  "url": "http:\/\/blog.evilpacket.net\/2019\/leveraging-javascript-debuggers\/",
+  "url": "http:\/\/evilpacket.net\/2019\/leveraging-javascript-debuggers\/",
   "datePublished": "2019-09-10T16:27:22-07:00",
   "dateModified": "2019-09-10T16:27:22-07:00",
   
@@ -67,7 +67,7 @@ While the Node."/>
     "name": "Adam BValdwin",
     "logo": {
       "@type": "ImageObject",
-      "url": "http:\/\/blog.evilpacket.net\/logo.png",
+      "url": "http:\/\/evilpacket.net\/logo.png",
       "width":  127 ,
       "height":  40 
     }
@@ -90,7 +90,7 @@ While the Node."/>
         <nav class="navbar">
     <div class="container">
         <div class="navbar-header header-logo">
-        	<a href="http://blog.evilpacket.net/">EvilPacket</a>
+        	<a href="http://evilpacket.net/">EvilPacket</a>
         </div>
         <div class="menu navbar-right">
                 
@@ -110,7 +110,7 @@ While the Node."/>
 <nav class="navbar-mobile" id="nav-mobile" style="display: none">
      <div class="container">
         <div class="navbar-header">
-            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://blog.evilpacket.net/">EvilPacket</a></div>
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://evilpacket.net/">EvilPacket</a></div>
             <div class="menu-toggle">
                 <span></span><span></span><span></span>
             </div>
@@ -138,7 +138,7 @@ While the Node."/>
     <header class="post-header">
         <h1 class="post-title">Leveraging Javascript Debuggers for compromise</h1>
         <div class="post-meta">
-            Written by <a href="http://blog.evilpacket.net/" rel="author">Adam Baldwin</a> with ♥ 
+            Written by <a href="http://evilpacket.net/" rel="author">Adam Baldwin</a> with ♥ 
                 <span class="post-time">
                     on <time datetime=2019-09-10 >10 September 2019</time>
                 </span>
@@ -176,7 +176,7 @@ While the Node."/>
 <p>Because of the unique string that is output when making a basic HTTP request to the debugger service, we can use a service like <a href="https://www.shodan.io/">shodan</a> or zoomeye to find potential targets. On a penetration test this would be something very interesting to keep an eye out for internally.</p>
 <p><a href="https://www.shodan.io/search?query=WebSockets+request+was+expected">https://www.shodan.io/search?query=WebSockets+request+was+expected</a></p>
 <p>If you find one of these debuggers laying around not only do you get remote code execution, you also get source code, and secrets stored in the environment or the config. There is a lot of interesting and juicy information just laying around the Internet if you are willing to go look for it.</p>
-<h3 id="lets-try-it-ourselves">Let's try it ourselves</h3>
+<h3 id="lets-try-it-ourselves">Let&rsquo;s try it ourselves</h3>
 <ol>
 <li>
 <p>Once you have found your target open chrome and browse to <code>chrome://inspect/</code></p>
@@ -195,14 +195,14 @@ While the Node."/>
 <p>Click <code>Console</code> in the menu bar at the top.</p>
 </li>
 <li>
-<p>Now things get interesting and I'm not exactly sure why this happens (if somebody reading this knows please <a href="https://twitter.com/adam_baldwin">tell me</a>), sometimes you get dropped into an alternative context (VM Context x). You will want to click the dropdown and select the <code>node</code> context. If you don't when you try and run some code you might end up with something like</p>
+<p>Now things get interesting and I&rsquo;m not exactly sure why this happens (if somebody reading this knows please <a href="https://twitter.com/adam_baldwin">tell me</a>), sometimes you get dropped into an alternative context (VM Context x). You will want to click the dropdown and select the <code>node</code> context. If you don&rsquo;t when you try and run some code you might end up with something like</p>
 </li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Uncaught ReferenceError: process is not defined
     at &lt;anonymous&gt;:1:1
 </code></pre></div><!-- raw HTML omitted -->
 <p>At this point you are free to run and execute code as you wish with whatever permissions the user has at whatever location this host is in the remote network.</p>
-<h1 id="but-wait-theres-more">But wait, there's more.</h1>
+<h1 id="but-wait-theres-more">But wait, there&rsquo;s more.</h1>
 <p>More than just Node.js developers utilize Chrome dev tools. In fact a lot of developers use headless browsers for all kinds of testing.</p>
 <p>An<a href="https://www.shodan.io/search?query=Inspectable+WebContents">interesting search</a> to do to find these open resources is <code>Inspectable WebContents</code>.</p>
 <p>When you connect to one of these instances you basically get a browser inside a browser so you can access any active cookies or client side sensitive data that may be cached. Additionally you get to have a browser at that servers position in the newtork that may be able to access interesting internal services or metadata urls as pictured below.</p>
@@ -229,13 +229,13 @@ While the Node."/>
                 <span>
 
       
-        <a href="//twitter.com/share?url=http%3a%2f%2fblog.evilpacket.net%2f2019%2fleveraging-javascript-debuggers%2f&amp;text=Leveraging%20Javascript%20Debuggers%20for%20compromise&amp;via=adam_baldwin" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=http%3a%2f%2fevilpacket.net%2f2019%2fleveraging-javascript-debuggers%2f&amp;text=Leveraging%20Javascript%20Debuggers%20for%20compromise&amp;via=adam_baldwin" target="_blank" title="Share on Twitter">
           <i class="iconfont icon-twitter"></i>
         </a>
         
       
       
-        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fblog.evilpacket.net%2f2019%2fleveraging-javascript-debuggers%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fevilpacket.net%2f2019%2fleveraging-javascript-debuggers%2f" target="_blank" title="Share on Facebook">
           <i class="iconfont icon-facebook"></i>
         </a>
         
@@ -243,7 +243,7 @@ While the Node."/>
       
       
       
-        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fblog.evilpacket.net%2f2019%2fleveraging-javascript-debuggers%2f&amp;title=Leveraging%20Javascript%20Debuggers%20for%20compromise" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fevilpacket.net%2f2019%2fleveraging-javascript-debuggers%2f&amp;title=Leveraging%20Javascript%20Debuggers%20for%20compromise" target="_blank" title="Share on LinkedIn">
           <i class="iconfont icon-linkedin"></i>
         </a>
         
@@ -273,14 +273,14 @@ While the Node."/>
         
         <section>
                 <a href="javascript:window.history.back();">Back</a></span> · 
-                <span><a href="http://blog.evilpacket.net/">Home</a></span>
+                <span><a href="http://evilpacket.net/">Home</a></span>
         </section>
     </div>
 
     <div class="post-nav">
          
         
-        <a href="http://blog.evilpacket.net/2019/msf-dev-environment/" class="next" rel="next" title="metasploit-framework Dev Environment setup issues">metasploit-framework Dev Environment setup issues&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        <a href="http://evilpacket.net/2019/msf-dev-environment/" class="next" rel="next" title="metasploit-framework Dev Environment setup issues">metasploit-framework Dev Environment setup issues&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
         
     </div>
 
@@ -302,7 +302,7 @@ While the Node."/>
         <span itemprop="copyrightYear">2019 - 2020</span>
         
          
-            <span class="author" itemprop="copyrightHolder"><a href="http://blog.evilpacket.net/">Adam Baldwin</a> | </span>
+            <span class="author" itemprop="copyrightHolder"><a href="http://evilpacket.net/">Adam Baldwin</a> | </span>
          
 
 		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
