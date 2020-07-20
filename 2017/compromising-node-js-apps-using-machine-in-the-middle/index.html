@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="http://evilpacket.net/2016/pillaging-distributed-version-control-5-years-later/" />
+  <link rel="next" href="http://evilpacket.net/2017/in-memory-backdoor-for-node-js-express-apps/" />
+  <link rel="canonical" href="http://evilpacket.net/2017/compromising-node-js-apps-using-machine-in-the-middle/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Compromising Node.js apps using Machine-in-the-Middle | EvilPacket
+       
+  </title>
+  <meta name="title" content="Compromising Node.js apps using Machine-in-the-Middle | EvilPacket">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Compromising Node.js apps using Machine-in-the-Middle"/>
+<meta name="twitter:description" content="Just before the New Years I published 140&#43; advisories on Node.js modules. I’ve been researching ways to compromise developers &amp; node.js applications without compromising the npm registry or their CDN.
+To start, I looked for modules with install hooks that downloaded and executed or used resources from the internet over HTTP, an insecure medium that’s susceptible to interception and manipulation, also known as a machine-in-the-middle attack.
+What is Machine-In-The-Middle (MITM)?"/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Compromising Node.js apps using Machine-in-the-Middle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http:\/\/evilpacket.net\/2017\/compromising-node-js-apps-using-machine-in-the-middle\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http:\/\/evilpacket.net\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  511 ,
+  "url": "http:\/\/evilpacket.net\/2017\/compromising-node-js-apps-using-machine-in-the-middle\/",
+  "datePublished": "2017-01-11T16:31:08-08:00",
+  "dateModified": "2017-01-11T16:31:08-08:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Adam BValdwin",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http:\/\/evilpacket.net\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Adam Baldwin"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="http://evilpacket.net/">EvilPacket</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/presentations" title="">Presentations</a>
+                
+                <a class="menu-item" href="/vulns" title="">Vulnerabilities</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://evilpacket.net/">EvilPacket</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/presentations" title="">Presentations</a>
+                
+                <a class="menu-item" href="/vulns" title="">Vulnerabilities</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">Compromising Node.js apps using Machine-in-the-Middle</h1>
+        <div class="post-meta">
+            Written by <a href="http://evilpacket.net/" rel="author">Adam Baldwin</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2017-01-11 >11 January 2017</time>
+                </span>
+                in
+                
+                <i class="iconfont icon-timer"></i>
+                3 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Just before the New Years I published 140+ advisories on Node.js modules. I’ve been researching ways to compromise developers &amp; node.js applications without compromising the npm registry or their CDN.</p>
+<p>To start, I looked for modules with install hooks that downloaded and executed or used resources from the internet over HTTP, an insecure medium that’s susceptible to interception and manipulation, also known as a machine-in-the-middle attack.</p>
+<p><strong>What is Machine-In-The-Middle (MITM)?</strong></p>
+<p>Machine-in-the-Middle is a type of attack in which the attacker is able to put themselves between two parties and intercept and influence the traffic between the two parties.</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/images/2017/01/normaltraffic.png" alt="Normal Traffic Flow" class="lazyload"><figcaption class="image-caption">Normal Traffic Flow</figcaption></figure><em>Normal Traffic Flow</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/images/2017/01/mitm.png" alt="Machine-in-the-Middle" class="lazyload"><figcaption class="image-caption">Machine-in-the-Middle</figcaption></figure><em>Machine-in-the-Middle</em></p>
+<p>This attack can affect the confidentiality, integrity, and availability of data you or your application is expecting. Explaining how an attacker might actually gain this kind of position in a network and exploit the flaw is beyond the scope of this post, but know that the only pre-requisite is that they are either on the same local network as you, or positioned somewhere upstream. A common scenario for an attack like this to be exploited would be working from a public network, like a coffee shop or library.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/d8N6oQ1OpG4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>The example video above shows using bettercap to manipulate the files chromedriver is downloading during install. The end of the video shows the exploit running on a yarn install, to demonstrate that it is not isolated to npm.</p>
+<p><strong>What to do as a module author?</strong></p>
+<p>As a module author or maintainer you want to always make sure that when you download resources from the Internet you do so over HTTPS and you don’t allow for invalid certs to be ignored.</p>
+<p>Additionally you will want to use a hashing function like sha256 to verify that the content you downloaded is what you expected (i.e. the hash matches).</p>
+<p>You will also want to be sure to host the hashes over HTTPS as well, and preferably on another host in the event that the host serving the file is compromised.</p>
+<p>For example, the hashes for npm packages are downloaded via the package json data from the npm <a href="https://registry.npmjs.org">registry</a>, but the tarball comes down from their CDN.</p>
+<p>Don’t take a URL you have configured at face value. I’ve run into at least one instance where tarballs and hashes were downloaded from a https:// URL but the URL redirected to an insecure http:// endpoint completely compromising the download and hash verification process. For this reason, you should always attempt to download the file from the configured URL first and verify that it doesn’t pass through any insecure redirects. Once a request passes through an unencrypted connection, the entirety of the rest of the request sequence cannot be trusted.</p>
+<p><strong>Module user?</strong></p>
+<p>If you are a module consumer, ultimately you need to be proactive in making sure that your applications aren’t vulnerable to exploits like this. When 140+ vulnerabilities were released in a single day, and it only takes one exploit to compromise your app, manually ensuring modules are updated in a timely manner is a lot of work and risk to take on.</p>
+<p>Originally posted <a href="https://medium.com/lift-security/compromising-node-js-apps-using-man-in-the-middle-d27b766dc5bc">on Medium</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Adam Baldwin </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>511</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=http%3a%2f%2fevilpacket.net%2f2017%2fcompromising-node-js-apps-using-machine-in-the-middle%2f&amp;text=Compromising%20Node.js%20apps%20using%20Machine-in-the-Middle&amp;via=adam_baldwin" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fevilpacket.net%2f2017%2fcompromising-node-js-apps-using-machine-in-the-middle%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fevilpacket.net%2f2017%2fcompromising-node-js-apps-using-machine-in-the-middle%2f&amp;title=Compromising%20Node.js%20apps%20using%20Machine-in-the-Middle" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+
+          
+</span>
+                
+            </p>
+
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="http://evilpacket.net/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://evilpacket.net/2016/pillaging-distributed-version-control-5-years-later/" class="prev" rel="prev" title="Pillaging Distributed Version Control 5 Years Later"><i class="iconfont icon-dajiantou"></i>&nbsp;Pillaging Distributed Version Control 5 Years Later</a>
+         
+        
+        <a href="http://evilpacket.net/2017/in-memory-backdoor-for-node-js-express-apps/" class="next" rel="next" title="In Memory Backdoor for Node.js Express Apps">In Memory Backdoor for Node.js Express Apps&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          
+
+ 
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://evilpacket.net/">Adam Baldwin</a> | </span>
+         
+
+		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <link crossorigin="anonymous" integrity="sha384-yziQACfvCVwLqVFLqkWBYRO3XeA4EqzfXKGwaWnenYn5XzqfJFlFdKEmvutIQdKb" href="https://lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

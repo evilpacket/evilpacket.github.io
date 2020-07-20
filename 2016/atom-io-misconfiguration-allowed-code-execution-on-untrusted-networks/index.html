@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="http://evilpacket.net/2016/regular-expression-denial-of-service-affecting-express-js/" />
+  <link rel="next" href="http://evilpacket.net/2016/what-are-the-bots-up-to-on-npm/" />
+  <link rel="canonical" href="http://evilpacket.net/2016/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Atom.io Misconfiguration Allowed Code Execution on Untrusted Networks | EvilPacket
+       
+  </title>
+  <meta name="title" content="Atom.io Misconfiguration Allowed Code Execution on Untrusted Networks | EvilPacket">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Atom.io Misconfiguration Allowed Code Execution on Untrusted Networks"/>
+<meta name="twitter:description" content="Developers have increasingly become a more valuable target to compromise in recent years. The DevOps movement means they have more access to production, not to mention the plethora of source code and keys that you are likely to find.
+This post is going to show you how a production configuration mistake on the atom.io domain that put users of the Atom editor at risk.
+Note this issue is now fixed thanks to the GitHub Security team."/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Atom.io Misconfiguration Allowed Code Execution on Untrusted Networks",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http:\/\/evilpacket.net\/2016\/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http:\/\/evilpacket.net\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  608 ,
+  "url": "http:\/\/evilpacket.net\/2016\/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks\/",
+  "datePublished": "2016-10-30T09:16:51-07:00",
+  "dateModified": "2016-10-30T09:16:51-07:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Adam BValdwin",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http:\/\/evilpacket.net\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Adam Baldwin"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="http://evilpacket.net/">EvilPacket</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/presentations" title="">Presentations</a>
+                
+                <a class="menu-item" href="/vulns" title="">Vulnerabilities</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://evilpacket.net/">EvilPacket</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/presentations" title="">Presentations</a>
+                
+                <a class="menu-item" href="/vulns" title="">Vulnerabilities</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">Atom.io Misconfiguration Allowed Code Execution on Untrusted Networks</h1>
+        <div class="post-meta">
+            Written by <a href="http://evilpacket.net/" rel="author">Adam Baldwin</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2016-10-30 >30 October 2016</time>
+                </span>
+                in
+                
+                <i class="iconfont icon-timer"></i>
+                3 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/images/2016/10/atom_header.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure>
+Developers have increasingly become a more valuable target to compromise in recent years. The DevOps movement means they have more access to production, not to mention the plethora of source code and keys that you are likely to find.</p>
+<p>This post is going to show you how a production configuration mistake on the atom.io domain that put users of the Atom editor at risk.</p>
+<p><em>Note this issue is now fixed thanks to the GitHub Security team.</em></p>
+<h3 id="background">Background</h3>
+<p>Atom&rsquo;s package manager apm uses npm to fulfill it&rsquo;s dependencies and for native modules this means using node-gyp when code needs to be compiled.</p>
+<p>As part of the compilation step for native modules, node-gyp downloads a tarball for headers from a specified dist-url and a list of SHASUMS for integrity verification.</p>
+<p>These urls are configured with a flag, something like this</p>
+<p><code>node-gyp rebuild --dist-url=https://atom.io/download/atom-shell</code></p>
+<p>This is where the subtle bug gets introduced. When auditing the source someone might look at this, confirm that HTTPS is being used and move on. They might even go a step further and curl the url and verify that it is in fact using HTTPS and you would be correct that it is.</p>
+<p><em>However….</em></p>
+<p>The dist-url and SHASUM url&rsquo;s that are derived by node-gyp are forwarded to an S3 bucket over HTTP by the atom.io web service.</p>
+<p>For example:
+When hxxps://atom.io/download/atom-shell/v0.30.6/node-v0.30.6.tar.gz is requested a <em>302</em> is returned with a redirect location of hxxp://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist/v0.30.6/node-v0.30.6.tar.gz</p>
+<p>The same goes for the SHASUM url</p>
+<p>hxxps://atom.io/download/atom-shell/v0.30.6/SHASUMS256.txt redirects to hxxp://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist/v0.30.6/SHASUMS256.txt</p>
+<p><em>So what?</em></p>
+<p>That means if we can get between the developer and atom.io we can control the content returned for the dist tarball and the SHASUM file.</p>
+<p>But before getting that far I had to figure out how to backdoor the dist tarball so that I could have code execution. Knowing nothing about how node-gyp works, and finding it to be a rats nest of gibberish this took a while. I&rsquo;m sure there are other ways as well, such as causing a backdoor to be compiled into the final library. I went with what I felt was a simpler route, as attackers tend to do.</p>
+<h3 id="the-exploit">The Exploit</h3>
+<p>What I found was that node-gyp loads a file namedcommon.gypi. This file provides ways to specify defaults and configuration for gyp. The proof of concept below includes a default target with an action to execute the say command, however this could be any command the attacker wants to run.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#39;target_name&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;sdf&#39;</span>,
+<span style="color:#e6db74">&#39;sources&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;src/asdf.h&#39;</span>],
+<span style="color:#e6db74">&#39;actions&#39;</span><span style="color:#f92672">:</span> [{
+  <span style="color:#e6db74">&#39;action_name&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;hax&#39;</span>,
+  <span style="color:#e6db74">&#39;inputs&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;src/asdf.h&#39;</span>],
+  <span style="color:#e6db74">&#39;outputs&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;&lt;(PRODUCT_DIR)/asdf.out&#39;</span>],
+  <span style="color:#e6db74">&#39;action&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;/usr/bin/say&#39;</span>, <span style="color:#e6db74">&#39;ha ha ha ha ha ha powned&#39;</span>],
+}],
+</code></pre></div><p>Once I had reliable code execution during a node-gyp installation, I had to perform a MITM (machine in the middle) attack and swap out the tarball and the SHASUMS file.</p>
+<p>For this task I used <a href="https://www.bettercap.org/">Bettercap</a>, an extensible MITM framework with many already built plugins. Since what I had to do was a bit custom, I wrote a <a href="https://github.com/evilpacket/bettercap-modules">custom plugin</a> to replace more than one file on the fly.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/4iiZ1bXKYPM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h3 id="mitigating-factors"><strong>Mitigating Factors</strong></h3>
+<p>First of all, not all modules trigger this condition because there are plenty of modules that are not native modules.</p>
+<p>Secondly, node-gyp caches the dist content so if it&rsquo;s already on disk it won&rsquo;t be downloaded again.</p>
+<p><strong>Timeline Fun Facts</strong></p>
+<ul>
+<li>10.28.2016 — Vulnerability found</li>
+<li>10.29.2016 — Confirmed exploitability</li>
+<li>10.30.2016 — Notified atom.io via email</li>
+<li>10.31.2016 — Notified AtomEditor via twitter</li>
+<li>11.03.2016 — Submitted to GitHub bounty via hackerone.com</li>
+<li>11.03.2016 — Received bug confirmation</li>
+<li>11.05.2016 — Verified fix was in place</li>
+<li>11.07.2016 — GithHub Security resolved the issue &amp; issued a bounty</li>
+</ul>
+<p>Big thanks to the GitHub Security team for their quick response and good communication with the reported issue.</p>
+<p>Originally posted <a href="https://medium.com/lift-security/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks-3404566ba788">on Medium</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Adam Baldwin </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>608</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=http%3a%2f%2fevilpacket.net%2f2016%2fatom-io-misconfiguration-allowed-code-execution-on-untrusted-networks%2f&amp;text=Atom.io%20Misconfiguration%20Allowed%20Code%20Execution%20on%20Untrusted%20Networks&amp;via=adam_baldwin" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fevilpacket.net%2f2016%2fatom-io-misconfiguration-allowed-code-execution-on-untrusted-networks%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fevilpacket.net%2f2016%2fatom-io-misconfiguration-allowed-code-execution-on-untrusted-networks%2f&amp;title=Atom.io%20Misconfiguration%20Allowed%20Code%20Execution%20on%20Untrusted%20Networks" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+
+          
+</span>
+                
+            </p>
+
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="http://evilpacket.net/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://evilpacket.net/2016/regular-expression-denial-of-service-affecting-express-js/" class="prev" rel="prev" title="Regular Expression Denial of Service Affecting Express.js"><i class="iconfont icon-dajiantou"></i>&nbsp;Regular Expression Denial of Service Affecting Express.js</a>
+         
+        
+        <a href="http://evilpacket.net/2016/what-are-the-bots-up-to-on-npm/" class="next" rel="next" title="What Are the Bots Up to on npm?">What Are the Bots Up to on npm?&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+          
+
+ 
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://evilpacket.net/">Adam Baldwin</a> | </span>
+         
+
+		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <link crossorigin="anonymous" integrity="sha384-yziQACfvCVwLqVFLqkWBYRO3XeA4EqzfXKGwaWnenYn5XzqfJFlFdKEmvutIQdKb" href="https://lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>
