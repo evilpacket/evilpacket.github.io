@@ -286,7 +286,8 @@
 &lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0713&#34;&gt;CVE-2010-0713&lt;/a&gt; - Zenoss Multiple Admin CSRF&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2290&#34;&gt;CVE-2010-2290&lt;/a&gt; - McAfee UTM Firewall Reflected Cross-Site Scripting (XSS)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://cxsecurity.com/issue/WLB-2010080072&#34;&gt;Nagios XI users.php SQL Injection&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.exploit-db.com/exploits/13754&#34;&gt;JForum 2.1.8 findUser reflected XSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.exploit-db.com/exploits/34147&#34;&gt;JForum 2.1.8 findUser reflected XSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.exploit-db.com/exploits/13754&#34;&gt;JForum 2.1.8 bookmarks CSRF &amp;amp; XSS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;2009&#34;&gt;2009&lt;/h2&gt;
 &lt;ul&gt;
