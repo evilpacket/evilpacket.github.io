@@ -298,6 +298,12 @@
 &lt;li&gt;&lt;a href=&#34;https://cxsecurity.com/issue/WLB-2009040003&#34;&gt;Zabbix Multiple Frontend CSRF (RCE)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2361&#34;&gt;CVE-2009-2361&lt;/a&gt; - osTicket Admin Login Blind SQL Injection&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3427&#34;&gt;CVE-2009-3427&lt;/a&gt; - Ticket Subject Persistent XSS in Kayako SupportSuite&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://web.archive.org/web/20100623041246/http://ngenuity-is.com/advisories/2009/jan&#34;&gt;Open-Realty SQL Injection&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2008&#34;&gt;2008&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://web.archive.org/web/20100623041232/http://ngenuity-is.com/advisories/2008/dec&#34;&gt;Encompass Web PACS Forced Browsing Vulnerability&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://web.archive.org/web/20100623041232/http://ngenuity-is.com/advisories/2008/dec&#34;&gt;Open-Realty Multiple XSS Vulnerabilities&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;2006&#34;&gt;2006&lt;/h2&gt;
 &lt;ul&gt;
