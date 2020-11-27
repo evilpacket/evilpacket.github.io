@@ -6,7 +6,23 @@
     <description>Recent content in Posts on EvilPacket</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Feb 2020 10:00:13 -0800</lastBuildDate><atom:link href="http://evilpacket.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Nov 2020 08:04:37 -0800</lastBuildDate><atom:link href="http://evilpacket.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Headless Holiday Hack: Flag 1</title>
+      <link>http://evilpacket.net/2020/headless-holiday-hack-part-1/</link>
+      <pubDate>Fri, 27 Nov 2020 08:04:37 -0800</pubDate>
+      
+      <guid>http://evilpacket.net/2020/headless-holiday-hack-part-1/</guid>
+      <description>Last night I tossed up a quick CTF-esque challenge with a couple of flags defined.
+Let&amp;#39;s have some fun with a CTF challenge. I&amp;#39;ll post updates &amp;amp; solves here or something.
+IP:PORT 178.128.7.71:9222
+flag1: /home/browser/flag.txt
+???
+flag2: /root/flag.txt
+It&amp;#39;s one service on one box, don&amp;#39;t be dicks to the service provider / others or my account or it won&amp;#39;t be fun
+&amp;mdash; Adam Baldwin (@adam_baldwin) November 27, 2020  The host and service to attack is located at 178.</description>
+    </item>
+    
     <item>
       <title>My Favorite Vulnerability: From ERROR to inter-protocol exploitation</title>
       <link>http://evilpacket.net/2020/my-favorite-vuln/</link>

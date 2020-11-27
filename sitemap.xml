@@ -4,7 +4,7 @@
     <url>
       <loc>http://evilpacket.net/</loc>
       
-      <lastmod>2020-02-09T10:00:13-08:00</lastmod>
+      <lastmod>2020-11-27T08:04:37-08:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -16,9 +16,9 @@
     </url>
   
     <url>
-      <loc>http://evilpacket.net/2020/my-favorite-vuln/</loc>
+      <loc>http://evilpacket.net/2020/headless-holiday-hack-part-1/</loc>
       
-      <lastmod>2020-02-09T10:00:13-08:00</lastmod>
+      <lastmod>2020-11-27T08:04:37-08:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -31,6 +31,20 @@
   
     <url>
       <loc>http://evilpacket.net/posts/</loc>
+      
+      <lastmod>2020-11-27T08:04:37-08:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://evilpacket.net/2020/my-favorite-vuln/</loc>
       
       <lastmod>2020-02-09T10:00:13-08:00</lastmod>
       

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="http://evilpacket.net/2020/my-favorite-vuln/" />
+  
+  <link rel="canonical" href="http://evilpacket.net/2020/headless-holiday-hack-part-1/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Headless Holiday Hack: Flag 1 | EvilPacket
+       
+  </title>
+  <meta name="title" content="Headless Holiday Hack: Flag 1 | EvilPacket">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Headless Holiday Hack: Flag 1"/>
+<meta name="twitter:description" content="Last night I tossed up a quick CTF-esque challenge with a couple of flags defined.
+Let&#39;s have some fun with a CTF challenge. I&#39;ll post updates &amp; solves here or something.
+IP:PORT 178.128.7.71:9222
+flag1: /home/browser/flag.txt
+???
+flag2: /root/flag.txt
+It&#39;s one service on one box, don&#39;t be dicks to the service provider / others or my account or it won&#39;t be fun
+&mdash; Adam Baldwin (@adam_baldwin) November 27, 2020  The host and service to attack is located at 178."/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Headless Holiday Hack: Flag 1",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http:\/\/evilpacket.net\/2020\/headless-holiday-hack-part-1\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http:\/\/evilpacket.net\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  479 ,
+  "url": "http:\/\/evilpacket.net\/2020\/headless-holiday-hack-part-1\/",
+  "datePublished": "2020-11-27T08:04:37-08:00",
+  "dateModified": "2020-11-27T08:04:37-08:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Adam BValdwin",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http:\/\/evilpacket.net\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Adam Baldwin"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="http://evilpacket.net/">EvilPacket</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/presentations" title="">Presentations</a>
+                
+                <a class="menu-item" href="/vulns" title="">Vulnerabilities</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://evilpacket.net/">EvilPacket</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/presentations" title="">Presentations</a>
+                
+                <a class="menu-item" href="/vulns" title="">Vulnerabilities</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">Headless Holiday Hack: Flag 1</h1>
+        <div class="post-meta">
+            Written by <a href="http://evilpacket.net/" rel="author">Adam Baldwin</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2020-11-27 >27 November 2020</time>
+                </span>
+                in
+                
+                <i class="iconfont icon-timer"></i>
+                3 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Last night I tossed up a quick CTF-esque challenge with a couple of flags defined.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Let&#39;s have some fun with a CTF challenge. I&#39;ll post updates &amp; solves here or something.<br>IP:PORT 178.128.7.71:9222<br>flag1: /home/browser/flag.txt<br>???<br>flag2: /root/flag.txt<br><br>It&#39;s one service on one box, don&#39;t be dicks to the service provider / others or my account or it won&#39;t be fun</p>&mdash; Adam Baldwin (@adam_baldwin) <a href="https://twitter.com/adam_baldwin/status/1332198011535986697?ref_src=twsrc%5Etfw">November 27, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>The host and service to attack is located at 178.128.7.71:9222 and will be online until it&rsquo;s rooted or I get tired of watching it. Spoilers ahead.</p>
+<h2 id="discovery">Discovery</h2>
+<p>If you visit this in a browser you&rsquo;ll see &ldquo;Inspectable WebContents&rdquo;, in older versions or maybe this is because it&rsquo;s Chromium vs Chrome idk, you used to see &ldquo;WebSockets requests was expected&rdquo;</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cldup.com/vN5O6uQQRZ-3000x3000.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>Depending on how you went about discovery you should arrive at the conclusion that it&rsquo;s a remote headless debugger.</p>
+<p>If you want to run this locally and play around you can do something like the following.</p>
+<p><code>/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --remote-debugging-address=127.0.0.1 --headless</code></p>
+<p>There are a few ways we can interact with this. I prefer to setup the debugger as a remote.</p>
+<ol>
+<li>Navigate to <code>chrome://inspect</code></li>
+<li>Click &lsquo;Configure&hellip;&rsquo;</li>
+<li>Enter in the host:port of the remote debugger - 178.128.7.71:9222</li>
+<li>Click &lsquo;Done&rsquo;</li>
+</ol>
+<p>You should then see something like this.
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cldup.com/Z8FGis0gyY-3000x3000.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>The important piece here is for the first flag is &lsquo;Open tab with url&rsquo; -</p>
+<p>If we step back and think about what we have in front of us is just a web browser that&rsquo;s running on a remote host. We can tell it to go to any url tht we want and it will do that, type evilpacket.net and you&rsquo;re surfing evilpacket.net (lol surfing the web) but there are more than just http and https:// url schemas. The file:// schema will let us read from a local file, remember to keep your perspective as operating from the remote host, so we&rsquo;re reading files that the remote process can read.</p>
+<p>If you just click on the about:blank url and try and navigate to <code>file:////home/browser/flag.txt</code> it won&rsquo;t work because the : gets stripped. Using <code>window.location='file:////home/browser/flag.txt'</code> Might give an error <code>Not allowed to load local resource:</code></p>
+<p>But if we use the &lsquo;Open tab with url&rsquo; box mentioned above you can open a tab to that location and read the contents. Ooh and the contents might not be visible to you in the page on the debugger you might have to dig through the elements.</p>
+<p>A few handy tips</p>
+<p><code>http://178.128.7.71:9222/json</code> will show you all the tabs and their debugger endpoints. Sometimes when you find debuggers in the wild this blob will have internal IP addresses, just re-write them.</p>
+<p>If you don&rsquo;t have the <code>Open tab with url</code> inputbox, you can use <code>http://178.128.7.71:9222/json/new?file:////home/browser/flag.txt</code> to create a tab to be able to inspect.</p>
+<p>ok. I think that should leave everyone on the same page for part 2. Hints to follow on twitter.</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cldup.com/YwCfUy6l8T-1200x1200.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Adam Baldwin </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>479</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=http%3a%2f%2fevilpacket.net%2f2020%2fheadless-holiday-hack-part-1%2f&amp;text=Headless%20Holiday%20Hack%3a%20Flag%201&amp;via=adam_baldwin" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fevilpacket.net%2f2020%2fheadless-holiday-hack-part-1%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fevilpacket.net%2f2020%2fheadless-holiday-hack-part-1%2f&amp;title=Headless%20Holiday%20Hack%3a%20Flag%201" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+
+          
+</span>
+                
+            </p>
+
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="http://evilpacket.net/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://evilpacket.net/2020/my-favorite-vuln/" class="prev" rel="prev" title="My Favorite Vulnerability: From ERROR to inter-protocol exploitation"><i class="iconfont icon-dajiantou"></i>&nbsp;My Favorite Vulnerability: From ERROR to inter-protocol exploitation</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+          
+
+ 
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://evilpacket.net/">Adam Baldwin</a> | </span>
+         
+
+		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <link crossorigin="anonymous" integrity="sha384-yziQACfvCVwLqVFLqkWBYRO3XeA4EqzfXKGwaWnenYn5XzqfJFlFdKEmvutIQdKb" href="https://lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>
