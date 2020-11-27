@@ -62,7 +62,7 @@ It&#39;s one service on one box, don&#39;t be dicks to the service provider / ot
   },
   "genre": "posts",
   
-  "wordcount":  479 ,
+  "wordcount":  508 ,
   "url": "http:\/\/evilpacket.net\/2020\/headless-holiday-hack-part-1\/",
   "datePublished": "2020-11-27T08:04:37-08:00",
   "dateModified": "2020-11-27T08:04:37-08:00",
@@ -195,9 +195,17 @@ It&#39;s one service on one box, don&#39;t be dicks to the service provider / ot
 <p>If we step back and think about what we have in front of us is just a web browser that&rsquo;s running on a remote host. We can tell it to go to any url tht we want and it will do that, type evilpacket.net and you&rsquo;re surfing evilpacket.net (lol surfing the web) but there are more than just http and https:// url schemas. The file:// schema will let us read from a local file, remember to keep your perspective as operating from the remote host, so we&rsquo;re reading files that the remote process can read.</p>
 <p>If you just click on the about:blank url and try and navigate to <code>file:////home/browser/flag.txt</code> it won&rsquo;t work because the : gets stripped. Using <code>window.location='file:////home/browser/flag.txt'</code> Might give an error <code>Not allowed to load local resource:</code></p>
 <p>But if we use the &lsquo;Open tab with url&rsquo; box mentioned above you can open a tab to that location and read the contents. Ooh and the contents might not be visible to you in the page on the debugger you might have to dig through the elements.</p>
-<p>A few handy tips</p>
+<h2 id="a-few-handy-tips">A few handy tips</h2>
 <p><code>http://178.128.7.71:9222/json</code> will show you all the tabs and their debugger endpoints. Sometimes when you find debuggers in the wild this blob will have internal IP addresses, just re-write them.</p>
 <p>If you don&rsquo;t have the <code>Open tab with url</code> inputbox, you can use <code>http://178.128.7.71:9222/json/new?file:////home/browser/flag.txt</code> to create a tab to be able to inspect.</p>
+<h2 id="interesting-data">Interesting data</h2>
+<p>The first 3 people to bring me the flag were</p>
+<ol>
+<li>@jstash</li>
+<li>@cnelson</li>
+<li>@JF0LKINS</li>
+</ol>
+<p><a href="https://gist.github.com/evilpacket/6651547a3d3e39bef75eee35f321f25f">Here is a list</a> of the urls that various people have tried so far.</p>
 <p>ok. I think that should leave everyone on the same page for part 2. Hints to follow on twitter.</p>
 <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cldup.com/YwCfUy6l8T-1200x1200.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
@@ -213,7 +221,7 @@ It&#39;s one service on one box, don&#39;t be dicks to the service provider / ot
            
             <p class="copyright-item">
                     <span>Words:</span>
-                   <span>479</span>
+                   <span>508</span>
             </p>
             
             <p class="copyright-item">
