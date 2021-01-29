@@ -13,7 +13,7 @@
       <pubDate>Thu, 28 Jan 2021 17:35:34 -0800</pubDate>
       
       <guid>http://evilpacket.net/2021/attacking-oss-using-abandoned-resources/</guid>
-      <description>In December I discovered a supply chain vulnerability that impacted 7,341 public npm package versions, at least I thought I did. Turns out that earlier in October of 2020 Security Innovation published similar research dubbing the issue Repo Jacking. This initially took the wind out of my sails but after I thought about it rediscovery is pretty cool and I was able to expand upon it a bit by focusing on abandoned S3 buckets, Google Cloud Storage bucket, expired domain names, and finding and reporting a vulnerability in GitHub to make exploitation possible in some conditions.</description>
+      <description>In December I discovered a supply chain vulnerability that impacted 7,941 public npm package versions, at least I thought I did. Turns out that earlier in October of 2020 Security Innovation published similar research dubbing the issue Repo Jacking. This initially took the wind out of my sails but after I thought about it rediscovery is pretty cool and I was able to expand upon it a bit by focusing on abandoned S3 buckets, Google Cloud Storage bucket, expired domain names, and finding and reporting a vulnerability in GitHub to make exploitation possible in some conditions.</description>
     </item>
     
     <item>
