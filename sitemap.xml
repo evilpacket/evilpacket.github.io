@@ -2,9 +2,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>http://evilpacket.net/</loc>
+      <loc>http://evilpacket.net/2021/attacking-oss-using-abandoned-resources/</loc>
       
-      <lastmod>2020-11-27T08:04:37-08:00</lastmod>
+      <lastmod>2021-01-28T17:35:34-08:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -16,9 +16,9 @@
     </url>
   
     <url>
-      <loc>http://evilpacket.net/2020/headless-holiday-hack-part-1/</loc>
+      <loc>http://evilpacket.net/</loc>
       
-      <lastmod>2020-11-27T08:04:37-08:00</lastmod>
+      <lastmod>2021-01-28T17:35:34-08:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
@@ -31,6 +31,20 @@
   
     <url>
       <loc>http://evilpacket.net/posts/</loc>
+      
+      <lastmod>2021-01-28T17:35:34-08:00</lastmod>
+      
+      
+      <changefreq>monthly</changefreq>
+      
+      
+      <priority>0.5</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>http://evilpacket.net/2020/headless-holiday-hack-part-1/</loc>
       
       <lastmod>2020-11-27T08:04:37-08:00</lastmod>
       

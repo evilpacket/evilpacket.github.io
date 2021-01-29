@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="http://evilpacket.net/2020/headless-holiday-hack-part-1/" />
+  
+  <link rel="canonical" href="http://evilpacket.net/2021/attacking-oss-using-abandoned-resources/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Attacking OSS Using Abandoned Resources | EvilPacket
+       
+  </title>
+  <meta name="title" content="Attacking OSS Using Abandoned Resources | EvilPacket">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Attacking OSS Using Abandoned Resources"/>
+<meta name="twitter:description" content="In December I discovered a supply chain vulnerability that impacted 7,341 public npm package versions, at least I thought I did. Turns out that earlier in October of 2020 Security Innovation published similar research dubbing the issue Repo Jacking. This initially took the wind out of my sails but after I thought about it rediscovery is pretty cool and I was able to expand upon it a bit by focusing on abandoned S3 buckets, Google Cloud Storage bucket, expired domain names, and finding and reporting a vulnerability in GitHub to make exploitation possible in some conditions."/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Attacking OSS Using Abandoned Resources",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http:\/\/evilpacket.net\/2021\/attacking-oss-using-abandoned-resources\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http:\/\/evilpacket.net\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  
+  "wordcount":  883 ,
+  "url": "http:\/\/evilpacket.net\/2021\/attacking-oss-using-abandoned-resources\/",
+  "datePublished": "2021-01-28T17:35:34-08:00",
+  "dateModified": "2021-01-28T17:35:34-08:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Adam BValdwin",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http:\/\/evilpacket.net\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Adam Baldwin"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="http://evilpacket.net/">EvilPacket</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/presentations" title="">Presentations</a>
+                
+                <a class="menu-item" href="/vulns" title="">Vulnerabilities</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://evilpacket.net/">EvilPacket</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/presentations" title="">Presentations</a>
+                
+                <a class="menu-item" href="/vulns" title="">Vulnerabilities</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">Attacking OSS Using Abandoned Resources</h1>
+        <div class="post-meta">
+            Written by <a href="http://evilpacket.net/" rel="author">Adam Baldwin</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2021-01-28 >28 January 2021</time>
+                </span>
+                in
+                
+                <i class="iconfont icon-timer"></i>
+                5 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>In December I discovered a supply chain vulnerability that impacted 7,341 public npm package versions, at least I thought I did. Turns out that earlier in October of 2020 Security Innovation published similar research dubbing the issue <a href="https://blog.securityinnovation.com/repo-jacking-exploiting-the-dependency-supply-chain">Repo Jacking</a>. This initially took the wind out of my sails but after I thought about it rediscovery is pretty cool and I was able to expand upon it a bit by focusing on abandoned S3 buckets, Google Cloud Storage bucket, expired domain names, and finding and reporting a vulnerability in GitHub to make exploitation possible in some conditions.</p>
+<p>If you want to see if your organization is potentially at risk, here is a <a href="https://evilpacket.net/files/vulnerable_package_versions.csv">list of package versions</a> that were found to be vulnerable. If you are using these particular package versions I would recommend not.</p>
+<p>While maintainers were notified by email a lot of those emails bounced. Please do not go screaming into the issues, email, or DMs of these package maintainers&hellip; and if you do reach out please be kind and respectful of their volunteer, unpaid, time. I encourage all security practitioners to get more involved in the open source communities they complain about (I too could do a better job here)&hellip; Anyway, on to the details!</p>
+<h2 id="details">Details</h2>
+<p>It’s typical for a Node.js based application to have many 3rd party dependencies. These npm packages can point to resources (the package) that are not hosted by the npm Registry. Typically these types of dependencies will be either a file or git repository that is available via HTTP/HTTPS or SSH.</p>
+<p>If the dependency reference (domain, storage bucket, GitHub account) becomes abandoned and made available for an attacker to claim then an attacker can now control this resource as part of the npm install process creating an exploitable situation.</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/images/2021/01/dep1.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<h3 id="attack-walk-through">Attack Walk Through</h3>
+<p>Let’s look at an example of how this might be exploited using a GitHub repository.</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/images/2021/01/dep2.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>The attacker registers the available GitHub username and creates a repository with the same name and the code they want to be their payload shaped like an npm package.</p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/images/2021/01/dep3.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p>When the app owner runs npm install npm will run a git clone on the referenced repository. Let’s say the dependency reference looks like:  <code>github:evilpacket/beep-boop#beta</code> It will clone <code>evilpacket/beep-boop</code>. Once the clone is complete npm will try to git checkout whatever comes after the #, in this case the <code>beta</code> branch or in the case of the lock file it will checkout a particular commit hash.</p>
+<h2 id="what-are-some-mitigating-circumstances">What are some mitigating circumstances</h2>
+<p>There are some npm features that can change how exploitable this is from situation to situation.</p>
+<p><strong>package-lock.json</strong></p>
+<p>package-lock.json can save you in <em>some</em> situations, especially for anything that directly references a file vs a repository (repos are a special). This is because it has the integrity hashes that aren&rsquo;t going to match when the attacker changes the payload.</p>
+<p>Also a package-lock.json won&rsquo;t help you on initial install or if package-lock.json isn&rsquo;t being used. You should be checking that file into all your projects and using npm ci for builds.</p>
+<p><strong>The local npm cache</strong></p>
+<p>If the object that is requested is in the cache, you’re going to get that object and not a public or attacker controlled object.</p>
+<p><strong>dev Dependencies</strong></p>
+<p>Another aspect that shapes exploitability here is if the vulnerable dependency is a dev (development) dependency or not. Dev dependencies aren&rsquo;t going to get installed with a typical npm install pkg but could still be useful in a targeted attack against a developer of one of those packages ( but who would want to do that 😈 )</p>
+<p><strong>GitHub branch names &amp; policies</strong></p>
+<p>GitHub (and others like gitlab) will block the creation of a branch name that is 40 hex characters (the same format as a commit hash) with an error like <code>remote: error: GH002: Sorry, branch or tag names consisting of 40 hex characters are not allowed.</code>, however I found a way around this security control so while I couldn’t forge a commit hash I could name a branch the same as the upstream commit hash and our payload would pass validation in the package-lock.json.</p>
+<p>This issue was reported to GitHub security ❤️.</p>
+<p>Additionally GitHub claims <code>“To prevent developers from pulling down potentially unsafe packages, we now retire the namespace of any open source project that had more than 100 clones in the week leading up to the owner’s account being renamed or deleted.”</code> That said I did not encounter any block when testing exploitation of this issue with older versions of the popular webpack-cli package, but it&rsquo;s likely all these packages fall just below the popularity watermark set by this control.</p>
+<h2 id="results-numbers-and-thats-it">Results, Numbers, and that&rsquo;s it.</h2>
+<p>While I’m never shocked to find vulnerable dependencies in the npm Registry I wasn’t expecting this many packages to be vulnerable.</p>
+<p>You can find the package list here: <a href="https://evilpacket.net/files/vulnerable_package_versions.csv">https://evilpacket.net/files/vulnerable_package_versions.csv</a></p>
+<p>Summary breakdown by resource type. As you can see the behavior of using GitHub repositories as dependencies and the forwarding behavior that GitHub allows creates a lot more vulnerability.</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>PKG Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Cloud Storage Buckets abandoned</td>
+<td>2</td>
+</tr>
+<tr>
+<td>AWS S3 Bucket abandoned</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Domain Name expired</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GitHub Repo (not found or redirect)</td>
+<td>743</td>
+</tr>
+</tbody>
+</table>
+<p>Welp, that&rsquo;s it. That&rsquo;s the end of the post. I&rsquo;m terrible at conclusions&hellip; ahhh maybe clap, it&rsquo;s like giving yourself a high five because you made it this far 🤘</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Adam Baldwin </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>883</span>
+            </p>
+            
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=http%3a%2f%2fevilpacket.net%2f2021%2fattacking-oss-using-abandoned-resources%2f&amp;text=Attacking%20OSS%20Using%20Abandoned%20Resources&amp;via=adam_baldwin" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fevilpacket.net%2f2021%2fattacking-oss-using-abandoned-resources%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fevilpacket.net%2f2021%2fattacking-oss-using-abandoned-resources%2f&amp;title=Attacking%20OSS%20Using%20Abandoned%20Resources" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+
+          
+</span>
+                
+            </p>
+
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="http://evilpacket.net/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://evilpacket.net/2020/headless-holiday-hack-part-1/" class="prev" rel="prev" title="Headless Holiday Hack: Flag 1"><i class="iconfont icon-dajiantou"></i>&nbsp;Headless Holiday Hack: Flag 1</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+          
+
+ 
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2021</span>
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://evilpacket.net/">Adam Baldwin</a> | </span>
+         
+
+		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <link crossorigin="anonymous" integrity="sha384-yziQACfvCVwLqVFLqkWBYRO3XeA4EqzfXKGwaWnenYn5XzqfJFlFdKEmvutIQdKb" href="https://lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+
+
+
+
+     </div>
+  </body>
+</html>
