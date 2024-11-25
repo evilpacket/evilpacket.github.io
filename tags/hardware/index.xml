@@ -1,10 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hardware on EvilPacket</title><link>/tags/hardware/</link><description>Recent content in Hardware on EvilPacket</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 06 Jan 2020 17:34:01 -0800</lastBuildDate><atom:link href="/tags/hardware/index.xml" rel="self" type="application/rss+xml"/><item><title>Identify an O.MG Cable</title><link>/blog/identify-an-omg-cable/</link><pubDate>Mon, 06 Jan 2020 17:34:01 -0800</pubDate><guid>/blog/identify-an-omg-cable/</guid><description>&lt;p>Today I got my hands on an &lt;a href="https://shop.hak5.org/products/o-mg-cable"
-
-
-
-
- target="_blank"
- 
-
-
->O.MG cable&lt;/a>. It is extremely well manufactured and to most it will be extremely stealthy.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hardware on EvilPacket</title>
+    <link>//localhost:1313/tags/hardware/</link>
+    <description>Recent content in Hardware on EvilPacket</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jan 2020 17:34:01 -0800</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Identify an O.MG Cable</title>
+      <link>//localhost:1313/blog/identify-an-omg-cable/</link>
+      <pubDate>Mon, 06 Jan 2020 17:34:01 -0800</pubDate>
+      <guid>//localhost:1313/blog/identify-an-omg-cable/</guid>
+      <description>&lt;p&gt;Today I got my hands on an &lt;a href=&#34;https://shop.hak5.org/products/o-mg-cable&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;O.MG cable&lt;/a&gt;. It is extremely well manufactured and to most it will be extremely stealthy.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

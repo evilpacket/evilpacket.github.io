@@ -1,1 +1,96 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on EvilPacket</title><link>/tags/</link><description>Recent content in Tags on EvilPacket</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 Jan 2021 17:35:34 -0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Security</title><link>/tags/security/</link><pubDate>Thu, 28 Jan 2021 17:35:34 -0800</pubDate><guid>/tags/security/</guid><description/></item><item><title>Ctf</title><link>/tags/ctf/</link><pubDate>Fri, 27 Nov 2020 08:04:37 -0800</pubDate><guid>/tags/ctf/</guid><description/></item><item><title>Research</title><link>/tags/research/</link><pubDate>Sun, 09 Feb 2020 10:00:13 -0800</pubDate><guid>/tags/research/</guid><description/></item><item><title>Hardware</title><link>/tags/hardware/</link><pubDate>Mon, 06 Jan 2020 17:34:01 -0800</pubDate><guid>/tags/hardware/</guid><description/></item><item><title>Dev</title><link>/tags/dev/</link><pubDate>Thu, 19 Dec 2019 09:19:25 -0800</pubDate><guid>/tags/dev/</guid><description/></item><item><title>Ost</title><link>/tags/ost/</link><pubDate>Thu, 19 Dec 2019 09:19:25 -0800</pubDate><guid>/tags/ost/</guid><description/></item><item><title>JavaScript</title><link>/tags/javascript/</link><pubDate>Tue, 10 Sep 2019 16:27:22 -0700</pubDate><guid>/tags/javascript/</guid><description/></item><item><title>Career</title><link>/tags/career/</link><pubDate>Tue, 20 Jun 2017 18:41:00 -0700</pubDate><guid>/tags/career/</guid><description/></item><item><title>Backdoor</title><link>/tags/backdoor/</link><pubDate>Thu, 02 Mar 2017 17:15:51 -0800</pubDate><guid>/tags/backdoor/</guid><description/></item><item><title>Npm</title><link>/tags/npm/</link><pubDate>Tue, 08 Nov 2016 15:59:14 -0700</pubDate><guid>/tags/npm/</guid><description/></item><item><title>Express</title><link>/tags/express/</link><pubDate>Fri, 29 Apr 2016 15:59:41 -0700</pubDate><guid>/tags/express/</guid><description/></item><item><title>Vulnerability</title><link>/tags/vulnerability/</link><pubDate>Fri, 29 Apr 2016 15:59:41 -0700</pubDate><guid>/tags/vulnerability/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on EvilPacket</title>
+    <link>//localhost:1313/tags/</link>
+    <description>Recent content in Tags on EvilPacket</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Jan 2021 17:35:34 -0800</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Security</title>
+      <link>//localhost:1313/tags/security/</link>
+      <pubDate>Thu, 28 Jan 2021 17:35:34 -0800</pubDate>
+      <guid>//localhost:1313/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ctf</title>
+      <link>//localhost:1313/tags/ctf/</link>
+      <pubDate>Fri, 27 Nov 2020 08:04:37 -0800</pubDate>
+      <guid>//localhost:1313/tags/ctf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>//localhost:1313/tags/research/</link>
+      <pubDate>Sun, 09 Feb 2020 10:00:13 -0800</pubDate>
+      <guid>//localhost:1313/tags/research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hardware</title>
+      <link>//localhost:1313/tags/hardware/</link>
+      <pubDate>Mon, 06 Jan 2020 17:34:01 -0800</pubDate>
+      <guid>//localhost:1313/tags/hardware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dev</title>
+      <link>//localhost:1313/tags/dev/</link>
+      <pubDate>Thu, 19 Dec 2019 09:19:25 -0800</pubDate>
+      <guid>//localhost:1313/tags/dev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ost</title>
+      <link>//localhost:1313/tags/ost/</link>
+      <pubDate>Thu, 19 Dec 2019 09:19:25 -0800</pubDate>
+      <guid>//localhost:1313/tags/ost/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>//localhost:1313/tags/javascript/</link>
+      <pubDate>Tue, 10 Sep 2019 16:27:22 -0700</pubDate>
+      <guid>//localhost:1313/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Career</title>
+      <link>//localhost:1313/tags/career/</link>
+      <pubDate>Tue, 20 Jun 2017 18:41:00 -0700</pubDate>
+      <guid>//localhost:1313/tags/career/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backdoor</title>
+      <link>//localhost:1313/tags/backdoor/</link>
+      <pubDate>Thu, 02 Mar 2017 17:15:51 -0800</pubDate>
+      <guid>//localhost:1313/tags/backdoor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Npm</title>
+      <link>//localhost:1313/tags/npm/</link>
+      <pubDate>Tue, 08 Nov 2016 15:59:14 -0700</pubDate>
+      <guid>//localhost:1313/tags/npm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Express</title>
+      <link>//localhost:1313/tags/express/</link>
+      <pubDate>Fri, 29 Apr 2016 15:59:41 -0700</pubDate>
+      <guid>//localhost:1313/tags/express/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vulnerability</title>
+      <link>//localhost:1313/tags/vulnerability/</link>
+      <pubDate>Fri, 29 Apr 2016 15:59:41 -0700</pubDate>
+      <guid>//localhost:1313/tags/vulnerability/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

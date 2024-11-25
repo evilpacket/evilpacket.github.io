@@ -1,3 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Application on EvilPacket</title><link>/categories/application/</link><description>Recent content in Application on EvilPacket</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 30 Oct 2016 09:16:51 -0700</lastBuildDate><atom:link href="/categories/application/index.xml" rel="self" type="application/rss+xml"/><item><title>Atom.io Misconfiguration Allowed Code Execution on Untrusted Networks</title><link>/blog/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks/</link><pubDate>Sun, 30 Oct 2016 09:16:51 -0700</pubDate><guid>/blog/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks/</guid><description>&lt;p>&lt;img src="/images/2016/10/atom_header.png">
-Developers have increasingly become a more valuable target to compromise in recent years. The DevOps movement means they have more access to production, not to mention the plethora of source code and keys that you are likely to find.&lt;/p></description></item><item><title>Brilliant Hire Exposure No Bounty</title><link>/blog/brilliant-hire-exposure-no-bounty/</link><pubDate>Sun, 30 Oct 2016 09:16:51 -0700</pubDate><guid>/blog/brilliant-hire-exposure-no-bounty/</guid><description>&lt;p>&lt;img src="/images/2019/11/debugger.png">&lt;/p>
-&lt;p>During security research a few years back, I discovered an exposure on SAP&amp;rsquo;s BrilliantHire API - an exposed Node.js debugger instance that provided full remote code execution capabilities and access to sensitive AWS credentials, database encryption keys, and production source code. The finding highlights how a simple misconfiguration can lead to complete system compromise.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Application on EvilPacket</title>
+    <link>//localhost:1313/categories/application/</link>
+    <description>Recent content in Application on EvilPacket</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Oct 2016 09:16:51 -0700</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/application/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Atom.io Misconfiguration Allowed Code Execution on Untrusted Networks</title>
+      <link>//localhost:1313/blog/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks/</link>
+      <pubDate>Sun, 30 Oct 2016 09:16:51 -0700</pubDate>
+      <guid>//localhost:1313/blog/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/2016/10/atom_header.png&#34;&gt;&#xA;Developers have increasingly become a more valuable target to compromise in recent years. The DevOps movement means they have more access to production, not to mention the plethora of source code and keys that you are likely to find.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Brilliant Hire Exposure No Bounty</title>
+      <link>//localhost:1313/blog/brilliant-hire-exposure-no-bounty/</link>
+      <pubDate>Sun, 30 Oct 2016 09:16:51 -0700</pubDate>
+      <guid>//localhost:1313/blog/brilliant-hire-exposure-no-bounty/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/2019/11/debugger.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;During security research a few years back, I discovered an exposure on SAP&amp;rsquo;s BrilliantHire API - an exposed Node.js debugger instance that provided full remote code execution capabilities and access to sensitive AWS credentials, database encryption keys, and production source code. The finding highlights how a simple misconfiguration can lead to complete system compromise.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

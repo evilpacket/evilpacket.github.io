@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Backdoor on EvilPacket</title><link>/tags/backdoor/</link><description>Recent content in Backdoor on EvilPacket</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 02 Mar 2017 17:15:51 -0800</lastBuildDate><atom:link href="/tags/backdoor/index.xml" rel="self" type="application/rss+xml"/><item><title>In Memory Backdoor for Node.js Express Apps</title><link>/blog/in-memory-backdoor-for-node-js-express-apps/</link><pubDate>Thu, 02 Mar 2017 17:15:51 -0800</pubDate><guid>/blog/in-memory-backdoor-for-node-js-express-apps/</guid><description>&lt;p>Earlier this week Zach Grace published an article on one way that you could backdoor a Node.js Express application without touching disk. This jogged my memory of something I posted in our team’s chat this last week but never wrote about; how I would in memory backdoor an express application. It’s a bit different than how Zach approached it so I thought it would be good to expand upon his post sharing the knowledge.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backdoor on EvilPacket</title>
+    <link>//localhost:1313/tags/backdoor/</link>
+    <description>Recent content in Backdoor on EvilPacket</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 17:15:51 -0800</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/backdoor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>In Memory Backdoor for Node.js Express Apps</title>
+      <link>//localhost:1313/blog/in-memory-backdoor-for-node-js-express-apps/</link>
+      <pubDate>Thu, 02 Mar 2017 17:15:51 -0800</pubDate>
+      <guid>//localhost:1313/blog/in-memory-backdoor-for-node-js-express-apps/</guid>
+      <description>&lt;p&gt;Earlier this week Zach Grace published an article on one way that you could backdoor a Node.js Express application without touching disk. This jogged my memory of something I posted in our team’s chat this last week but never wrote about; how I would in memory backdoor an express application. It’s a bit different than how Zach approached it so I thought it would be good to expand upon his post sharing the knowledge.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

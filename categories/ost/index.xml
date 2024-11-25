@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OST on EvilPacket</title><link>/categories/ost/</link><description>Recent content in OST on EvilPacket</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 19 Dec 2019 09:19:25 -0800</lastBuildDate><atom:link href="/categories/ost/index.xml" rel="self" type="application/rss+xml"/><item><title>Using Chrome Debugger Metasploit Gather Module</title><link>/blog/using-chrome-debugger-msf-gather-module/</link><pubDate>Thu, 19 Dec 2019 09:19:25 -0800</pubDate><guid>/blog/using-chrome-debugger-msf-gather-module/</guid><description>&lt;p>This last week &lt;a href="https://twitter.com/nstarke"
-
-
-
-
- target="_blank"
- 
-
-
->Nick Starke&lt;/a> got the &lt;a href="https://blog.rapid7.com/2019/12/13/metasploit-wrap-up-45/"
-
-
-
-
- target="_blank"
- 
-
-
->chrome debugger metasploit module&lt;/a> pushed over the line and merged into master. I figured I&amp;rsquo;d write up a quick intro to the module and how it might be used should you happen to stumble across a chrome debugger laying around the network.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OST on EvilPacket</title>
+    <link>//localhost:1313/categories/ost/</link>
+    <description>Recent content in OST on EvilPacket</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Dec 2019 09:19:25 -0800</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/ost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Chrome Debugger Metasploit Gather Module</title>
+      <link>//localhost:1313/blog/using-chrome-debugger-msf-gather-module/</link>
+      <pubDate>Thu, 19 Dec 2019 09:19:25 -0800</pubDate>
+      <guid>//localhost:1313/blog/using-chrome-debugger-msf-gather-module/</guid>
+      <description>&lt;p&gt;This last week &lt;a href=&#34;https://twitter.com/nstarke&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;Nick Starke&lt;/a&gt; got the &lt;a href=&#34;https://blog.rapid7.com/2019/12/13/metasploit-wrap-up-45/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;chrome debugger metasploit module&lt;/a&gt; pushed over the line and merged into master. I figured I&amp;rsquo;d write up a quick intro to the module and how it might be used should you happen to stumble across a chrome debugger laying around the network.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

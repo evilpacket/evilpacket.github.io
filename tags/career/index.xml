@@ -1,10 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Career on EvilPacket</title><link>/tags/career/</link><description>Recent content in Career on EvilPacket</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 20 Jun 2017 18:41:00 -0700</lastBuildDate><atom:link href="/tags/career/index.xml" rel="self" type="application/rss+xml"/><item><title>My story about mentorship and my career</title><link>/blog/my-story-about-mentorship/</link><pubDate>Tue, 20 Jun 2017 18:41:00 -0700</pubDate><guid>/blog/my-story-about-mentorship/</guid><description>&lt;p>The &lt;a href="https://medium.com/@ThePracticalDev"
-
-
-
-
- target="_blank"
- 
-
-
->Practical Developer DevDiscuss&lt;/a> one day got me thinking about mentorship and how it’s impacted my life. It doesn’t fit in a tweet or a thread of tweets so you get the story about how a mentorship gave me my entire career in security. This is going to be a bit stream of mind so give me a break on grammar and spelling :)&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Career on EvilPacket</title>
+    <link>//localhost:1313/tags/career/</link>
+    <description>Recent content in Career on EvilPacket</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Jun 2017 18:41:00 -0700</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/career/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My story about mentorship and my career</title>
+      <link>//localhost:1313/blog/my-story-about-mentorship/</link>
+      <pubDate>Tue, 20 Jun 2017 18:41:00 -0700</pubDate>
+      <guid>//localhost:1313/blog/my-story-about-mentorship/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://medium.com/@ThePracticalDev&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;Practical Developer DevDiscuss&lt;/a&gt; one day got me thinking about mentorship and how it’s impacted my life. It doesn’t fit in a tweet or a thread of tweets so you get the story about how a mentorship gave me my entire career in security. This is going to be a bit stream of mind so give me a break on grammar and spelling :)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

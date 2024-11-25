@@ -2011,9 +2011,6 @@ input#nav-toggle:checked ~ #nav-menu {
 .mt-20 {
   margin-top: 5rem;
 }
-.mt-4 {
-  margin-top: 1rem;
-}
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -3442,10 +3439,6 @@ input#nav-toggle:checked ~ #nav-menu {
 
   .lg\:block {
     display: block;
-  }
-
-  .lg\:inline-block {
-    display: inline-block;
   }
 
   .lg\:flex {
