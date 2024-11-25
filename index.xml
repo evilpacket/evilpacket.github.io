@@ -1,413 +1,495 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>EvilPacket on EvilPacket</title>
-    <link>http://evilpacket.net/</link>
-    <description>Recent content in EvilPacket on EvilPacket</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 28 Jan 2021 17:35:34 -0800</lastBuildDate>
-    <atom:link href="http://evilpacket.net/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Posts</title>
-      <link>http://evilpacket.net/posts/</link>
-      <pubDate>Thu, 28 Jan 2021 17:35:34 -0800</pubDate>
-      
-      <guid>http://evilpacket.net/posts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>http://evilpacket.net/projects/</link>
-      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://evilpacket.net/projects/</guid>
-      <description>&lt;p&gt;Historical archive of projects and tools I&amp;rsquo;ve start that I&amp;rsquo;m the slightest bit proud of.&lt;/p&gt;
-&lt;h3 id=&#34;dvcs-pillage&#34;&gt;DVCS-Pillage&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/evilpacket/DVCS-Pillage&#34;&gt;https://github.com/evilpacket/DVCS-Pillage&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;xssio&#34;&gt;xss.io&lt;/h3&gt;
-&lt;h3 id=&#34;redis-sha-crack&#34;&gt;Redis SHA Crack&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/evilpacket/redis-sha-crack&#34;&gt;https://github.com/evilpacket/redis-sha-crack&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;helmet&#34;&gt;Helmet&lt;/h3&gt;
-&lt;p&gt;Now maintained by Evan now&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://evilpacket.net/about/</link>
-      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://evilpacket.net/about/</guid>
-      <description>&lt;h1 id=&#34;bio&#34;&gt;Bio&lt;/h1&gt;
-&lt;p&gt;Adam Baldwin is a security focused professional with over 25 years of experience. Adam has spent his career building companies, breaking into companies, managing teams, designing products, and talking about security non-stop.&lt;/p&gt;
-&lt;p&gt;Previously Adam was VP of security at npm, acquired by GitHub in 2020.&lt;/p&gt;
-&lt;p&gt;Before that he founded ^Lift Security, a successful application security and penetration testing service company, and the Node Security Project, an initiative to track vulnerabilities and make security a core value in the JavaScript ecosystem. The project evolved into a SaaS platform at the forefront of the DevSecOps movement. Both were acquired by npm, Inc. in early 2018.&lt;/p&gt;
-&lt;h3 id=&#34;career-and-mentorship&#34;&gt;Career and Mentorship&lt;/h3&gt;
-&lt;p&gt;Read about the start of my career and why I think mentorship is so important. &lt;a href=&#34;https://medium.com/@adam_baldwin/my-story-about-mentorship-3f793df90db7&#34;&gt;https://medium.com/@adam_baldwin/my-story-about-mentorship-3f793df90db7&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;other-fun-facts&#34;&gt;Other Fun Facts&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;2x DEFCON Black Badge holder. &lt;a href=&#34;https://www.defcon.org/html/links/dc-black-badge.html#tab-6&#34;&gt;DC18&lt;/a&gt;, &lt;a href=&#34;https://www.defcon.org/html/links/dc-black-badge.html#tab-4&#34;&gt;DC20&lt;/a&gt; (team psychoholics)&lt;/li&gt;
-&lt;li&gt;Won TeleChallenge phreaking contest at DEFCON 28 (team psychoholics)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;certifications&#34;&gt;Certifications&lt;/h3&gt;
-&lt;p&gt;Active:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Certified Ethical Hacker (CEH) - Mar 2008&lt;/li&gt;
-&lt;li&gt;CompTIA Security+ - Feb 2003&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Expired:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Certified Information Systems Security Professional (CISSP) - Aug 2003 - Aug 2009&lt;/li&gt;
-&lt;li&gt;Information Systems Security Architecture Professional (ISSAP) - Jan 2005 - Aug 2009&lt;/li&gt;
-&lt;li&gt;GIAC Certified Intrusion Analyst (GCIA) - May 2005 - May 2009&lt;/li&gt;
-&lt;li&gt;Symantec Certified Security Practitioner - Feb 2004 - Feb 2007&lt;/li&gt;
-&lt;li&gt;Cisco Certified Network Association (CCNA) - Jul 2002 - Jun 2005&lt;/li&gt;
-&lt;li&gt;ImageStream Certified Network Operator - May 2009 - May 2012&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>CVE / Vulnerabilities / Advisories</title>
-      <link>http://evilpacket.net/vulns/</link>
-      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://evilpacket.net/vulns/</guid>
-      <description>&lt;p&gt;Here are some vulnerabilities I&amp;rsquo;ve found over the years. It is in no way a complete archive, but it&amp;rsquo;s a pretty good list of CVEs&lt;/p&gt;
-&lt;h2 id=&#34;2019&#34;&gt;2019&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14772&#34;&gt;CVE-2019-14772&lt;/a&gt; - verdaccio - Cross-Site Scripting&lt;/li&gt;
-&lt;li&gt;verdaccio - &lt;a href=&#34;https://www.npmjs.com/advisories/833&#34;&gt;Cross-Site Scripting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;electron-native-notify - &lt;a href=&#34;https://www.npmjs.com/advisories/927&#34;&gt;Malicious Package&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;donotinstallthis - &lt;a href=&#34;https://www.npmjs.com/advisories/887&#34;&gt;Malicious Package&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;destroyer-of-worlds - &lt;a href=&#34;https://www.npmjs.com/advisories/890&#34;&gt;Malicious Package&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2018&#34;&gt;2018&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;boogeyman - &lt;a href=&#34;https://www.npmjs.com/advisories/677&#34;&gt;Malicious Package&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2017&#34;&gt;2017&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;pgAdmin 4 - XSS leading to RCE&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-16041&#34;&gt;CVE-2017-16041&lt;/a&gt; - ikst - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-16086&#34;&gt;CVE-2017-16086&lt;/a&gt; - ua-parser - ReDoS via long UserAgent header&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-16040&#34;&gt;CVE-2017-16040&lt;/a&gt; - gfe-sass - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-16035&#34;&gt;CVE-2017-16035&lt;/a&gt; - hubl-server - Downloads resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-16126&#34;&gt;CVE-2017-16126&lt;/a&gt; - botbait - Tracking Module&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2016&#34;&gt;2016&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Atom Editor - &lt;a href=&#34;https://medium.com/lift-security/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks-3404566ba788&#34;&gt;Misconfiguration allowed code execution on untrusted networks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2537&#34;&gt;CVE-2016-2537&lt;/a&gt; - is-my-json-valid - Regular Expression Denial of Service&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2515&#34;&gt;CVE-2016-2515&lt;/a&gt; - hawk - Regular Expression Denial of Service&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10520&#34;&gt;CVE-2016-10520&lt;/a&gt; - jadedown - Regular Expression Denial of Service&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10521&#34;&gt;CVE-2016-10521&lt;/a&gt; - jshamcrest - Regular Expression Denial of Service&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4055&#34;&gt;CVE-2016-4055&lt;/a&gt; - moment - Regular Expression Denial of Service&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10589&#34;&gt;CVE-2016-10589&lt;/a&gt; - selenium-binaries - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10587&#34;&gt;CVE-2016-10587&lt;/a&gt; - wasdk - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10593&#34;&gt;CVE-2016-10593&lt;/a&gt; - ibapi - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10594&#34;&gt;CVE-2016-10594&lt;/a&gt; - ipip - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10603&#34;&gt;CVE-2016-10603&lt;/a&gt; - air-sdk - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10602&#34;&gt;CVE-2016-10602&lt;/a&gt; - haxe - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10613&#34;&gt;CVE-2016-10613&lt;/a&gt; - bionode-sra - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10621&#34;&gt;CVE-2016-10621&lt;/a&gt; - fibjs - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10624&#34;&gt;CVE-2016-10624&lt;/a&gt; - selenium-chromedriver - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10631&#34;&gt;CVE-2016-10631&lt;/a&gt; - jvminstall - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10629&#34;&gt;CVE-2016-10629&lt;/a&gt; - nw-with-arm - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10562&#34;&gt;CVE-2016-10562&lt;/a&gt; - iedriver - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10627&#34;&gt;CVE-2016-10627&lt;/a&gt; - scala-bin - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10588&#34;&gt;CVE-2016-10588&lt;/a&gt; - nw - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10642&#34;&gt;CVE-2016-10642&lt;/a&gt; - cmake - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10649&#34;&gt;CVE-2016-10649&lt;/a&gt; - frames-compiler - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10582&#34;&gt;CVE-2016-10582&lt;/a&gt; - closurecompiler - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10647&#34;&gt;CVE-2016-10647&lt;/a&gt; - node-air-sdk - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10645&#34;&gt;CVE-2016-10645&lt;/a&gt; - grunt-images - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10666&#34;&gt;CVE-2016-10666&lt;/a&gt; - tomita-parser - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10655&#34;&gt;CVE-2016-10655&lt;/a&gt; - clang-extra - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10657&#34;&gt;CVE-2016-10657&lt;/a&gt; - co-cli-installer - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10668&#34;&gt;CVE-2016-10668&lt;/a&gt; - libsbml - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10671&#34;&gt;CVE-2016-10671&lt;/a&gt; - mystem-wrapper - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10697&#34;&gt;CVE-2016-10697&lt;/a&gt; - react-native-baidu-voice-synthesizer - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10625&#34;&gt;CVE-2016-10625&lt;/a&gt; - headless-browser-lite - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10683&#34;&gt;CVE-2016-10683&lt;/a&gt; - arcanist - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10686&#34;&gt;CVE-2016-10686&lt;/a&gt; - fis-sass-all - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10688&#34;&gt;CVE-2016-10688&lt;/a&gt; - haxe3 - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10580&#34;&gt;CVE-2016-10580&lt;/a&gt; - nodewebkit - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10558&#34;&gt;CVE-2016-10558&lt;/a&gt; - aerospike - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10560&#34;&gt;CVE-2016-10560&lt;/a&gt; - galenframework-cli - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10567&#34;&gt;CVE-2016-10567&lt;/a&gt; - product-monitor - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10694&#34;&gt;CVE-2016-10694&lt;/a&gt; - alto-saxophone - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10539&#34;&gt;CVE-2016-10539&lt;/a&gt; - negotiator - Regular Expression Denial of Service&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1000224&#34;&gt;CVE-2016-1000224&lt;/a&gt; - ezseed-transmission - Insecure Defaults Leads to Potential MITM&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10552&#34;&gt;CVE-2016-10552&lt;/a&gt; - igniteui - Resources Downloaded over Insecure Protocol&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10583&#34;&gt;CVE-2016-10583&lt;/a&gt; - closure-util - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10578&#34;&gt;CVE-2016-10578&lt;/a&gt; - unicode - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10557&#34;&gt;CVE-2016-10557&lt;/a&gt; - appium-chromedriver - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10559&#34;&gt;CVE-2016-10559&lt;/a&gt; - selenium-download - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10565&#34;&gt;CVE-2016-10565&lt;/a&gt; - operadriver - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10586&#34;&gt;CVE-2016-10586&lt;/a&gt; - macaca-chromedriver - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10574&#34;&gt;CVE-2016-10574&lt;/a&gt; - apk-parser3 - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10585&#34;&gt;CVE-2016-10585&lt;/a&gt; - libxl - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10568&#34;&gt;CVE-2016-10568&lt;/a&gt; - geoip-lite-country - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10564&#34;&gt;CVE-2016-10564&lt;/a&gt; - apk-parser - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10569&#34;&gt;CVE-2016-10569&lt;/a&gt; - embedza - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10570&#34;&gt;CVE-2016-10570&lt;/a&gt; - pngcrush-installer - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10591&#34;&gt;CVE-2016-10591&lt;/a&gt; - prince - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10596&#34;&gt;CVE-2016-10596&lt;/a&gt; - imageoptim - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10590&#34;&gt;CVE-2016-10590&lt;/a&gt; - cue-sdk-node - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10598&#34;&gt;CVE-2016-10598&lt;/a&gt; - arrayfire-js - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10604&#34;&gt;CVE-2016-10604&lt;/a&gt; - dalek-browser-chrome - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10608&#34;&gt;CVE-2016-10608&lt;/a&gt; - robot-js - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10611&#34;&gt;CVE-2016-10611&lt;/a&gt; - strider-sauce - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10566&#34;&gt;CVE-2016-10566&lt;/a&gt; - install-nw - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10610&#34;&gt;CVE-2016-10610&lt;/a&gt; - unicode-json - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10609&#34;&gt;CVE-2016-10609&lt;/a&gt; - chromedriver126 - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10607&#34;&gt;CVE-2016-10607&lt;/a&gt; - openframe-glslviewer - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10605&#34;&gt;CVE-2016-10605&lt;/a&gt; - dalek-browser-ie - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10622&#34;&gt;CVE-2016-10622&lt;/a&gt; - nodeschnaps - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10571&#34;&gt;CVE-2016-10571&lt;/a&gt; - bkjs-wand - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10576&#34;&gt;CVE-2016-10576&lt;/a&gt; - fuseki - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10618&#34;&gt;CVE-2016-10618&lt;/a&gt; - node-browser - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10620&#34;&gt;CVE-2016-10620&lt;/a&gt; - atom-node-module-installer - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10674&#34;&gt;CVE-2016-10674&lt;/a&gt; - limbus-buildgen - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10617&#34;&gt;CVE-2016-10617&lt;/a&gt; - box2d-native - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10632&#34;&gt;CVE-2016-10632&lt;/a&gt; - apk-parser2 - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10626&#34;&gt;CVE-2016-10626&lt;/a&gt; - mystem3 - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10630&#34;&gt;CVE-2016-10630&lt;/a&gt; - install-g-test - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10572&#34;&gt;CVE-2016-10572&lt;/a&gt; - mongodb-instance - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10635&#34;&gt;CVE-2016-10635&lt;/a&gt; - broccoli-closure - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10640&#34;&gt;CVE-2016-10640&lt;/a&gt; - node-thulac - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10636&#34;&gt;CVE-2016-10636&lt;/a&gt; - grunt-ccompiler - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10638&#34;&gt;CVE-2016-10638&lt;/a&gt; - js-given - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10575&#34;&gt;CVE-2016-10575&lt;/a&gt; - kindlegen - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10652&#34;&gt;CVE-2016-10652&lt;/a&gt; - prebuild-lwip - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10650&#34;&gt;CVE-2016-10650&lt;/a&gt; - ntfserver - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10646&#34;&gt;CVE-2016-10646&lt;/a&gt; - resourcehacker - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10654&#34;&gt;CVE-2016-10654&lt;/a&gt; - sfml - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10665&#34;&gt;CVE-2016-10665&lt;/a&gt; - herbivore - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10667&#34;&gt;CVE-2016-10667&lt;/a&gt; - selenium-portal - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10662&#34;&gt;CVE-2016-10662&lt;/a&gt; - tomita - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10661&#34;&gt;CVE-2016-10661&lt;/a&gt; - phantomjs-cheniu - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10663&#34;&gt;CVE-2016-10663&lt;/a&gt; - wixtoolset - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10656&#34;&gt;CVE-2016-10656&lt;/a&gt; - qbs - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10669&#34;&gt;CVE-2016-10669&lt;/a&gt; - soci - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10659&#34;&gt;CVE-2016-10659&lt;/a&gt; - poco - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10676&#34;&gt;CVE-2016-10676&lt;/a&gt; - rs-brightcove - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10677&#34;&gt;CVE-2016-10677&lt;/a&gt; - google-closure-tools-latest - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10672&#34;&gt;CVE-2016-10672&lt;/a&gt; - cloudpub-redis - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10680&#34;&gt;CVE-2016-10680&lt;/a&gt; - adamvr-geoip-lite - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10679&#34;&gt;CVE-2016-10679&lt;/a&gt; - selenium-standalone-painful - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10684&#34;&gt;CVE-2016-10684&lt;/a&gt; - healthcenter - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10682&#34;&gt;CVE-2016-10682&lt;/a&gt; - massif - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10689&#34;&gt;CVE-2016-10689&lt;/a&gt; - windows-iedriver - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10691&#34;&gt;CVE-2016-10691&lt;/a&gt; - windows-seleniumjar - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10695&#34;&gt;CVE-2016-10695&lt;/a&gt; - npm-test-sqlite3-trunk - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10693&#34;&gt;CVE-2016-10693&lt;/a&gt; - pm2-kafka - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10579&#34;&gt;CVE-2016-10579&lt;/a&gt; - chromedriver - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10577&#34;&gt;CVE-2016-10577&lt;/a&gt; - ibm_db - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10600&#34;&gt;CVE-2016-10600&lt;/a&gt; - webrtc-native - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10584&#34;&gt;CVE-2016-10584&lt;/a&gt; - dalek-browser-chrome-canary - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10599&#34;&gt;CVE-2016-10599&lt;/a&gt; - sauce-connect - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10592&#34;&gt;CVE-2016-10592&lt;/a&gt; - jser-stat - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10601&#34;&gt;CVE-2016-10601&lt;/a&gt; - webdrvr - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10597&#34;&gt;CVE-2016-10597&lt;/a&gt; - cobalt-cli - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10595&#34;&gt;CVE-2016-10595&lt;/a&gt; - jdf-sass - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10612&#34;&gt;CVE-2016-10612&lt;/a&gt; - dalek-browser-ie-canary - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10606&#34;&gt;CVE-2016-10606&lt;/a&gt; - grunt-webdriver-qunit - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10614&#34;&gt;CVE-2016-10614&lt;/a&gt; - httpsync - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10619&#34;&gt;CVE-2016-10619&lt;/a&gt; - pennyworth - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10615&#34;&gt;CVE-2016-10615&lt;/a&gt; - curses - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10616&#34;&gt;CVE-2016-10616&lt;/a&gt; - openframe-image - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10623&#34;&gt;CVE-2016-10623&lt;/a&gt; - macaca-chromedriver-zxa - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10628&#34;&gt;CVE-2016-10628&lt;/a&gt; - selenium-wrapper - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10634&#34;&gt;CVE-2016-10634&lt;/a&gt; - scalajs-standalone-bin - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10641&#34;&gt;CVE-2016-10641&lt;/a&gt; - node-bsdiff-android - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10573&#34;&gt;CVE-2016-10573&lt;/a&gt; - baryton-saxophone - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10637&#34;&gt;CVE-2016-10637&lt;/a&gt; - haxe-dev - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10633&#34;&gt;CVE-2016-10633&lt;/a&gt; - dwebp-bin - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10639&#34;&gt;CVE-2016-10639&lt;/a&gt; - redis-srvr - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10644&#34;&gt;CVE-2016-10644&lt;/a&gt; - slimerjs-edge - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10643&#34;&gt;CVE-2016-10643&lt;/a&gt; - jstestdriver - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10651&#34;&gt;CVE-2016-10651&lt;/a&gt; - webdriver-launcher - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10648&#34;&gt;CVE-2016-10648&lt;/a&gt; - marionette-socket-host - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10653&#34;&gt;CVE-2016-10653&lt;/a&gt; - xd-testing - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10664&#34;&gt;CVE-2016-10664&lt;/a&gt; - mystem - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10658&#34;&gt;CVE-2016-10658&lt;/a&gt; - native-opencv - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10660&#34;&gt;CVE-2016-10660&lt;/a&gt; - fis-parser-sass-bin - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10675&#34;&gt;CVE-2016-10675&lt;/a&gt; - libsbmlsim - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10678&#34;&gt;CVE-2016-10678&lt;/a&gt; - serc.js - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10673&#34;&gt;CVE-2016-10673&lt;/a&gt; - ipip-coffee - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10670&#34;&gt;CVE-2016-10670&lt;/a&gt; - windows-seleniumjar-mirror - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10687&#34;&gt;CVE-2016-10687&lt;/a&gt; - windows-selenium-chromedriver - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10685&#34;&gt;CVE-2016-10685&lt;/a&gt; - pk-app-wonderbox - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10681&#34;&gt;CVE-2016-10681&lt;/a&gt; - roslib-socketio - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10696&#34;&gt;CVE-2016-10696&lt;/a&gt; - windows-latestchromedriver - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10690&#34;&gt;CVE-2016-10690&lt;/a&gt; - openframe-ascii-image - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10692&#34;&gt;CVE-2016-10692&lt;/a&gt; - haxeshim - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10698&#34;&gt;CVE-2016-10698&lt;/a&gt; - mystem-fix - Downloads Resources over HTTP&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10581&#34;&gt;CVE-2016-10581&lt;/a&gt; - steroids - Downloads Resources over HTTP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2015&#34;&gt;2015&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8855&#34;&gt;CVE-2015-8855&lt;/a&gt; - semver - Regular Expression Denial of Service&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9239&#34;&gt;CVE-2015-9239&lt;/a&gt; - ansi2html - Regular Expression Denial of Service&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8315&#34;&gt;CVE-2015-8315&lt;/a&gt; - ms - Regular Expression Denial of Service&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8858&#34;&gt;CVE-2015-8858&lt;/a&gt; - uglify-js - Regular Expression Denial of Service&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9241&#34;&gt;CVE-2015-9241&lt;/a&gt; - hapi - Denial of Service&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2014&#34;&gt;2014&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0030&#34;&gt;CVE-2014-0030&lt;/a&gt; - Apache Roller XML-RPC susceptible to XXE Attacks&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-10066&#34;&gt;CVE-2014-10066&lt;/a&gt; - fancy-server - Directory Traversal&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1850&#34;&gt;CVE-2014-1850,CVE-2014-3743&lt;/a&gt; - marked - Multiple Content Injection Vulnerabilities&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3741&#34;&gt;CVE-2014-3741&lt;/a&gt; - printer - Potential Command Injection&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-10065&#34;&gt;CVE-2014-10065&lt;/a&gt; - remarkable - Content Injection&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8881&#34;&gt;CVE-2014-8881&lt;/a&gt; - bleach - Regular Expression Denial of Service&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2013&#34;&gt;2013&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7381&#34;&gt;CVE-2013-7381&lt;/a&gt; - libnotify - Potential Command Injection&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7379&#34;&gt;CVE-2013-7379&lt;/a&gt; - tomato - API Admin Auth Weakness&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2012&#34;&gt;2012&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/jashkenas/2001456&#34;&gt;npm Registry sha password exposure&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;OpenFire Code Execution&lt;/li&gt;
-&lt;li&gt;Nagios Enterprise Config Manager Log Persistent XSS&lt;/li&gt;
-&lt;li&gt;Nagios Enterprise XIWindow Reflected XSS&lt;/li&gt;
-&lt;li&gt;Pandora FMS 4.0.2 System Audit Log XSS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2010&#34;&gt;2010&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.securityfocus.com/archive/1/508948&#34;&gt;MiFi Geopwn&lt;/a&gt; - Sprint / Verizon MiFi geo location theft&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2010-4534&#34;&gt;CVE-2010-4534&lt;/a&gt; - Django admin interface sensitive data exposure&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0713&#34;&gt;CVE-2010-0713&lt;/a&gt; - Zenoss Multiple Admin CSRF&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0712&#34;&gt;CVE-2010-0712&lt;/a&gt; - Zenoss before 2.5 Multiple SQLi&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2290&#34;&gt;CVE-2010-2290&lt;/a&gt; - McAfee UTM Firewall Reflected Cross-Site Scripting (XSS)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cxsecurity.com/issue/WLB-2010080072&#34;&gt;Nagios XI users.php SQL Injection&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://seclists.org/bugtraq/2009/Aug/72&#34;&gt;Spiceworks Multiple Vulnerabilities (XSS &amp;amp; CSRF)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.exploit-db.com/exploits/34147&#34;&gt;JForum 2.1.8 findUser reflected XSS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.exploit-db.com/exploits/13754&#34;&gt;JForum 2.1.8 bookmarks CSRF &amp;amp; XSS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2009&#34;&gt;2009&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1027&#34;&gt;CVE-2009-1027&lt;/a&gt; - OpenCart Order By Blind SQL Injection&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1070&#34;&gt;CVE-2009-1070&lt;/a&gt; - ExpressionEngine Persistent Cross-Site Scripting&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cxsecurity.com/issue/WLB-2009040003&#34;&gt;Zabbix Multiple Frontend CSRF (RCE)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2361&#34;&gt;CVE-2009-2361&lt;/a&gt; - osTicket Admin Login Blind SQL Injection&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3427&#34;&gt;CVE-2009-3427&lt;/a&gt; - Ticket Subject Persistent XSS in Kayako SupportSuite&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://web.archive.org/web/20100623041246/http://ngenuity-is.com/advisories/2009/jan&#34;&gt;Open-Realty SQL Injection&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2008&#34;&gt;2008&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://web.archive.org/web/20100623041232/http://ngenuity-is.com/advisories/2008/dec&#34;&gt;Encompass Web PACS Forced Browsing Vulnerability&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://web.archive.org/web/20100623041232/http://ngenuity-is.com/advisories/2008/dec&#34;&gt;Open-Realty Multiple XSS Vulnerabilities&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2006&#34;&gt;2006&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://support.symantec.com/us/en/article.symsa1095.html&#34;&gt;SYMSA1095&lt;/a&gt; - Symantec Security Information Manager Authentication bypass&lt;/li&gt;
-&lt;li&gt;Symantec Enterprise Firewall Privilege Escalation&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4092&#34;&gt;CVE-2006-4092&lt;/a&gt; - Simpliciti Locked Browser Jail Breakout Vulnerability&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2005&#34;&gt;2005&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cvedetails.com/cve/CVE-2005-1204/&#34;&gt;CVE-2005-1204&lt;/a&gt; - Neslo Desktop Rover DoS&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://seclists.org/fulldisclosure/2005/Feb/1&#34;&gt;University of Phoenix - Outlook Express Unauthorized Configuration Manipulation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://packetstormsecurity.com/files/35752/Secunia-Security-Advisory-13844.html&#34;&gt;JohnyTech Encrypted Messenger DoS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Presentations and Podcasts</title>
-      <link>http://evilpacket.net/presentations/</link>
-      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://evilpacket.net/presentations/</guid>
-      <description>&lt;h1 id=&#34;2021&#34;&gt;2021&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Speakeasy JS - &lt;a href=&#34;https://www.youtube.com/watch?v=GnuJkbLkYnw&#34;&gt;Attacking Open Source using Abandoned Resources&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;2020&#34;&gt;2020&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;OpenJS World - &lt;a href=&#34;https://www.youtube.com/watch?v=TkEty9PV9ro&#34;&gt;Fireside Chat on JavaScript Security&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Node.js Global Summit - JavaScript Supply Chain Security&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;2019&#34;&gt;2019&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;LocoMocoSec, &lt;a href=&#34;https://www.youtube.com/watch?v=HDo2iOlkbyc&#34;&gt;JavaScript Supply Chain Security&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Container Security Summit - JavaScript Supply Chain Security&lt;/li&gt;
-&lt;li&gt;Absolute AppSec - &lt;a href=&#34;https://www.youtube.com/watch?v=EQ9cZFyJ_xA&amp;amp;feature=youtu.be&#34;&gt;EP #65&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Real Talk JavaScript - &lt;a href=&#34;https://realtalkjavascript.simplecast.fm/33196473&#34;&gt;Secure JavaScript&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;2018&#34;&gt;2018&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;BrazilJS - &lt;a href=&#34;https://www.youtube.com/watch?v=hxlEct_FCEk&#34;&gt;Becoming a Security Minded Developer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Node Summit - &lt;a href=&#34;https://vimeo.com/287729415&#34;&gt;Security Panel&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Thunderplains - &lt;a href=&#34;https://www.youtube.com/watch?v=rn0U_vPEqZY&#34;&gt;The Developer Trail: Adventures shipping secure software&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://brakeingsecurity.com/2018-043-adam-baldwin-npmjs-director-of-security-event-stream-post-mortem-and-making-your-package-system-more-secure&#34;&gt;Brakeing Down Security Podcast&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JavaScript Jabber - &lt;a href=&#34;https://devchat.tv/js-jabber/jsj-294-node-security-adam-baldwin/&#34;&gt;Node Security&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JS Party - &lt;a href=&#34;https://changelog.com/jsparty/23&#34;&gt;The state of Node security&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;2017&#34;&gt;2017&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Node Summit - &lt;a href=&#34;https://vimeo.com/229529077&#34;&gt;Hunting for malicious modules in npm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;NodeConf AR - &lt;a href=&#34;https://www.youtube.com/watch?v=AGJV4PgZXns&#34;&gt;Continuous Security&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The Manifest - &lt;a href=&#34;https://www.iheart.com/podcast/256-the-manifest-31120517/episode/episode-9-typosquatting-with-adam-baldwin-39946713/&#34;&gt;Typosquatting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Exploring Information Security podcast - &lt;a href=&#34;http://www.timothydeblock.com/eis/tag/Adam+Baldwin&#34;&gt;What is the Node Security Platform&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;2016&#34;&gt;2016&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Node Summit - &lt;a href=&#34;https://vimeo.com/179274716&#34;&gt;Security Panel&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;EmpireJS - &lt;a href=&#34;https://www.youtube.com/watch?v=-N-WB7hnPsE&#34;&gt;Continuous Security&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Thunderplains - Continuous Security&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;2015&#34;&gt;2015&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Nodevember - &lt;a href=&#34;https://www.youtube.com/watch?v=QxH9PWreUPE&#34;&gt;Node Security Experiements&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;CascadiaFest - &lt;a href=&#34;https://www.youtube.com/watch?v=ePPbjaFLN88&#34;&gt;The art of identifying vulnerabilities&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;SINFO - &lt;a href=&#34;https://www.youtube.com/watch?v=9iz_Q30Yiaw&#34;&gt;Breaking into Security&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Node Summit - &lt;a href=&#34;https://vimeo.com/123546531&#34;&gt;Security Panel&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;OpoJS - &lt;a href=&#34;https://www.youtube.com/watch?v=n8a1BZcgCG4&#34;&gt;OWASP Top 10 / requireSafe&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;2014&#34;&gt;2014&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;JSFest - &lt;a href=&#34;https://www.youtube.com/watch?v=rjzpPlY5Kck&#34;&gt;A Security Carol&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;NodeDay at PayPal - &lt;a href=&#34;https://www.youtube.com/watch?v=Zc8QvuRbdoQ&#34;&gt;Node Security in the Enterprise&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ThunderPlains - &lt;a href=&#34;https://www.youtube.com/watch?v=4vccPZcq08w&#34;&gt;Node Security Live&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;2013&#34;&gt;2013&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;LXJS - &lt;a href=&#34;https://www.youtube.com/watch?v=49Bpzq6okWk&#34;&gt;Introducing the Node Security Project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JSConf EU - &lt;a href=&#34;https://www.youtube.com/watch?v=_aUKRh74JRY&#34;&gt;Security First&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JSConf US - &lt;a href=&#34;https://www.youtube.com/watch?v=82-hJk5WryU&#34;&gt;Builders vs Breakers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;NodePDX - &lt;a href=&#34;https://www.youtube.com/watch?v=UfCFFC-ilmI&#34;&gt;Introducing nodesecurity.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JavaScript Jabber - &lt;a href=&#34;https://devchat.tv/js-jabber/089-jsj-the-node-security-project-with-adam-baldwin/&#34;&gt;The Node Security Project&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;2012&#34;&gt;2012&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;DEFCON 20 - &lt;a href=&#34;https://www.youtube.com/watch?v=LV8IU3r1hr0&#34;&gt;Blind XSS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;RedisConf - EvilSHA - Cracking SHA hashes using publicly available Redis instances&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;2011&#34;&gt;2011&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;DEFCON 19 - &lt;a href=&#34;https://www.youtube.com/watch?v=1q42YAksVeg&#34;&gt;Pillaging DVCS Repos for fun and profit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Toorcon 13 - &lt;a href=&#34;https://www.youtube.com/watch?v=qBWTkZqY8GI&#34;&gt;Pillaging DVCS Repos for fun and profit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JSConf US - &lt;a href=&#34;https://www.youtube.com/watch?v=uVIcK4UXKWs&#34;&gt;Writing an (in)secure webapp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Keeping it Realtime - &lt;a href=&#34;https://vimeo.com/42487947&#34;&gt;Old problems, new tools&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;2010&#34;&gt;2010&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Djangocon - &lt;a href=&#34;https://pyvideo.org/djangocon-us-2010/djangocon-2010--pony-pwning.html&#34;&gt;Pony Pwning&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;2009&#34;&gt;2009&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Toorcamp - Introduction to w3af&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>EvilPacket</title><link>/</link><description>Recent content on EvilPacket</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 23 Nov 2024 00:00:00 -0500</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Old EvilPacket Videos</title><link>/videos/</link><pubDate>Sat, 23 Nov 2024 00:00:00 -0500</pubDate><guid>/videos/</guid><description>&lt;p>Many years ago I made a series of videos on vulnerabilities I found under the theme &amp;ldquo;education through exploitation&amp;rdquo;.&lt;/p></description></item><item><title>Attacking OSS Using Abandoned Resources</title><link>/blog/attacking-oss-using-abandoned-resources/</link><pubDate>Thu, 28 Jan 2021 17:35:34 -0800</pubDate><guid>/blog/attacking-oss-using-abandoned-resources/</guid><description>&lt;p>In December I discovered a supply chain vulnerability that impacted 6,530 public npm package versions, at least I thought I did. Turns out that earlier in October of 2020 Security Innovation published similar research dubbing the issue &lt;a href="https://blog.securityinnovation.com/repo-jacking-exploiting-the-dependency-supply-chain"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Repo Jacking&lt;/a>. This initially took the wind out of my sails but after I thought about it rediscovery is pretty cool and I was able to expand upon it a bit by focusing on abandoned S3 buckets, Google Cloud Storage bucket, expired domain names, and finding and reporting a vulnerability in GitHub to make exploitation possible in some conditions.&lt;/p></description></item><item><title>Headless Holiday Hack: Flag 1</title><link>/blog/headless-holiday-hack-part-1/</link><pubDate>Fri, 27 Nov 2020 08:04:37 -0800</pubDate><guid>/blog/headless-holiday-hack-part-1/</guid><description>&lt;p>Last night I tossed up a quick CTF-esque challenge with a couple of flags defined.&lt;/p></description></item><item><title>My Favorite Vulnerability: From ERROR to inter-protocol exploitation</title><link>/blog/my-favorite-vuln/</link><pubDate>Sun, 09 Feb 2020 10:00:13 -0800</pubDate><guid>/blog/my-favorite-vuln/</guid><description>&lt;p>I&amp;rsquo;m excited to finally write up and share my favorite vulnerability I&amp;rsquo;ve ever found. It&amp;rsquo;s a story where all the right pieces fell into place to make it exploitable. The names, ports, and other details have been changed to protect the vulnerable even though this took place probably 6 years ago and I believe the devices are now sunsetted.&lt;/p></description></item><item><title>Identify an O.MG Cable</title><link>/blog/identify-an-omg-cable/</link><pubDate>Mon, 06 Jan 2020 17:34:01 -0800</pubDate><guid>/blog/identify-an-omg-cable/</guid><description>&lt;p>Today I got my hands on an &lt;a href="https://shop.hak5.org/products/o-mg-cable"
+
+
+
+
+ target="_blank"
+ 
+
+
+>O.MG cable&lt;/a>. It is extremely well manufactured and to most it will be extremely stealthy.&lt;/p></description></item><item><title>Using Chrome Debugger Metasploit Gather Module</title><link>/blog/using-chrome-debugger-msf-gather-module/</link><pubDate>Thu, 19 Dec 2019 09:19:25 -0800</pubDate><guid>/blog/using-chrome-debugger-msf-gather-module/</guid><description>&lt;p>This last week &lt;a href="https://twitter.com/nstarke"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Nick Starke&lt;/a> got the &lt;a href="https://blog.rapid7.com/2019/12/13/metasploit-wrap-up-45/"
+
+
+
+
+ target="_blank"
+ 
+
+
+>chrome debugger metasploit module&lt;/a> pushed over the line and merged into master. I figured I&amp;rsquo;d write up a quick intro to the module and how it might be used should you happen to stumble across a chrome debugger laying around the network.&lt;/p></description></item><item><title>Leveraging Javascript Debuggers for compromise</title><link>/blog/leveraging-javascript-debuggers/</link><pubDate>Tue, 10 Sep 2019 16:27:22 -0700</pubDate><guid>/blog/leveraging-javascript-debuggers/</guid><description>&lt;h1 id="summary">Summary&lt;/h1>
+&lt;p>I discovered that developers do leave remote JavaScript debuggers and headless browsers laying around on the internet leading to sensitive data exposure and an interesting remote position for an attacker.&lt;/p></description></item><item><title>CVE / Vulnerabilities / Advisories</title><link>/vulns/</link><pubDate>Sun, 08 Sep 2019 00:00:00 -0400</pubDate><guid>/vulns/</guid><description>&lt;p>Here are some vulnerabilities I&amp;rsquo;ve found over the years. It is in no way a complete archive, but it&amp;rsquo;s a pretty good list of CVEs&lt;/p></description></item><item><title>Presentations and Podcasts</title><link>/presentations/</link><pubDate>Sun, 08 Sep 2019 00:00:00 -0400</pubDate><guid>/presentations/</guid><description>&lt;h1 id="2021">2021&lt;/h1>
+&lt;ul>
+&lt;li>Speakeasy JS - &lt;a href="https://www.youtube.com/watch?v=GnuJkbLkYnw"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Attacking Open Source using Abandoned Resources&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="2020">2020&lt;/h1>
+&lt;ul>
+&lt;li>OpenJS World - &lt;a href="https://www.youtube.com/watch?v=TkEty9PV9ro"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Fireside Chat on JavaScript Security&lt;/a>&lt;/li>
+&lt;li>Node.js Global Summit - JavaScript Supply Chain Security&lt;/li>
+&lt;/ul>
+&lt;h1 id="2019">2019&lt;/h1>
+&lt;ul>
+&lt;li>LocoMocoSec, &lt;a href="https://www.youtube.com/watch?v=HDo2iOlkbyc"
+
+
+
+
+ target="_blank"
+ 
+
+
+>JavaScript Supply Chain Security&lt;/a>&lt;/li>
+&lt;li>Container Security Summit - JavaScript Supply Chain Security&lt;/li>
+&lt;li>Absolute AppSec - &lt;a href="https://www.youtube.com/watch?v=EQ9cZFyJ_xA&amp;amp;feature=youtu.be"
+
+
+
+
+ target="_blank"
+ 
+
+
+>EP #65&lt;/a>&lt;/li>
+&lt;li>Real Talk JavaScript - &lt;a href="https://realtalkjavascript.simplecast.fm/33196473"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Secure JavaScript&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="2018">2018&lt;/h1>
+&lt;ul>
+&lt;li>BrazilJS - &lt;a href="https://www.youtube.com/watch?v=hxlEct_FCEk"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Becoming a Security Minded Developer&lt;/a>&lt;/li>
+&lt;li>Node Summit - &lt;a href="https://vimeo.com/287729415"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Security Panel&lt;/a>&lt;/li>
+&lt;li>Thunderplains - &lt;a href="https://www.youtube.com/watch?v=rn0U_vPEqZY"
+
+
+
+
+ target="_blank"
+ 
+
+
+>The Developer Trail: Adventures shipping secure software&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://brakeingsecurity.com/2018-043-adam-baldwin-npmjs-director-of-security-event-stream-post-mortem-and-making-your-package-system-more-secure"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Brakeing Down Security Podcast&lt;/a>&lt;/li>
+&lt;li>JavaScript Jabber - &lt;a href="https://devchat.tv/js-jabber/jsj-294-node-security-adam-baldwin/"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Node Security&lt;/a>&lt;/li>
+&lt;li>JS Party - &lt;a href="https://changelog.com/jsparty/23"
+
+
+
+
+ target="_blank"
+ 
+
+
+>The state of Node security&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="2017">2017&lt;/h1>
+&lt;ul>
+&lt;li>Node Summit - &lt;a href="https://vimeo.com/229529077"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Hunting for malicious modules in npm&lt;/a>&lt;/li>
+&lt;li>NodeConf AR - &lt;a href="https://www.youtube.com/watch?v=AGJV4PgZXns"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Continuous Security&lt;/a>&lt;/li>
+&lt;li>The Manifest - &lt;a href="https://www.iheart.com/podcast/256-the-manifest-31120517/episode/episode-9-typosquatting-with-adam-baldwin-39946713/"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Typosquatting&lt;/a>&lt;/li>
+&lt;li>Exploring Information Security podcast - &lt;a href="http://www.timothydeblock.com/eis/tag/Adam&amp;#43;Baldwin"
+
+
+
+
+ target="_blank"
+ 
+
+
+>What is the Node Security Platform&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="2016">2016&lt;/h1>
+&lt;ul>
+&lt;li>Node Summit - &lt;a href="https://vimeo.com/179274716"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Security Panel&lt;/a>&lt;/li>
+&lt;li>EmpireJS - &lt;a href="https://www.youtube.com/watch?v=-N-WB7hnPsE"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Continuous Security&lt;/a>&lt;/li>
+&lt;li>Thunderplains - Continuous Security&lt;/li>
+&lt;/ul>
+&lt;h1 id="2015">2015&lt;/h1>
+&lt;ul>
+&lt;li>Nodevember - &lt;a href="https://www.youtube.com/watch?v=QxH9PWreUPE"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Node Security Experiements&lt;/a>&lt;/li>
+&lt;li>CascadiaFest - &lt;a href="https://www.youtube.com/watch?v=ePPbjaFLN88"
+
+
+
+
+ target="_blank"
+ 
+
+
+>The art of identifying vulnerabilities&lt;/a>&lt;/li>
+&lt;li>SINFO - &lt;a href="https://www.youtube.com/watch?v=9iz_Q30Yiaw"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Breaking into Security&lt;/a>&lt;/li>
+&lt;li>Node Summit - &lt;a href="https://vimeo.com/123546531"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Security Panel&lt;/a>&lt;/li>
+&lt;li>OpoJS - &lt;a href="https://www.youtube.com/watch?v=n8a1BZcgCG4"
+
+
+
+
+ target="_blank"
+ 
+
+
+>OWASP Top 10 / requireSafe&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="2014">2014&lt;/h1>
+&lt;ul>
+&lt;li>JSFest - &lt;a href="https://www.youtube.com/watch?v=rjzpPlY5Kck"
+
+
+
+
+ target="_blank"
+ 
+
+
+>A Security Carol&lt;/a>&lt;/li>
+&lt;li>NodeDay at PayPal - &lt;a href="https://www.youtube.com/watch?v=Zc8QvuRbdoQ"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Node Security in the Enterprise&lt;/a>&lt;/li>
+&lt;li>ThunderPlains - &lt;a href="https://www.youtube.com/watch?v=4vccPZcq08w"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Node Security Live&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="2013">2013&lt;/h1>
+&lt;ul>
+&lt;li>LXJS - &lt;a href="https://www.youtube.com/watch?v=49Bpzq6okWk"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Introducing the Node Security Project&lt;/a>&lt;/li>
+&lt;li>JSConf EU - &lt;a href="https://www.youtube.com/watch?v=_aUKRh74JRY"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Security First&lt;/a>&lt;/li>
+&lt;li>JSConf US - &lt;a href="https://www.youtube.com/watch?v=82-hJk5WryU"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Builders vs Breakers&lt;/a>&lt;/li>
+&lt;li>NodePDX - &lt;a href="https://www.youtube.com/watch?v=UfCFFC-ilmI"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Introducing nodesecurity.io&lt;/a>&lt;/li>
+&lt;li>JavaScript Jabber - &lt;a href="https://devchat.tv/js-jabber/089-jsj-the-node-security-project-with-adam-baldwin/"
+
+
+
+
+ target="_blank"
+ 
+
+
+>The Node Security Project&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="2012">2012&lt;/h1>
+&lt;ul>
+&lt;li>DEFCON 20 - &lt;a href="https://www.youtube.com/watch?v=LV8IU3r1hr0"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Blind XSS&lt;/a>&lt;/li>
+&lt;li>RedisConf - EvilSHA - Cracking SHA hashes using publicly available Redis instances&lt;/li>
+&lt;/ul>
+&lt;h1 id="2011">2011&lt;/h1>
+&lt;ul>
+&lt;li>DEFCON 19 - &lt;a href="https://www.youtube.com/watch?v=1q42YAksVeg"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Pillaging DVCS Repos for fun and profit&lt;/a>&lt;/li>
+&lt;li>Toorcon 13 - &lt;a href="https://www.youtube.com/watch?v=qBWTkZqY8GI"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Pillaging DVCS Repos for fun and profit&lt;/a>&lt;/li>
+&lt;li>JSConf US - &lt;a href="https://www.youtube.com/watch?v=uVIcK4UXKWs"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Writing an (in)secure webapp&lt;/a>&lt;/li>
+&lt;li>Keeping it Realtime - &lt;a href="https://vimeo.com/42487947"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Old problems, new tools&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="2010">2010&lt;/h1>
+&lt;ul>
+&lt;li>Djangocon - &lt;a href="https://pyvideo.org/djangocon-us-2010/djangocon-2010--pony-pwning.html"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Pony Pwning&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="2009">2009&lt;/h1>
+&lt;ul>
+&lt;li>Toorcamp - Introduction to w3af&lt;/li>
+&lt;/ul></description></item><item><title>Enumerating Files Using Server Side Request Forgery and the request Module</title><link>/blog/enumerating-files-using-server-side-request-forgery-and-the-request-module/</link><pubDate>Fri, 15 Dec 2017 09:02:16 -0800</pubDate><guid>/blog/enumerating-files-using-server-side-request-forgery-and-the-request-module/</guid><description>&lt;p>If you ever find Server Side Request Forgery (SSRF) in a node.js based application and the app is using the request module you can use a special url format to detect the existence of files / directories.&lt;/p></description></item><item><title>npm Registry Spelunking: Dependencies Referenced by URL</title><link>/blog/npm-registry-spelunking-dependencies-referenced-by-url/</link><pubDate>Wed, 08 Nov 2017 14:40:22 -0800</pubDate><guid>/blog/npm-registry-spelunking-dependencies-referenced-by-url/</guid><description>&lt;p>I’ve learned a long time ago that not all security research pans out with a stack of vulnerabilities but every time I venture down a rabbit hole I learn something along the way. This is one of those times.&lt;/p></description></item><item><title>Bypassing npm / yarn ignore Scripts with Command Injection</title><link>/blog/bypassing-npm-ignore-scripts-with-command-injection-in-package-json/</link><pubDate>Thu, 10 Aug 2017 17:11:17 -0700</pubDate><guid>/blog/bypassing-npm-ignore-scripts-with-command-injection-in-package-json/</guid><description>&lt;p>Before you read this post please run &lt;code>git --version&lt;/code> and if it’s not &lt;em>2.14.1&lt;/em> or greater then please go upgrade it.&lt;/p></description></item><item><title>My story about mentorship and my career</title><link>/blog/my-story-about-mentorship/</link><pubDate>Tue, 20 Jun 2017 18:41:00 -0700</pubDate><guid>/blog/my-story-about-mentorship/</guid><description>&lt;p>The &lt;a href="https://medium.com/@ThePracticalDev"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Practical Developer DevDiscuss&lt;/a> one day got me thinking about mentorship and how it’s impacted my life. It doesn’t fit in a tweet or a thread of tweets so you get the story about how a mentorship gave me my entire career in security. This is going to be a bit stream of mind so give me a break on grammar and spelling :)&lt;/p></description></item><item><title>In Memory Backdoor for Node.js Express Apps</title><link>/blog/in-memory-backdoor-for-node-js-express-apps/</link><pubDate>Thu, 02 Mar 2017 17:15:51 -0800</pubDate><guid>/blog/in-memory-backdoor-for-node-js-express-apps/</guid><description>&lt;p>Earlier this week Zach Grace published an article on one way that you could backdoor a Node.js Express application without touching disk. This jogged my memory of something I posted in our team’s chat this last week but never wrote about; how I would in memory backdoor an express application. It’s a bit different than how Zach approached it so I thought it would be good to expand upon his post sharing the knowledge.&lt;/p></description></item><item><title>Compromising Node.js apps using Machine-in-the-Middle</title><link>/blog/compromising-node-js-apps-using-machine-in-the-middle/</link><pubDate>Wed, 11 Jan 2017 16:31:08 -0800</pubDate><guid>/blog/compromising-node-js-apps-using-machine-in-the-middle/</guid><description>&lt;p>Just before the New Years I published 140+ advisories on Node.js modules. I’ve been researching ways to compromise developers &amp;amp; node.js applications without compromising the npm registry or their CDN.&lt;/p></description></item><item><title>Pillaging Distributed Version Control 5 Years Later</title><link>/blog/pillaging-distributed-version-control-5-years-later/</link><pubDate>Sun, 13 Nov 2016 10:38:59 -0700</pubDate><guid>/blog/pillaging-distributed-version-control-5-years-later/</guid><description>&lt;p>5 years ago at DEFCON 19 I gave a talked titled “Pillaging DVCS repos for fun and profit.” The technique &amp;amp; tool I outlined in that talk has been very fruitful through out the years and plenty of security consultants have told me that this had helped them have breakthroughs during penetration tests. If it’s useful to us it’s also useful to attackers.&lt;/p></description></item><item><title>What Are the Bots Up to on npm?</title><link>/blog/what-are-the-bots-up-to-on-npm/</link><pubDate>Tue, 08 Nov 2016 15:59:14 -0700</pubDate><guid>/blog/what-are-the-bots-up-to-on-npm/</guid><description>&lt;p>Last year (2015) I had a thought, “who else is downloading and running / testing random modules on npm.” Postulating that there might be bots, build systems or other researchers mass downloading and running modules from npm. I figured it might be an interesting vector to attack systems and gain a foothold for some org and I was curious to know what that traffic looked like.&lt;/p></description></item><item><title>Atom.io Misconfiguration Allowed Code Execution on Untrusted Networks</title><link>/blog/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks/</link><pubDate>Sun, 30 Oct 2016 09:16:51 -0700</pubDate><guid>/blog/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks/</guid><description>&lt;p>&lt;img src="/images/2016/10/atom_header.png">
+Developers have increasingly become a more valuable target to compromise in recent years. The DevOps movement means they have more access to production, not to mention the plethora of source code and keys that you are likely to find.&lt;/p></description></item><item><title>Brilliant Hire Exposure No Bounty</title><link>/blog/brilliant-hire-exposure-no-bounty/</link><pubDate>Sun, 30 Oct 2016 09:16:51 -0700</pubDate><guid>/blog/brilliant-hire-exposure-no-bounty/</guid><description>&lt;p>&lt;img src="/images/2019/11/debugger.png">&lt;/p>
+&lt;p>During security research a few years back, I discovered an exposure on SAP&amp;rsquo;s BrilliantHire API - an exposed Node.js debugger instance that provided full remote code execution capabilities and access to sensitive AWS credentials, database encryption keys, and production source code. The finding highlights how a simple misconfiguration can lead to complete system compromise.&lt;/p></description></item><item><title>Regular Expression Denial of Service Affecting Express.js</title><link>/blog/regular-expression-denial-of-service-affecting-express-js/</link><pubDate>Fri, 29 Apr 2016 15:59:41 -0700</pubDate><guid>/blog/regular-expression-denial-of-service-affecting-express-js/</guid><description>&lt;p>At the end of April I found a flaw in a module that Express and many other frameworks use. This flaw allows a remote attacker to block the event loop of a remote site causing a Denial of Service effectively blocking the site from being accessed. This type of attack is known as a Regular Expression Denial of Service attack and we’ve found it to be quite common in applications and modules we test.&lt;/p></description></item><item><title>Elements</title><link>/elements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/elements/</guid><description>&lt;details class="table-of-content ">
+ &lt;summary>
+ 
+ Table of Contents
+ 
+ &lt;/summary>
+ &lt;nav id="TableOfContents">
+ &lt;ol>
+ &lt;li>&lt;a href="#heading-2">Heading 2&lt;/a>
+ &lt;ol>
+ &lt;li>&lt;a href="#heading-3">Heading 3&lt;/a>
+ &lt;ol>
+ &lt;li>&lt;a href="#heading-4">Heading 4&lt;/a>
+ &lt;ol>
+ &lt;li>&lt;a href="#heading-5">Heading 5&lt;/a>&lt;/li>
+ &lt;/ol>
+ &lt;/li>
+ &lt;/ol>
+ &lt;/li>
+ &lt;li>&lt;a href="#emphasis">Emphasis&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#button">Button&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#link">Link&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#paragraph">Paragraph&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#ordered-list">Ordered List&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#unordered-list">Unordered List&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#notice">Notice&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#tab">Tab&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#accordions">Accordions&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#code-and-syntax-highlighting">Code and Syntax Highlighting&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#blockquote">Blockquote&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#tables">Tables&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#image">Image&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#gallery">Gallery&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#slider">Slider&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#youtube-video">Youtube video&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#custom-video">Custom video&lt;/a>&lt;/li>
+ &lt;/ol>
+ &lt;/li>
+ &lt;/ol>
+&lt;/nav>
+&lt;/details>
+
+&lt;p>Here is an example of headings. You can use this heading by the following markdown rules. For example: use &lt;code>#&lt;/code> for heading 1 and use &lt;code>######&lt;/code> for heading 6.&lt;/p></description></item><item><title>Privacy</title><link>/privacy-policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/privacy-policy/</guid><description>&lt;h4 id="responsibility-of-contributors">Responsibility of Contributors&lt;/h4>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed&lt;/p></description></item><item><title>Ready to build your next project with Hugo?</title><link/><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid/><description/></item><item><title>What Users Are Saying About Hugoplate</title><link/><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid/><description/></item></channel></rss>
