@@ -1,75 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Security on EvilPacket</title>
-    <link>//localhost:1313/tags/security/</link>
-    <description>Recent content in Security on EvilPacket</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 28 Jan 2021 17:35:34 -0800</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Attacking OSS Using Abandoned Resources</title>
-      <link>//localhost:1313/blog/attacking-oss-using-abandoned-resources/</link>
-      <pubDate>Thu, 28 Jan 2021 17:35:34 -0800</pubDate>
-      <guid>//localhost:1313/blog/attacking-oss-using-abandoned-resources/</guid>
-      <description>&lt;p&gt;In December I discovered a supply chain vulnerability that impacted 6,530 public npm package versions, at least I thought I did. Turns out that earlier in October of 2020 Security Innovation published similar research dubbing the issue &lt;a href=&#34;https://blog.securityinnovation.com/repo-jacking-exploiting-the-dependency-supply-chain&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;Repo Jacking&lt;/a&gt;. This initially took the wind out of my sails but after I thought about it rediscovery is pretty cool and I was able to expand upon it a bit by focusing on abandoned S3 buckets, Google Cloud Storage bucket, expired domain names, and finding and reporting a vulnerability in GitHub to make exploitation possible in some conditions.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Headless Holiday Hack: Flag 1</title>
-      <link>//localhost:1313/blog/headless-holiday-hack-part-1/</link>
-      <pubDate>Fri, 27 Nov 2020 08:04:37 -0800</pubDate>
-      <guid>//localhost:1313/blog/headless-holiday-hack-part-1/</guid>
-      <description>&lt;p&gt;Last night I tossed up a quick CTF-esque challenge with a couple of flags defined.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Using Chrome Debugger Metasploit Gather Module</title>
-      <link>//localhost:1313/blog/using-chrome-debugger-msf-gather-module/</link>
-      <pubDate>Thu, 19 Dec 2019 09:19:25 -0800</pubDate>
-      <guid>//localhost:1313/blog/using-chrome-debugger-msf-gather-module/</guid>
-      <description>&lt;p&gt;This last week &lt;a href=&#34;https://twitter.com/nstarke&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;Nick Starke&lt;/a&gt; got the &lt;a href=&#34;https://blog.rapid7.com/2019/12/13/metasploit-wrap-up-45/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;chrome debugger metasploit module&lt;/a&gt; pushed over the line and merged into master. I figured I&amp;rsquo;d write up a quick intro to the module and how it might be used should you happen to stumble across a chrome debugger laying around the network.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Enumerating Files Using Server Side Request Forgery and the request Module</title>
-      <link>//localhost:1313/blog/enumerating-files-using-server-side-request-forgery-and-the-request-module/</link>
-      <pubDate>Fri, 15 Dec 2017 09:02:16 -0800</pubDate>
-      <guid>//localhost:1313/blog/enumerating-files-using-server-side-request-forgery-and-the-request-module/</guid>
-      <description>&lt;p&gt;If you ever find Server Side Request Forgery (SSRF) in a node.js based application and the app is using the request module you can use a special url format to detect the existence of files / directories.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>npm Registry Spelunking: Dependencies Referenced by URL</title>
-      <link>//localhost:1313/blog/npm-registry-spelunking-dependencies-referenced-by-url/</link>
-      <pubDate>Wed, 08 Nov 2017 14:40:22 -0800</pubDate>
-      <guid>//localhost:1313/blog/npm-registry-spelunking-dependencies-referenced-by-url/</guid>
-      <description>&lt;p&gt;I’ve learned a long time ago that not all security research pans out with a stack of vulnerabilities but every time I venture down a rabbit hole I learn something along the way. This is one of those times.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Bypassing npm / yarn ignore Scripts with Command Injection</title>
-      <link>//localhost:1313/blog/bypassing-npm-ignore-scripts-with-command-injection-in-package-json/</link>
-      <pubDate>Thu, 10 Aug 2017 17:11:17 -0700</pubDate>
-      <guid>//localhost:1313/blog/bypassing-npm-ignore-scripts-with-command-injection-in-package-json/</guid>
-      <description>&lt;p&gt;Before you read this post please run &lt;code&gt;git --version&lt;/code&gt; and if it’s not &lt;em&gt;2.14.1&lt;/em&gt; or greater then please go upgrade it.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Compromising Node.js apps using Machine-in-the-Middle</title>
-      <link>//localhost:1313/blog/compromising-node-js-apps-using-machine-in-the-middle/</link>
-      <pubDate>Wed, 11 Jan 2017 16:31:08 -0800</pubDate>
-      <guid>//localhost:1313/blog/compromising-node-js-apps-using-machine-in-the-middle/</guid>
-      <description>&lt;p&gt;Just before the New Years I published 140+ advisories on Node.js modules. I’ve been researching ways to compromise developers &amp;amp; node.js applications without compromising the npm registry or their CDN.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Atom.io Misconfiguration Allowed Code Execution on Untrusted Networks</title>
-      <link>//localhost:1313/blog/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks/</link>
-      <pubDate>Sun, 30 Oct 2016 09:16:51 -0700</pubDate>
-      <guid>//localhost:1313/blog/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/2016/10/atom_header.png&#34;&gt;&#xA;Developers have increasingly become a more valuable target to compromise in recent years. The DevOps movement means they have more access to production, not to mention the plethora of source code and keys that you are likely to find.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Brilliant Hire Exposure No Bounty</title>
-      <link>//localhost:1313/blog/brilliant-hire-exposure-no-bounty/</link>
-      <pubDate>Sun, 30 Oct 2016 09:16:51 -0700</pubDate>
-      <guid>//localhost:1313/blog/brilliant-hire-exposure-no-bounty/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/2019/11/debugger.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;During security research a few years back, I discovered an exposure on SAP&amp;rsquo;s BrilliantHire API - an exposed Node.js debugger instance that provided full remote code execution capabilities and access to sensitive AWS credentials, database encryption keys, and production source code. The finding highlights how a simple misconfiguration can lead to complete system compromise.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Security on EvilPacket</title><link>/tags/security/</link><description>Recent content in Security on EvilPacket</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 28 Jan 2021 17:35:34 -0800</lastBuildDate><atom:link href="/tags/security/index.xml" rel="self" type="application/rss+xml"/><item><title>Attacking OSS Using Abandoned Resources</title><link>/blog/attacking-oss-using-abandoned-resources/</link><pubDate>Thu, 28 Jan 2021 17:35:34 -0800</pubDate><guid>/blog/attacking-oss-using-abandoned-resources/</guid><description>&lt;p>In December I discovered a supply chain vulnerability that impacted 6,530 public npm package versions, at least I thought I did. Turns out that earlier in October of 2020 Security Innovation published similar research dubbing the issue &lt;a href="https://blog.securityinnovation.com/repo-jacking-exploiting-the-dependency-supply-chain"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Repo Jacking&lt;/a>. This initially took the wind out of my sails but after I thought about it rediscovery is pretty cool and I was able to expand upon it a bit by focusing on abandoned S3 buckets, Google Cloud Storage bucket, expired domain names, and finding and reporting a vulnerability in GitHub to make exploitation possible in some conditions.&lt;/p></description></item><item><title>Headless Holiday Hack: Flag 1</title><link>/blog/headless-holiday-hack-part-1/</link><pubDate>Fri, 27 Nov 2020 08:04:37 -0800</pubDate><guid>/blog/headless-holiday-hack-part-1/</guid><description>&lt;p>Last night I tossed up a quick CTF-esque challenge with a couple of flags defined.&lt;/p></description></item><item><title>Using Chrome Debugger Metasploit Gather Module</title><link>/blog/using-chrome-debugger-msf-gather-module/</link><pubDate>Thu, 19 Dec 2019 09:19:25 -0800</pubDate><guid>/blog/using-chrome-debugger-msf-gather-module/</guid><description>&lt;p>This last week &lt;a href="https://twitter.com/nstarke"
+
+
+
+
+ target="_blank"
+ 
+
+
+>Nick Starke&lt;/a> got the &lt;a href="https://blog.rapid7.com/2019/12/13/metasploit-wrap-up-45/"
+
+
+
+
+ target="_blank"
+ 
+
+
+>chrome debugger metasploit module&lt;/a> pushed over the line and merged into master. I figured I&amp;rsquo;d write up a quick intro to the module and how it might be used should you happen to stumble across a chrome debugger laying around the network.&lt;/p></description></item><item><title>Enumerating Files Using Server Side Request Forgery and the request Module</title><link>/blog/enumerating-files-using-server-side-request-forgery-and-the-request-module/</link><pubDate>Fri, 15 Dec 2017 09:02:16 -0800</pubDate><guid>/blog/enumerating-files-using-server-side-request-forgery-and-the-request-module/</guid><description>&lt;p>If you ever find Server Side Request Forgery (SSRF) in a node.js based application and the app is using the request module you can use a special url format to detect the existence of files / directories.&lt;/p></description></item><item><title>npm Registry Spelunking: Dependencies Referenced by URL</title><link>/blog/npm-registry-spelunking-dependencies-referenced-by-url/</link><pubDate>Wed, 08 Nov 2017 14:40:22 -0800</pubDate><guid>/blog/npm-registry-spelunking-dependencies-referenced-by-url/</guid><description>&lt;p>I’ve learned a long time ago that not all security research pans out with a stack of vulnerabilities but every time I venture down a rabbit hole I learn something along the way. This is one of those times.&lt;/p></description></item><item><title>Bypassing npm / yarn ignore Scripts with Command Injection</title><link>/blog/bypassing-npm-ignore-scripts-with-command-injection-in-package-json/</link><pubDate>Thu, 10 Aug 2017 17:11:17 -0700</pubDate><guid>/blog/bypassing-npm-ignore-scripts-with-command-injection-in-package-json/</guid><description>&lt;p>Before you read this post please run &lt;code>git --version&lt;/code> and if it’s not &lt;em>2.14.1&lt;/em> or greater then please go upgrade it.&lt;/p></description></item><item><title>Compromising Node.js apps using Machine-in-the-Middle</title><link>/blog/compromising-node-js-apps-using-machine-in-the-middle/</link><pubDate>Wed, 11 Jan 2017 16:31:08 -0800</pubDate><guid>/blog/compromising-node-js-apps-using-machine-in-the-middle/</guid><description>&lt;p>Just before the New Years I published 140+ advisories on Node.js modules. I’ve been researching ways to compromise developers &amp;amp; node.js applications without compromising the npm registry or their CDN.&lt;/p></description></item><item><title>Atom.io Misconfiguration Allowed Code Execution on Untrusted Networks</title><link>/blog/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks/</link><pubDate>Sun, 30 Oct 2016 09:16:51 -0700</pubDate><guid>/blog/atom-io-misconfiguration-allowed-code-execution-on-untrusted-networks/</guid><description>&lt;p>&lt;img src="/images/2016/10/atom_header.png">
+Developers have increasingly become a more valuable target to compromise in recent years. The DevOps movement means they have more access to production, not to mention the plethora of source code and keys that you are likely to find.&lt;/p></description></item><item><title>Brilliant Hire Exposure No Bounty</title><link>/blog/brilliant-hire-exposure-no-bounty/</link><pubDate>Sun, 30 Oct 2016 09:16:51 -0700</pubDate><guid>/blog/brilliant-hire-exposure-no-bounty/</guid><description>&lt;p>&lt;img src="/images/2019/11/debugger.png">&lt;/p>
+&lt;p>During security research a few years back, I discovered an exposure on SAP&amp;rsquo;s BrilliantHire API - an exposed Node.js debugger instance that provided full remote code execution capabilities and access to sensitive AWS credentials, database encryption keys, and production source code. The finding highlights how a simple misconfiguration can lead to complete system compromise.&lt;/p></description></item></channel></rss>
