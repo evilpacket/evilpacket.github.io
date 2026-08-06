@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EP DC 34 SAO · evilpacket · DEF CON 34</title>
+<style>
+:root{
+  --bg:#0b0b0e; --panel:#131318; --line:#26262e;
+  --red:#c0392b; --hot:#ff5646; --gold:#e9b63a;
+  --ink:#e8e4dc; --dim:#8a8578;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  line-height:1.55;padding:0 18px 60px}
+main{max-width:900px;margin:0 auto}
+a{color:var(--gold)}
+header{text-align:center;padding:46px 0 10px}
+h1{font-size:44px;letter-spacing:2px;color:var(--hot)}
+h1 span{color:var(--ink)}
+.sub{color:var(--dim);margin-top:4px}
+.tag{color:var(--ink);margin-top:14px}
+h2{font-size:19px;letter-spacing:1.5px;color:var(--gold);
+  border-bottom:1px solid var(--line);padding-bottom:8px;margin:54px 0 18px}
+h2 small{color:var(--dim);font-size:13px;letter-spacing:0;float:right;margin-top:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.card svg{width:96px;display:block;margin:0 auto 10px}
+.card b{color:var(--hot);display:block;margin-bottom:6px;letter-spacing:1px}
+.card p{font-size:13.5px;color:var(--dim)}
+.card p em{color:var(--ink);font-style:normal}
+.pats{display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:12px}
+.pat{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:12px 8px 10px;text-align:center;position:relative}
+.pat .num{position:absolute;top:7px;left:9px;color:var(--gold);
+  border:1px solid var(--line);border-radius:5px;padding:0 6px;
+  font-size:12.5px;line-height:1.5;background:#0e0e12}
+.pat svg{width:82px;margin-bottom:6px}
+.pat i{font-style:normal;font-size:12.5px;color:var(--dim);display:block}
+.pat i b{color:var(--ink);font-weight:normal}
+.pat.q{display:flex;align-items:center;justify-content:center;
+  min-height:132px;font-size:46px;color:var(--gold)}
+.note{font-size:13px;color:var(--dim);margin:12px 2px 0}
+.note em{color:var(--gold);font-style:normal}
+/* ---- datasheet ---- */
+.sheet{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:20px;margin-top:8px}
+.sheet table{width:100%;border-collapse:collapse;font-size:13.5px}
+.sheet td{padding:5px 8px;vertical-align:top;border-bottom:1px dashed var(--line)}
+.sheet td:first-child{color:var(--gold);white-space:nowrap;width:110px}
+.diagrams{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:14px;margin-top:18px}
+.diag{border:1px solid var(--line);border-radius:8px;padding:14px;font-size:13px}
+.diag h3{font-size:13px;color:var(--ink);letter-spacing:1px;margin-bottom:10px}
+.port{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;max-width:300px}
+.pin{border:1px solid var(--line);border-radius:5px;text-align:center;
+  padding:8px 2px;color:var(--dim);background:#0e0e12}
+.pin.gnd{color:var(--ink);border-color:#555}
+.pin.pwr{color:#fff;background:var(--red);border-color:var(--hot)}
+.pads{display:flex;gap:10px;align-items:flex-start;margin:6px 0 10px}
+.sheet ul{list-style:none;margin:0;padding:0}
+.sheet li{padding:1px 0}
+.wire{list-style:none;margin:6px 0 0;padding:0}
+.wire li{padding:2px 0}
+.pad{width:52px;text-align:center}
+.pad .sq{height:34px;border:2px solid var(--line);border-radius:5px;background:#0e0e12}
+.pad.mid .sq{border-color:var(--hot);background:var(--red)}
+.pad.updi .sq{border-color:var(--gold)}
+.pad span{font-size:11.5px;color:var(--dim);display:block;margin-top:4px}
+.pad b{font-size:12.5px;color:var(--ink);font-weight:normal}
+.dnote{color:var(--dim);margin-top:8px}
+.dnote code{color:var(--ink)}
+.warn{border:1px solid var(--red);background:#180d0d;border-radius:8px;
+  padding:13px 15px;font-size:13.5px;margin-top:14px}
+.warn b{color:var(--hot);letter-spacing:1px}
+footer{text-align:center;color:var(--dim);font-size:12.5px;margin-top:70px}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>EP DC 34 <span>SAO</span></h1>
+</header>
+
+<div class="warn"><b>⚠ POLARITY</b>
+  Cross +3V0 and GND and the ATtiny releases its smoke instantly.</div>
+<div class="warn"><b>⚠ DC34-COMPLIANT SAO PORTS ONLY.</b>
+  This badge expects power on the <b>right</b> (art view). Mirrored or older
+  1.69bis-era hosts with power on the left feed it <em>backwards</em>.</div>
+
+<h2>How to</h2>
+<div class="cards">
+  <div class="card"><div id="g-tap"></div>
+    <b>TAP A HORN</b>
+    <p><em>right = next pattern · left = previous.</em>
+    The mouth flashes the pattern number for a beat, then it plays.</p>
+  </div>
+  <div class="card"><div id="g-hold"></div>
+    <b>HOLD BOTH HORNS</b>
+    <p>Hold ≈1s: a mouth LED points at a mode. <em>Keep holding to cycle,
+    release to choose</em>. It double-flashes your pick.</p>
+  </div>
+</div>
+
+<h2>mode 1</h2>
+<div class="pats" id="m1"></div>
+
+<h2>mode 2</h2>
+<div class="pats" id="m2"></div>
+
+<h2>mode 3</h2>
+<div class="pats" id="m3"></div>
+
+<h2>mode 4</h2>
+<div class="pats">
+  <div class="pat q">?</div>
+</div>
+
+<h2>data sheet</h2>
+<div class="sheet">
+  <table>
+    <tr><td>brain</td><td>ATtiny1614 @ 10&nbsp;MHz · 16&nbsp;KB flash</td></tr>
+    <tr><td>rail</td><td>3.0–3.3&nbsp;V from the SAO port · ~35&nbsp;mA peak (the DC34 100&nbsp;mA budget is safe)</td></tr>
+    <tr><td>lights</td><td><ul>
+      <li>7 in the mouth</li>
+      <li>2 on the horns</li>
+    </ul></td></tr>
+    <tr><td>senses</td><td><ul>
+      <li>2 capacitive horn pads</li>
+      <li>1 phototransistor</li>
+    </ul></td></tr>
+  </table>
+
+  <div class="diagrams">
+    <div class="diag">
+      <h3>SAO PORT · viewed from the FRONT (art side)</h3>
+      <div class="port">
+        <div class="pin">GPIO2</div><div class="pin">SCL</div><div class="pin gnd">GND</div>
+        <div class="pin">GPIO1</div><div class="pin">SDA</div><div class="pin pwr">+3V0</div>
+      </div>
+      <p class="dnote">Power lives on the <b>RIGHT</b> column, per the DC34 spec.</p>
+    </div>
+    <div class="diag">
+      <h3>PROGRAMMING PADS · 3 bare pads on the back</h3>
+      <div class="pads">
+        <div class="pad"><div class="sq"></div><b>GND</b><span>far pad</span></div>
+        <div class="pad mid"><div class="sq"></div><b>+3V0</b><span>ALWAYS middle</span></div>
+        <div class="pad updi"><div class="sq"></div><b>UPDI</b><span>nearest the eye</span></div>
+      </div>
+      <p class="dnote">SerialUPDI · <b>3.3&nbsp;V logic only</b></p>
+      <ul class="wire">
+        <li>TX → 1&nbsp;kΩ → UPDI</li>
+        <li>RX → UPDI</li>
+        <li>GND → GND</li>
+        <li>VCC → middle pad</li>
+      </ul>
+      <p class="dnote">flash with <code>pymcuprog -d attiny1614</code></p>
+    </div>
+  </div>
+
+</div>
+
+<footer>evilpacket.net</footer>
+</main>
+
+<script>
+/* geometry lifted straight from the board files — this IS the badge */
+const GEO={"outer":[[5.07,2.4],[3.57,3.87],[2.28,5.7],[1.31,7.76],[0.72,9.93],[0.6,12.07],[1.05,14.06],[1.96,15.58],[3.18,16.65],[3.15,19.34],[1.01,24.82],[0.25,28.12],[0.02,31.66],[0.11,35.41],[0.69,39.15],[1.76,42.77],[3.8,46.96],[6.01,49.91],[8.74,52.39],[12.01,54.3],[14.96,55.35],[18.75,55.96],[23.01,55.78],[26.37,55.05],[29.61,53.85],[32.67,52.23],[35.47,50.24],[37.95,47.92],[38.76,46.53],[39.02,45.38],[38.82,44.52],[38.25,43.97],[37.4,43.75],[36.37,43.91],[35.25,44.48],[34.12,45.48],[30.48,46.89],[27.37,47.46],[23.81,47.47],[19.99,46.67],[17.17,45.42],[14.97,43.85],[13.35,42.14],[11.64,39.17],[10.02,35.13],[9.71,33.22],[9.96,32.27],[10.59,31.78],[26.51,30.54],[34.89,29.52],[39.0,28.31],[39.68,27.06],[39.66,25.85],[38.76,23.58],[37.28,20.51],[36.96,18.82],[36.88,17.63],[37.36,16.86],[39.73,14.98],[40.61,13.95],[40.88,12.61],[40.47,10.17],[39.27,6.9],[37.69,4.25],[35.72,2.06],[34.26,1.01],[32.73,0.39],[33.43,2.67],[34.28,6.62],[34.22,8.45],[33.69,9.89],[32.77,10.66],[31.35,10.82],[29.13,10.05],[26.92,9.14],[24.64,8.67],[21.74,8.61],[17.64,9.23],[11.01,11.05],[8.68,11.06],[7.37,10.22],[6.91,9.17],[6.83,7.13],[7.57,3.08],[7.94,0.27],[6.75,0.8]],
+"hornL":[[7.0,1.6],[6.1,5.9],[6.0,8.8],[6.2,10.0],[5.9,10.0],[3.6,9.2],[2.0,8.1],[3.7,4.9],[7.0,1.6]],
+"hornR":[[34.0,1.9],[34.5,2.1],[36.1,3.6],[37.9,6.1],[38.8,8.0],[37.4,9.1],[34.4,10.3],[34.9,9.0],[35.0,6.3],[34.5,3.4],[34.0,1.9]],
+"eye":[[24.16,16.07],[25.04,17.02],[26.17,18.62],[27.11,20.43],[27.46,21.35],[27.72,22.24],[27.84,23.09],[27.81,24.06],[27.67,24.56],[27.33,25.13],[26.95,25.46],[26.27,25.77],[25.36,25.89],[24.51,25.84],[22.8,25.5],[21.56,25.39],[19.65,25.45],[15.53,25.79],[13.6,25.78],[12.74,25.67],[11.97,25.46],[11.31,25.15],[10.77,24.71],[10.39,24.12],[10.2,23.57],[10.27,22.84],[10.55,21.8],[10.92,20.76],[11.38,19.74],[11.92,18.76],[12.54,17.84],[13.23,16.98],[14.0,16.2],[14.82,15.52],[16.17,14.72],[17.12,14.34],[18.12,14.12],[19.17,14.07],[20.24,14.19],[21.34,14.5],[22.19,14.88],[24.16,16.07]],
+"leds":[[4.85,32.78],[6.08,39.37],[9.1,45.36],[14.22,49.64],[20.67,51.46],[27.39,50.97],[5.28,13.08],[35.59,12.81],[33.64,48.47]],
+"pupil":[25.93,21.0]};
+
+const NS='http://www.w3.org/2000/svg';
+function path(pts){return pts.map((p,i)=>(i?'L':'M')+p[0]+' '+p[1]).join(' ')+'Z';}
+function el(n,at){const e=document.createElementNS(NS,n);for(const k in at)e.setAttribute(k,at[k]);return e;}
+
+/* builds one badge; returns {svg, halos[], cores[]} */
+function buildBadge(host,deco){
+  const s=el('svg',{viewBox:'-1.6 -1.6 44.2 59.2'});
+  s.appendChild(el('path',{d:path(GEO.outer),fill:'#b03028',stroke:'#7d1f1a','stroke-width':'0.9'}));
+  s.appendChild(el('path',{d:path(GEO.hornL),fill:'#e9b63a'}));
+  s.appendChild(el('path',{d:path(GEO.hornR),fill:'#e9b63a'}));
+  s.appendChild(el('path',{d:path(GEO.eye),fill:'#15151b'}));
+  s.appendChild(el('circle',{cx:GEO.pupil[0],cy:GEO.pupil[1],r:1.5,fill:'#07070c'}));
+  s.appendChild(el('circle',{cx:GEO.pupil[0],cy:GEO.pupil[1],r:0.55,fill:'#26536b'}));
+  const halos=[],cores=[];
+  GEO.leds.forEach(p=>{
+    const h=el('circle',{cx:p[0],cy:p[1],r:2.6,fill:'#ff5646',opacity:0});
+    const c=el('circle',{cx:p[0],cy:p[1],r:1.05,fill:'#ff5646',opacity:0.13});
+    s.appendChild(h);s.appendChild(c);halos.push(h);cores.push(c);
+  });
+  if(deco==='tap'){
+    s.appendChild(el('circle',{cx:36.3,cy:5.8,r:5.6,fill:'none',stroke:'#e9b63a','stroke-width':'0.8','stroke-dasharray':'2 1.4'}));
+  }else if(deco==='hold'){
+    s.appendChild(el('circle',{cx:4.6,cy:5.8,r:5.6,fill:'none',stroke:'#e9b63a','stroke-width':'0.8','stroke-dasharray':'2 1.4'}));
+    s.appendChild(el('circle',{cx:36.3,cy:5.8,r:5.6,fill:'none',stroke:'#e9b63a','stroke-width':'0.8','stroke-dasharray':'2 1.4'}));
+  }
+  host.appendChild(s);
+  return {halos,cores};
+}
+
+/* ---- pattern engines, kept 1:1 with src/patterns.c ---- */
+const G=[0,1,1,1,2,2,3,4,5,6,8,9,11,12,14,16];
+const RING=[6,7,8,5,4,3,2,1,0];            /* HL,HR,tip,D6..D1 = clockwise */
+const HL=1<<6,HR=1<<7,TIP=1<<8,JAW=0x3F,ALL=0x1FF;
+let rs=0xACE1;
+function rnd(){rs^=(rs<<7)&0xFFFF;rs^=rs>>9;rs^=(rs<<8)&0xFFFF;return rs&0xFFFF;}
+function tri32(x){const i=x&31;return i<16?i:31-i;}
+/* fake ambient for the mode-3 demos: a slow sunrise/sunset */
+function fakeLight(t){return Math.round(512+480*Math.sin(t/2400));}
+
+const BON=[1500,1150,880,680,520,400,310,240,190,150,120];
+const BOFF=[380,320,270,230,200,175,155,140,130,120,2500];
+const BSEG=[];{let a=0;for(let i=0;i<11;i++){BSEG.push({e:a+=BON[i],on:1});BSEG.push({e:a+=BOFF[i],on:0});}}
+const BTOT=BSEG[BSEG.length-1].e;
+
+function mkTwinkle(){let nx=0,m=0,pv=0;return t=>{
+  if(t>=nx){nx=t+90;const r=rnd();m=r&pv&ALL;pv=r;}return [m,16];};}
+function mkPhotoRing(){let nx=0,i=0;return t=>{
+  if(t>=nx){i=(i+1)%9;nx=t+400-Math.round(fakeLight(t)*360/1023);}return [1<<RING[i],16];};}
+function mkMeterSparkle(){let nx=0,hm=0;return t=>{
+  const L=fakeLight(t);let m=0;
+  for(let i=0;i<6;i++)if(L>80+i*150)m|=1<<i;
+  if(t>=nx){nx=t+80;const r=rnd();hm=0;if((r&3)===0)hm|=HL;if((r&12)===0)hm|=HR;}
+  return [m|hm,16];};}
+function mkLightSparkle(){let nx=0,m=0;return t=>{
+  if(t>=nx){const L=fakeLight(t);nx=t+Math.max(40,120-(L>>4));
+    const thr=60+L*7/8;m=0;
+    for(let i=0;i<9;i++)if((rnd()&0x3FF)<thr)m|=1<<i;}
+  return [m,16];};}
+function mkFuse(){const IV=[150,110,80,55,38];let nx=0,i=0,lap=0,ph=0;return t=>{
+  if(t>=nx){
+    if(ph===0){i++;if(i>=9){i=0;if(++lap>=5){ph=1;i=8;}}nx=t+(ph?0:IV[lap]);}
+    else if(ph===1){if(i){i--;nx=t+60;}else{ph=2;nx=t+1400;}}
+    else{ph=0;lap=0;i=0;nx=t+IV[0];}
+  }
+  return ph===0?[1<<RING[i],16]:ph===1?[(i&1)?ALL:0,16]:[0,16];};}
+function mkCandle(){let nx=0,b=8;return t=>{
+  if(t>=nx){const r=rnd();nx=t+35+(r&63);b=5+((r>>6)%12);if((r&0xF00)===0)b=2;}
+  return [ALL,b];};}
+
+const PATTERNS={
+  m1:[
+    ['horns breathe','power-on default',t=>[HL|HR,G[tri32(Math.floor(t%2000/63))]]],
+    ['night-rider grin','pong across the mouth',t=>[[3,6,12,24,48,24,12,6][Math.floor(t/110)%8],16]],
+    ['clockwise','clockwise lap',t=>[1<<RING[Math.floor(t/110)%9],16]],
+    ['counter-clockwise','counter-clockwise lap',t=>[1<<RING[8-Math.floor(t/110)%9],16]],
+    ['bouncing ball','drops, quickens, rattles out',t=>{const p=t%BTOT;for(const s of BSEG)if(p<s.e)return [s.on?ALL:0,16];return [0,16];}],
+    ['twinkle','random glitter',mkTwinkle()],
+  ],
+  m2:[
+    ['tick-tock','horns trade places',t=>[(t%700)<350?HL:HR,16]],
+    ['smile breathe','the grin swells',t=>[JAW,G[tri32(Math.floor(t%4608/144))]]],
+    ['mouth walker','one LED pacing',t=>{const p=Math.floor(t/350)%10;return [1<<(p<6?p:10-p),16];}],
+    ['fill & drain','builds up, lets go',t=>{const s=Math.floor(t/250)%18;let m=0;
+      if(s<9){for(let i=0;i<=s;i++)m|=1<<i;}else{m=ALL;for(let i=0;i<=s-9;i++)m&=~(1<<i);}
+      return [m,16];}],
+    ['lit fuse','burns faster… BOOM',mkFuse()],
+    ['candle flicker','lit by an unsteady flame',mkCandle()],
+  ],
+  m3:[
+    ['light meter','mouth = lux gauge, horns sparkle',mkMeterSparkle()],
+    ['light spins the ring','bright = fast',mkPhotoRing()],
+    ['light sparkle','bright = frantic',mkLightSparkle()],
+  ],
+};
+
+const anims=[];
+function addPattern(hostId,def,n){
+  const box=document.getElementById(hostId);
+  def.forEach((d,i)=>{
+    const card=document.createElement('div');card.className='pat';
+    const num=document.createElement('span');num.className='num';
+    num.textContent=i+1;card.appendChild(num);
+    const sv=document.createElement('div');card.appendChild(sv);
+    const cap=document.createElement('i');
+    cap.innerHTML='<b>'+d[0]+'</b>';
+    card.appendChild(cap);box.appendChild(card);
+    anims.push({b:buildBadge(sv),fn:d[2]});
+  });
+}
+addPattern('m1',PATTERNS.m1);
+addPattern('m2',PATTERNS.m2);
+addPattern('m3',PATTERNS.m3);
+buildBadge(document.getElementById('g-tap'),'tap');
+buildBadge(document.getElementById('g-hold'),'hold');
+
+let last=0;
+function frame(ts){
+  if(ts-last>32){last=ts;
+    for(const a of anims){
+      const [m,b]=a.fn(ts);
+      for(let i=0;i<9;i++){
+        const on=(m>>i)&1,k=b/16;
+        a.b.halos[i].setAttribute('opacity',on?(0.3*k).toFixed(2):0);
+        a.b.cores[i].setAttribute('opacity',on?(0.2+0.8*k).toFixed(2):0.13);
+      }
+    }
+  }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
